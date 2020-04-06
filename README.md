@@ -2,7 +2,8 @@
 REGex Summer ONLINE FREE Training Program 2020
 
 
-Assingment Submission for REGex Summer ONLINE FREE Training Program 2020
+# Assingment Submission for REGex Summer ONLINE FREE Training Program 2020
+
 ## Submission Procedure
 Read the following steps and guidelines properly for proper submission of your project. Missing out any step or performing it wrongly can lead to unsuccessful submission. 
 ## Running Procedure
@@ -15,13 +16,7 @@ Run the cmd in logic implementation.
 #### Create a New Folder within the forked repository, with the 'folder name' being your 'Team Name'
 
 ## Contents of the folder
-+ The project directory.
-+ The presentation that you will be presenting while presenting your project before the judges.
-+ A text file that contains proper documentation. The documentation should contain:
-    - A description of your project.
-    - The contents of your project directory.
-    - Ways to host your project on the localhost.
-+ The name of the 'pptx' and 'text' files should also be the 'team name'.
+
 
 
 
