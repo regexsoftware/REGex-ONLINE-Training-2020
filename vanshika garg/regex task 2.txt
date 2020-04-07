@@ -1,0 +1,33 @@
+An example to show how to change umask values permanently.
+
+
+Access the terminal from user root and create a regularuser account.
+create normal user linux.
+Check the default umask setting of user root and user regularuser.
+Default umask setting is 022 and 002 for user root and user regularuser respectively.
+Open two separate terminals (by pressing Alt+Ctrl+F2 and Alt+Ctrl+F3 keys combination) and login from user root and user regularuser respectively. 
+Check the umask setting which both users receive.
+
+Now change the default umask setting in /etc/bashrc file.
+For regular user, set it to 444 (old value 002).
+For root user, set it to 555 (old value 022).
+Check umask setting again. 
+Change cannot be applied in running terminal. you have to access the other terminal for testing. Open another terminal and test umask setting for both users.
+umask values have been changed.
+
+Since we only changed /etc/bashrc file ,the umask permissions for login shell should not be changed.
+To confirm it, access two terminals(use Alt+Ctrl+F4 and Alt+Ctrl+F5 keys combinations) and login from user root and user regularuser.
+umask permissions will not change for login shell.
+Switch back and update umask permissions in /etc/profile file.
+
+For root user set it to 222
+For regular user set it to 111
+
+Re-login from both users (root and regularuser) in their respective terminals and check the default umask permissions.
+umask permissions have been changed. Since this time we changed the file which controls login shell, a non-login shell should not be affected.
+To confirm it, switch back to terminal and close the opened terminal. Access new terminal and check umask permissions for both users again.
+umask permissions in non-login shell are not changed.
+
+When we changed /etc/bashrc file, the umask permissions for non-login shell were changed but umask permissions for login shell remained unchanged. 
+Just like this, when we changed /etc/profile file, the umask permissions for login shell were changed but umask permissions for login shell remained unchanged.
+This process can be used to change umask values permanently.
