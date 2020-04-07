@@ -1,0 +1,24 @@
+1. Change the Umask value for any user permanently.
+Sol. In order the change the umask value permanently, one has to change the values in config files. For Ubuntu change the umask value in file /etc/login.defs
+
+2. How to add a new user without using adduser or useradd command?
+Sol. 
+a. Add an entry in /etc/passwd as follows:
+	Username:password:UID:GID:Comments:Home_Directory:Login Shell
+b. Create a Group with same name, i.e. add an entry in /etc/group
+c. Assign a password to user by -> #passwd <user_name>
+d. mkdir /home/<user_name>
+e. chown user:user /home/user
+f. copy contents from /etc/skel directory inside the home directory of the user.
+
+3. Can we change the Umask value to 0888?
+Sol. No, as it exceeds the octal value (i.e. 0-7) for each field (i.e. owner, group, others) as max permission that can be given is 7 (i.e. 111 in binary = 7 in decimal)
+
+4. How to add new user with a unique user id e.g. 1345?
+Sol. By using the -u/--uid option, i.e. useradd -u 1345 username
+
+5. How to change group of any directory?
+Sol. Groupid of any directory/file can be changed using:
+chgrp <groupname>/+<groupid> <filename>
+a) The Group name of the files inside the directory remains the same
+b) To change group of all the files included in the directory, -R option is used to perform the action recursively.
