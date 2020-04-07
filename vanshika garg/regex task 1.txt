@@ -1,0 +1,9 @@
+ques:- If we use useradd user_name command than user_name folder will not be made on home directory. why ?
+ans:-  useradd is native binary compiled with the system.But, adduser is a perl script which uses useradd binary in back-end.
+       adduser is more user friendly and interactive than it's back-end useradd. no such difference in features.
+       useradd commands are low level utilities which are there for historical reasons .useradd will not create a home directory 
+       for such a user, regardless of the default settings in /etc/login.defs (CREATE_MODE).
+       You have to specify the -m options if you want a home directory for a system account to be created.
+       For creating a system user without a home directory then use useradd --system -m.
+  
+ 
