@@ -1,0 +1,5 @@
+1)To create a user account and add it in the group at the same time.
+->sudo useradd -G grpdemo regex
+
+2)command to unzip the bz2 file
+->bzip2 -d demo.txt.bz2
