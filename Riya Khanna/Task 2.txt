@@ -1,0 +1,45 @@
+Q1. Change the umask value for any user permanently.
+Ans1. eg. to change the umask to 076
+	if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
+    		umask 076
+      	else
+    		umask 076
+
+Q2. Add a new user without using adduser and useradd comma)nd
+Ans2. Step 1: (Add an entry of user details in /etc/passwd)
+The field details are as shown below
+username:password:UID:GID:Comments:Home_Directory:Login Shell
+# vi /etc/passwd
+
+Step 2 :You will have to create a group with same name. So add a new entry in /etc/group
+# vi /etc/group
+
+Step 3:Assign a password to the user
+# passwd user
+
+Step 4: ( /etc/skel directory contains all the defaults files which are present inside the home folder of any user)
+So, copy the contents from /etc/skel inside /home/user using the below command
+#cp -v /etc/skel/.* /home/user/
+
+Now re login to user and it is done.
+
+Q3.Can we change the Umask value to 0888?
+Ans3. 000 and 777 is the minimum and maximum UMASK value for folder in Linux.
+000 and 666 is the minimum and maximum UMASK value for file in Linux.
+Hence, the Uamsk value cannot be changed to 0888.
+
+Q4.How to add a new user with a Unique userid and check Id of that user.
+Ans4.(a)Use the -u (--uid) option to create a user with a specific UID. 
+For example to create a new user named username with UID of 1345 you would type:
+$ sudo useradd -u 1345 username
+(b)check Id of that user
+$ id -u username
+
+Q5. How to change the group of any folder?
+(a) After this checkout the group names of the files present in that folder.
+(b) Try to change the group of the folder and the files present in the same folder using a single command.
+Ans5.(a)To change the group ownership of a folder:
+sudo chgrp <groupname> <foldername>
+
+(b)To recursively change the group ownership of a folder and all of its contents.
+sudo chgrp -R <groupname> <foldername>
