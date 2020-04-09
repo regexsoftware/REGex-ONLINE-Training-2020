@@ -1,0 +1,5 @@
+Q1. Create a new user and at the same time you have to add that user into the group you have already
+Ans:	useradd -G groupname newUserName
+
+Q2. Command to unzip the bzip2 extension file
+Ans:	bzip2 -d filename.bz2
