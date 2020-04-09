@@ -1,0 +1,25 @@
+1) How to change the group of files and folders using single command?
+solution- sudo chgrp -R groupname filename.
+
+
+2) Create a new user and at the same time you have to add that user into the group you have already .
+solution-Useradd - g grpname username 
+Check with id command
+id username
+
+
+3) how to unzip the bz2 file?
+solution-  tar xjf file.tar.bz2 - to uncompress a bzip2 tar file (.tbz or .tar.bz2) to extract the contents.
+x = eXtract, this indicated an extraction c = create to create )
+ j = bzip2-zipped
+f = from/to file ... (what is next after the f is the archive file)
+
+
+4) archive + compress file with extension bz2 and in that include some files with data and a folder
+solution-  tar -cvjf test.tar.b2z 1 2 3 one
+after this ls
+
+
+5) add user and at the same time you have to change the shell of user to /bin/sh means as default the shell is bin/sh
+solution- useradd -s /bin/sh kirti
+for checking- Vi /etc/passwd
