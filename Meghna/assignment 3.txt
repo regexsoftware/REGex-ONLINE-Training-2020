@@ -1,0 +1,18 @@
+Q1)Create a new user and at the same time you have to add that user into the group you have aleady created.
+Ans1) sudo adduser username grouptoadd
+
+Q2) How to unzip bz2 file?
+Ans2)tar -xf archive.tar.bz2
+
+Q3)Create archive compress ile with extension bz2 andin that add some file with data and folder.
+Ans3)bzip2 file1
+     bzip2 file1 file2 file3
+
+Q4)adduser and at the same time you have to change the shell of user to bin/sh as by default shell is bin bash/
+Ans 4)grep meghna /etc/passwd
+      usermod --shell /bin/bash meghna
+      grep meghna /etc/passwd
+      grep meghna /etc/passwd
+      chsh --shell /bin/sh meghna
+      grep meghna /etc/passwd
+      vi /etc/passwd
