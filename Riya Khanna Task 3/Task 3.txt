@@ -1,0 +1,14 @@
+Q1. While creating a new user, add that user in an already existing group.
+Ans1. The following command creates a new user riya with an group grpriya
+	$ sudo useradd -g grpriya -G riya
+
+
+Q2.How to unzip bzip2 file?
+Ans2. tar -xf filename.tar.bz2
+
+Q3.Archive and compress file with extension bz2 and in that include some file and folder
+Ans3. tar cfvj file_name.tar.bz2 file1 file2
+
+Q4. At the time of creating a new user, change the shell of the user to /bin/shell
+Ans4. to create a new user named username with /bin/sh as a login shell type:
+$ sudo useradd -s /bin/sh username
