@@ -1,0 +1,29 @@
+Ques : How to change the Umask value for any user permanently?
+Ans: step 1: Go to terminal 
+     step 2: vim /home/user/.bashrc   
+     step 3: in that type:   umask valuewhichyouwanttogive
+     step 4: vim /home/user/.bash_profile
+     step 5: in this also type: umask valuewhichyouwanttogive
+     step 6: su user and check umask value.
+
+Ques : How to add user without using adduser and useradd command?
+Ans:    Add an entry for the user in /etc/passwd file.
+	Add an entry for the group in /etc/group file.
+	Create the home directory for the added user.
+	Set the new user password using the passwd command.
+
+Ques : Can we change the Umask value to 0888. If yes, then how. If no then why?
+Ans: No, we can't change the Umask value to 0888 because the Umask values are calculated in octal range i.e between 0-7. Max  value can be 777.
+
+Ques : How to add a new user with a Unique user id (e.g. 1345) and check out the unique Id of that user.
+Ans: using the command:- sudo 'useradd' or 'adduser' -u 1345 rishita
+	to check out the unique Id of that user:  id -u username
+
+Ques : How to change the group of any folder?
+	Ans: chgrp ris /rishita
+	a). After this checkout the groupname of the files present in that folder.
+	Ans: 	stat -c "User:%U Group:%G" /path/to/dir/
+		stat -c "User:%U Group:%G" /etc/
+
+	b). Try to change the group of the folder and the files present in the same folder using a single command.
+	Ans: sudo chgrp -R groupname filename

@@ -1,0 +1,25 @@
+Ques: How to unzip the bzip2 file?
+Ans: $ bzip2 -d filename.bz2
+
+Ques: Create archive file with extension bz2 and in that include some file with data and a folder.
+Ans: The most common programs to archive files and directories are:
+
+	#tar
+	#zip
+Tar is an Unix command which stands for Tape Archive. It is used to combine or store multiple files (same or different size) into a single file. There are 4 main operating modes in tar utility.
+
+c – Create an archive from a file(s) or directory(s).
+x – Extract an archive.
+r – Append files to the end of an archive.
+t – List the contents of the archive.
+
+Suppose i take a folder named 'regex' that contains three different type of files.
+$ ls regex/
+file.odt image.png song.mp3
+
+Now, let us create a new tar archive of the the directory ostechnix.
+$ tar cf regex.tar regex/
+Here, c flag refers create new archive and f refers the file name.
+
+Similarly, to create an archive from a set of files in the current working directory, use this command:
+$ tar cf archive.tar file1 file2 file 3
