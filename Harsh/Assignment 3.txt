@@ -1,0 +1,17 @@
+Ques 1: How to change the group of files & the folder with a single command.
+sol: #chgrp -R groupname filename directory
+
+Ques 2 : Create a new user & at the same time, you have to add that user into the group you have already.
+sol:
+
+Ques 3: How to unzip the bz2 file.
+sol: #bzip2 -d filename.bz2
+
+Ques 4: Archieve + compress file with extension bz2 & in that include some file with data & a folder.
+sol: #tar -cvjf filename.tar.bz2
+
+Ques 5 : Add user and at the same time you have to change the shell of user to /bin/sh.(As by default the shell is /bin/bash)
+sol: #cat /etc/shells
+     #grep tecmint /etc/passwd
+     #chsh --shell /bin/sh tecmint
+     #grep tecmint /etc/passwd
