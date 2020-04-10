@@ -1,0 +1,26 @@
+Q1.What is JPython & CPython?
+
+Answer-CPython is the implementation, which was written in C language. It ends up producing bytecode 
+which is Python specific and then executes it. 
+
+Jython is an implementation of the Python programming language designed to run on the Java platform. 
+The implementation was formerly known as JPython until 1999.
+
+
+Q1.Basic difference between Python2 & python3?
+
+Answer-In python2 we have to take input from user by using writing statement input.But
+       In python3 we have a input() that take input from user.
+
+       In python2 we have show a any statement by using print
+       In Python3 we have a print() to automatically print statement.
+
+Q3.Difference between ASCII & unicode?
+
+Anser-ASCII originally used seven bits to encode each character. But
+      UNICODE uses a variable bit encoding program where you can choose between 32, 16, and 8-bit encoding.
+
+      ASCII has its equivalent within Unicode.
+      UNICODE represents most written languages in the world while ASCII does not.
+     
+

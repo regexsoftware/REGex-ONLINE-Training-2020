@@ -1,0 +1,25 @@
+Q1- When we create a user,some hidden files are generated in he directory of the same user at that time. How is it done?
+
+Answer- When we create a user, a command is executed. A command is a program. Now what happens after execution of a program its all about what is written within that program. We can see hidden file by using  ls command.In that program which we can called file contains touch , file creation command.
+
+
+
+Q2-Make sub Directories inside a parent directory by using single mkdir command?
+
+Answer- mkdir -p Harsh/{School,images,note,Music}.
+ -p denotes that we create a parent directory.
+
+Q3-Tac vs Cat command?
+
+Answer-tac command in Linux is used to concatenate and print files in reverse. This command will write each FILE to standard output, the last line first.
+When no file is specified then this command will read the standard input.
+Syntax:tac [file]
+
+Example: It will print files in reverse.
+
+Cat is most commonly used to display the contents of one or multiple text files, combine files by appending the contents of one file to the end of another file, and create new files.
+
+Syntax:cat [OPTIONS] [FILE_NAMES]
+
+
+

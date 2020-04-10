@@ -1,0 +1,18 @@
+Q1.Create & compress the file with bzip2?
+
+Answer-bzip2 file.txt
+
+Q2.What should be the argument to be given to unzip that file?
+
+Answer-unzip filename.zip
+
+Q3. Read a file & show the data on terminal using file input & output redirection?
+
+Answer-Output(to show the data)
+ ls > Harsh_Sinha.txt
+      input(to read data)
+sort < Harsh_Sinha.txt
+
+Q4.How to change the shell of user to “/bin/sh” at the time of adding the user?
+
+Answer-chsh  /bin/sh
