@@ -1,0 +1,32 @@
+Ques 1: What is JPython & CPython?
+Ans: JPython: Jython is the JVM implementation of the Python programming language. 
+	      It is designed to run on the Java platform.
+              A Jython program can import and use any Java class. 
+	      Just as Java, Jython program compiles to bytecode. 
+              One of the main advantages is that a user interface designed in Python can use GUI elements of AWT, Swing or SWT Package.
+	      Jython, which started as JPython and was later renamed, follows closely the standard Python implementation called CPython as created by Guido Van Rossum.
+     CPython: CPython is the reference implementation of the Python programming language. 
+	      Written in C and Python, CPython is the default and most widely used implementation of the language.
+	      CPython can be defined as both an interpreter and a compiler as it compiles Python code into bytecode before interpreting it.
+              It has a foreign function interface with several languages including C, in which one must explicitly write bindings in a language other than Python.
+
+Ques 2: Basic difference between Python2 and Python3?
+Ans: Basis of comparison	Python 3	Python 2
+	Release Date		2008		2000
+	Function print		print ("hello")	print "hello"
+	Syntax			simpler         comparatively difficult to understand
+	Iteration       	Range() func.	xrange() is used for iterations.
+
+Ques 3: Difference between ASCII and Unicode?
+Ans: ASCII: It stands for American Standart Code for Information Interchange. It uses 8-bit encoding.
+	    ASCII represents 128 characters.
+	    It is stored as 8-bit byte.
+	    ASCII is not standardized.
+
+     Unicode: It is also a character encoding but uses variable bit encoding.
+	      Unicode defones 2^21 characters. Unicode is a superset of ASCII. It represents more characters than ASCII.
+	      Unicode is stored in byte sequences such as UTF-32 and UTF-8.
+	      Unicode is standardized.
+
+
+
