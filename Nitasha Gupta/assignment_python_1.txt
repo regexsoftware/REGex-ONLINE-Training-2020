@@ -1,0 +1,29 @@
+1. What is cpython and jpython?
+Sol. 
+a. Cpython: 
+Its the widely used interpreter, developed in C and python. Its uses a Glopbal interpreter Lock (GIL) on each process thus python bytecode for a sing;e process is executed on a single thread.
+This is not suitable for CPU intensive algorithms. The steps of compilations are as follows :
+i) Decoding
+ii) Tokenizing
+iii) Parsing
+iv) AST (Abstract syntax tree)
+v) Compiling
+
+b. Jpython
+Its an implementation that has been designed for the seamless integration of python code over JVM, the advantage of this integration is that it provides an opportunity for amalgamation of popular scripting language like python to a vast library of the JVM.
+It complies tfiles to .class extension. It's programs can inherit and run Java class and compile the code to byte code. Along with this Jython can be used to implement any Java-based packages especially desirable for creating solutions using Servlets, Swing, SWT, and AWT packages. It also uses the GIL like cpython.	
+
+
+2. Difference btw Python 2 and Python 3?
+Sol. Differences:
+i) Python 2 us more stable and transparent version while python 3 is designed to address the design flaws in the previous versions
+ii) print-syntax is treated as a statement in python 2 while it explicitly treated as a funtion in python 3 which requires an extra pair of parenthesis.
+iii) ASCII string types is used to store the string in python 2 while unicode is the implicit string type in python 3
+iv) On dividing two integers, python 2 simply returns nearest whole number while in python 3 the division is more intuitive using true division for integers and floats
+v) In python 2 raw_input() and input() was used to take inputs while in python 3 only input() function is used.
+
+3. Difference btw ASCII and Unicode?
+Sol. Difference:
+i) ASCII defines 128 characters, which maps to the numbers 0–127 while unicode defines (less than) 221 characters, which, similarly, map to numbers 0–221.
+ii) Unicode is a superset of ASCII, and the numbers 0–127 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means "Latin capital 'A'".
+iii) Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
