@@ -1,0 +1,5 @@
+Q) how to unzip a bz2 file
+   first type tar xzff filename.tar.bz2 which uncompresses a bzip2 tar file
+
+Q) how to add a user and at the same time we must chnage shell of the user
+   useradd -s /bin/bash/bin/rbash <username>
