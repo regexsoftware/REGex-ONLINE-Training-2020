@@ -1,0 +1,19 @@
+
+
+Ques - 3 + 4 ** 6 - 9 * 10 / 2
+Ques - Let say I have, some string "hello this side regex"
+
+	-	Find out the count of the total vowels
+		vowels - ['a','e','i','o','u']
+
+
+Ques - Find out the area of triangle 
+	1/2 * b * h
+
+	- You have to take value from user about the base, & the height
+
+
+Ques - Print the calendar on the terminal. If you give the year.
+	- Allow the user to input the year.
+	- Then should that calendar of that year
+
