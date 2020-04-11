@@ -1,0 +1,44 @@
+PYTHON ASSIGNMENT-2
+
+Q1. What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
+Ans
+Output will be : 4054.0
+Q2. Let say I have, some string "hello this side regex"
+Find out the count of the total vowels.
+vowels - ['a','e','i','o','u']
+Ans.
+string ="hello this side regex"
+vowel_counts = {}
+for vowel in "aeiou":
+    count = string.count(vowel)
+  vowel_counts[vowel] = count
+print(vowel_counts)
+
+Output will be:
+{'a': 0, 'e': 4, 'i': 2, 'o': 1, 'u': 0}
+Q3. Find out the area of triangle.
+1/2 * b * h (formula of area)
+- You have to take value from user about the base, & the height.
+Ans
+base=int(input("Enter the base of the triangle"))
+height=int(input("Enter the height of the triangle"))
+area=base*height/2
+print(area)
+
+
+
+
+
+Q4. Print the calendar on the terminal. If you give the year.
+- Allow the user to input the year.
+- Then print calendar of that year.
+Ans.
+Import os
+Year=int(input(“Enter the year”))
+os.system(“cal {}”.format(year))
+
+Tried the above code in Redhat Terminal and it gave the required output.
+
+
+SUBMITTED BY:
+SHRESHTHA GUPTA

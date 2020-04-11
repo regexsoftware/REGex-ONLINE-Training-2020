@@ -1,0 +1,34 @@
+ASSIGNMENT-3(LINUX)
+
+Q1.Create and compress the file with bzip2.
+Ans.To create a file:
+Touch filename.txt
+We can compress a file as below, where the flag -z enables file compression:
+bzip2 filename
+OR
+bzip2 -z filename
+Q2.What would be the argument to be given to unzip that file?
+Ans. sudo apt install unzip
+Unzip filename
+Q3.Read a file and show the data on terminal using file input and output redirection.
+Ans. gedit filename
+         Cat < filename
+Q4. How to change the shell of user to “/bin/sh” at the time of adding the user?
+Ans.
+Syntax:
+useradd -s [shell]  [username]
+For example:
+To set the shell of user testuser to /bin/sh:-
+useradd -s  /bin/sh testuser
+
+
+SUBMITTED BY:
+SHRESHTHA GUPTA
+
+
+
+
+
+
+
+
