@@ -1,0 +1,21 @@
+Ques 1: What is JPython & CPython?
+Sol: Jython is an implementation of the python programming language that can run on the java platform. Jython programs use java classes instead of python modules. jython compiles into java 
+     byte code, which can then be run by java virtual machine. jython is slow as compared to Cpython.
+     Cpython is written in c language. Cpython compiles the python source code into intermediate bytecode, which is executed by the Cpython virtual machine. 
+     
+
+Ques 2: Basic difference between Python2 & Python3
+sol:      Basis of comparison         python3                   		   python2
+           Release Date                2008					     2000
+           Function print	      print("hello") 				 print"hello"
+           Division of integer	     Whenever two integer are divide,            When two integer are divide,
+       				     you get a float value   			 you always provide integer value 
+            Unicode    		     store string is Unicode 			 define then with "u" 
+                                       
+
+Ques 3: Difference between ASCII & Unicode.
+sol:   ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221characters, which, similarly, map to numbers 0–221 (though not all 
+       numbers are currently assigned, and some are reserved).
+       Unicode is a superset of ASCII, and the numbers 0–128 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means "Latin capital 'A'".
+       Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
+       C follows ASCII and Java follows UNICODE.
