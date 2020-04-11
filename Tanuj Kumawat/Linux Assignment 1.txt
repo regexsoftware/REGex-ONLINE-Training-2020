@@ -1,0 +1,17 @@
+1) When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done ?
+
+Ans.  It is done because these files are in the folder /etc/skel and whichever files we place in this folder those files will be 
+	made available in the home directory of all the users which we create afterwards.
+	For reference following are some commands to create a file in /etc/skel and creating and listing files in /home/user
+	files 
+	-> cd /etc/root
+	-> touch TestFile
+	-> useradd RedhatUser
+	-> ls /home/RedhatUser
+	Now you'll find the TestFile document in this folder which is the proof that whichever files we put in the folder
+	/etc/skel will be available to all the users created after it.
+
+
+2) Make sub directories inside a parent directory by using single mkdir command.
+
+Ans.  mkdir  -p  A/B/C (-p for parent directoy option).
