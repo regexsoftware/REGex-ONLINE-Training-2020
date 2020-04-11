@@ -1,0 +1,19 @@
+				                Assignment-3
+
+1) Create & compress the file with bzip2.
+
+2) What should be the argument to be given to unzip that file.
+
+3) Read a file & show the data on terminal using file input & output redirection
+
+4) How to change the shell of user to “/bin/sh” at the time of adding the user
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ans 1    #tar -cvzf ContentFile.tar.bz2 content.txt.
+
+Ans 2    #bzip2 -d filename.bz2 (-d specifies Decompress).
+
+Ans 3    #cat  <  file.
+
+Ans 4    #useradd    -s      /bin/sh       username.
