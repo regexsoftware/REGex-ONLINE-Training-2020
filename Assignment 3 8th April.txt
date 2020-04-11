@@ -1,0 +1,14 @@
+				8th April Assignment-3
+
+1). Create and compress file with extension bzip2.
+	Ans 3.	tar -cvzf ContentFile.tar.bz2 content.txt
+
+2) What should be the argument to be given to unzip that file.?
+	Ans 2.	 bzip2 -d filename.bz2 where -d specifies Decompress
+
+3) Read a file & show the data on terminal using file input & output redirection
+	Ans3	cat < File.txt
+	
+4) How to change the shell of user to “/bin/sh” at the time of adding the user
+
+	Ans 4.    useradd  -s  /bin/sh RedhatUser
