@@ -1,0 +1,21 @@
+Ques-1 What is JPython & CPython?
+Ans-1  CPYTHON
+       The default implementation of the Python programming language is Cpython. As the name suggests Cpython is written in C language. Cpython compiles the python 
+       source code into intermediate bytecode, which is executed by the Cpython virtual machine. CPython is distributed with a large standard library written in a 
+       mixture of C and Python. CPython provides the highest level of compatibility with Python packages and C extension modules. All versions of the Python language  
+       are implemented in C because CPython is the reference implementation.
+    
+       JPYTHON
+       Jython is an implementation of the Python programming language that can run on the Java platform. Jython programs use Java classes instead of Python modules .
+       Jython compiles into Java byte code, which can then be run by Java virtual machine. Jython enables the use of Java class library functions from the Python 
+       program. Jython is slow as compared to Cpython and lacks compatibility with CPython libraries.
+
+Ques-2 Basic difference between Python2 & python3.
+Ans-2 version 3.0 was mainly released to fix problems which exist in Python 2. The nature of these change is such that Python 3 was incompatible with 
+      Python 2. It is backward incompatible Some features of Python 3 have been backported to Python 2.x versions to make the migration process easy in Python 3.
+      As a result, for any organization who was using Python 2.x version, migrating their project to 3.x.
+
+Ques-3 Difference between ASCII & unicode.
+ANS-3 Unicode and ASCII both are standards for encoding texts. Uses of such standards are very much important all around the world. Code or standard provides unique 
+      number for every symbol no matter which language or program is being used. From big corporation to individual software developers, Unicode and ASCII have
+      significant influence. Communication between different regions in the world was difficult but this was needed in every time. 
