@@ -1,0 +1,58 @@
+ASSIGNMENT-3(PYTHON)
+
+Q1.Find the Armstrong Number between the two numbers which are input by user.
+
+Ans.
+lower = int(input("Enter lower range: "))
+upper = int(input("Enter upper range: "))
+ 
+for num in range(lower,upper + 1):
+
+   sum = 0
+ 
+   temp = num
+   while temp > 0:
+       digit = temp % 10
+       sum += digit ** 3
+       temp //= 10
+ 
+   if num == sum:
+       print(num)
+
+Q2.Let’s say you have a string “hello this world @2020!!! ”
+Remove the punctuation like [“@!#$%&*()”] from the string
+Final output should be without the punctuation
+“hello this world 2020”.
+
+Ans.
+
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+str = "hello this world @2020!!!"
+new= ""
+for char in str:
+   if char not in punctuations:
+       new= new + char
+
+print(new)  
+
+Q3.You have a list with words - [“Apple”, “banana”, “cat”, “REGEX”,”apple”]
+Sort words in Alphabetical order.
+If you get output, like [Apple, apple, banana]
+How has it happened?
+
+Ans.
+
+a = ["Apple", "banana", "cat", "REGEX","apple"]
+
+x = sorted(a , key=str.lower)
+
+print(x)
+
+This will give us output:
+['Apple', 'apple', 'banana', 'cat', 'REGEX']
+diregarding the capitalization in the list objects by using key function.
+
+
+
+
+
