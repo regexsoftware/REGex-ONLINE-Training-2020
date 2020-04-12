@@ -1,0 +1,32 @@
+Q) armstrong number in a range
+   
+   l = int(input("enter the lower range:"))
+   u = int(input("enter the upper range:"))
+   for num in range(lower,upper+1):
+    sum=0
+    i=num
+     while i >0 :
+       d = 1%10
+       sum+=d**3
+       i/=10
+    if num == sum
+      print(num)
+
+Q) to remove special characters in a given string 
+   str1 = (input("enter the string:"))
+   str2 = " "
+   for i in str1:
+     if i.isalnum()
+        str2 += i
+   print(str2)
+
+Q) to sort the given list and explain the output 
+   ls1 = ["apple", "banana", "cat", "REGEX", "Apple"] 
+   ls1.sort()
+   print("sorted list")
+   print(ls1)
+  
+   output: ["Apple", "REGEX", "apple", "banana", "cat"]
+   Explanation: A has the ASCII value of 65 which is the least hence appears first in the sorted output. 
+   We then get REGEX in the output instead of apple because R has the AScCII value 82 whereas a, b, c have ASCII values 97, 98, 99 respectively.
+   The sort() sorts in ascending order of the ASCII values.
