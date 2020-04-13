@@ -1,0 +1,43 @@
+Today's assignment :
+
+
+1) change the Umask value for any user permanently.
+
+
+Ans write a new Umask value in shell’s configuration file (~/.bashrc for Bash) or in the /etc/profile file
+
+2)  add a new user  without using adduser & useradd command
+
+
+
+Ans Add the user in /etc/passwd file 
+    Then add a group with same name in /etc/group
+
+    And set the passwd with passwd command
+
+3) Can we change the Umask value to 0888.
+If yes, then how. If no then why ?
+
+
+
+Ans No, because maximum umask value can be 0777.
+
+
+4)  how to add a new user with a Unique user id (e.g 1345) & check out the unique Id of that user.
+
+
+
+Ans sudo useradd -u 1345 username
+    You can verify the user’s UID, using the id command:
+    id -u username
+
+5) How to change the group of any folder
+   
+   
+   5(a) After this checkout the group name of the files present in that folder.
+
+
+   5(b)  Try to change the group of the folder & the files present in the same folder using a single command
+Ans 
+   (a)ls -ld $HOME/Downloads/
+   (b)chgrp {-R} [group] [file|directory]

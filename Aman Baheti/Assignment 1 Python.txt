@@ -1,0 +1,45 @@
+Python Class 1:
+
+? What is JPython & CPython
+ans- Jython is an implementation of the Python programming language designed to run on the Java platform.
+     CPython is the reference implementation of the Python programming language. Written in C and Python, 
+     CPython is the default and most widely used implementation of the language.	
+
+? Basic difference between Python2 & python3
+ans- In Python 3, default storing of strings is Unicode.	
+     In Python2, to store Unicode string value, you require to define them with "u".
+
+? Difference between ASCII & unicode
+ans-ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221characters,
+    which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+
+Python Class 2:
+
+? What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
+ans- 4054.0
+
+? Let say I have, some string "hello this side regex"
+? Find out the count of the total vowels
+? vowels - ['a','e','i','o','u']
+ans- vowels='aeiou'
+     count = 0
+     string="hello this side regex"
+     >>> for s in string:
+            if s in vowels: count=count+1
+     count
+
+? Find out the area of triangle
+- 1/2 * b * h (formula of area)
+- You have to take value from user about the base, & the height
+ans- h = int(input("Enter height:")
+     b = int(input("Enter base:")
+     area = 1/2 * b * h
+     print(area)
+
+? Print the calendar on the terminal. If you give the year.
+- Allow the user to input the year.
+- Then should that calendar of that year
+ans- year = int(input("Enter the year:"))
+     import calendar 
+     print(calendar.calendar(year))
+     
