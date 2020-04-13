@@ -1,0 +1,87 @@
+Ques 1:Change the umask value permanently ?
+
+Ans 1: This can be achived by writting a new Umask value in your shell’s configuration file (~/.bashrc for Bash) or in the /etc/profile file.
+
+
+
+
+
+
+Ques 2:Add a new user without using adduser or useradd commands
+
+Ans:
+	Step 1:Add an entry for the user in /etc/passwd file.
+	Step 2:Add an entry for the group in /etc/group file.
+	Step 3:Create the home directory for the added user.
+	Step 4:Set the new user password using the passwd command.
+
+
+
+Ques 3:Can we change the UMASK value to 0888?
+
+Ans 3: No we cannot change the value of UMASK to 0888 because maximum value of UMASK can be 0777.
+if we try to do so than we will get the following error:
+
+shubhangvats@ubuntu:~$ umask 0888
+bash: umask: 0888: octal number out of range
+shubhangvats@ubuntu:~$ 
+
+
+
+Ques 4: New user with unique user id
+Ans 4: We can create new user with unique userid with ‘-u‘ option. For example, the following command will create a user ‘superuser‘ with custom userid ‘888‘. 
+And also we can verify the user with the command cat /etc/passwd | grep superuser.
+Code:
+
+shubhangvats@ubuntu:~$ sudo -i
+[sudo] password for shubhangvats: 
+root@ubuntu:~# useradd -u 888 superuser
+root@ubuntu:~# cat /etc/passwd | grep superuser
+superuser:x:888:1003::/home/superuser:/bin/sh
+root@ubuntu:~# 
+
+
+
+
+Ques 5:How can we change group of a file?
+
+Ans: The chgrp command changes the group ownership of given files.
+command - $ chgrp newgroupname filename
+
+Ques 5(a):To check the group name of a file
+
+Ans: By using the command 
+	$ ls -l filename
+
+
+Ques 5(b): Changing the group of the folder and the files present in  the same folder using a simple command 
+
+Ans 5(b): This can be done by using a command:
+
+	$ sudo chgrp -r groupname filename
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
