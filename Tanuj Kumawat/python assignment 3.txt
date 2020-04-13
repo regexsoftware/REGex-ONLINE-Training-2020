@@ -1,0 +1,37 @@
+Ques 1. Find the Armstrong Number between the two numbers which are input by user
+		Armstrong number : 153 -> 1*1*1 + 5*5*5 + 3*3*3
+Ans. 	n = int(input("Enter any no. : "))
+	temp = n
+	sum = 0
+	while (n > 0):
+    		r = n % 10
+    		sum = sum + (r*r*r)
+    		n = n//10
+
+	if sum == temp:
+    		print("Number is armstrong")
+	else:
+    		print("Number is not armstrong")
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Ques 2. Let’s say you have a string “hello this world @2020!!! ”
+		Remove the punctuation like [“@!#$%&*()”] from the string
+		Final output should be without the punctuation
+			“hello this world 2020”
+
+Ans. 	s = "hello this world @2020!!!"
+     	for i in range(len(s)):
+          	if ((s[i] >= 'a' and s[i] <= 'z') or (s[i] >= '0' and s[i] <= '9') or (s[i] == ' ')):
+        		print(s[i],end="")
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Ques 3. You have a list with words - [“Apple”, “banana”, “cat”, “REGEX”,”apple”]
+  	Sort words in Alphabetical order
+	If you get output, like [Apple, apple, banana]
+	How has it happened?
+
+Ans. 	l = ['Apple', 'banana', 'cat', 'REGEX','apple']
+	l.sort()
+	print(l)
