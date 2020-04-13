@@ -1,0 +1,33 @@
+Assignment 1 - Unicode vs ASCII
+
+ASCII and Unicode are two character encodings. Basically, they are standards on how to represent difference characters in binary so that they can be written, stored, transmitted, and read in digital media. The main difference between the two is in the way they encode the character and the number of bits that they use for each. ASCII originally used seven bits to encode each character. This was later increased to eight with Extended ASCII to address the apparent inadequacy of the original. In contrast, Unicode uses a variable bit encoding program where you can choose between 32, 16, and 8-bit encodings. Using more bits lets you use more characters at the expense of larger files while fewer bits give you a limited choice but you save a lot of space. Using fewer bits (i.e. UTF-8 or ASCII) would probably be best if you are encoding a large document in English.
+
+One of the main reasons why Unicode was the problem arose from the many non-standard extended ASCII programs. Unless you are using the prevalent page, which is used by Microsoft and most other software companies, then you are likely to encounter problems with your characters appearing as boxes. Unicode virtually eliminates this problem as all the character code points were standardized.
+
+
+
+
+
+Assignment 2 - Different types of Python Compilers:
+
+1)CPython.
+It is the most widely used interpreter in Python, developed in C and python, the bindings for the interpreter must be written in a foreign language other than Python. CPython uses a Global Interpreter Lock (GIL) on each process thus python bytecode for a single process is executed on a single thread.
+
+2)Jython or Jpython.
+Jython is an implementation that has been designed for the seamless integration of Python code over Java virtual machine, the advantage of this integration is that it provides an opportunity for amalgamation of a popular scripting language like python to a vast library of the Java virtual machine. Jython compiles files to .class extensions.
+
+3)IronPython.
+Iron Python is a python implementation designed with the target of the dot net framework. This project is maintained presently by a small community of users in Github. To be used for scripting this has a requisite of installing the Python tools for visual studio which is available as an extension for visual studio IDE. The full implementation is written in C#.
+
+4)ActivePython.
+ActivePython is a commercial version of Python scripting platform designed and developed by the Open source organization called ActiveState. It provides Python bundles along with some additional packages.
+
+
+5)PyJS (it also is formerly known as Pyjamas).
+PyJs is a rich internet application particularly used in the development of client-side web applications and desktop applications using Python scripting. The PyJs has a compiler that translates Python to JavaScript and is primarily designed over the Ajax framework.
+
+6)Nuitka.
+Nuitka is an ideal example of a source to source compiler. The compiler allows the user to feed python codes and produce C/C++ extensions even if the computer has no python version installed in it.
+
+7)Stackless Python
+It is an advanced version of programming language interpreter used by the developers in multithreaded programming without compromising on performance complexity and performance issues faced by the conventional multithreaded programming languages.
