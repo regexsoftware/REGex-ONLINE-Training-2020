@@ -1,4 +1,4 @@
-# Assignment 2 [Python] [Avi Kasliwal]
+# Assignment 2 [Python] [Ayush Goyal]
 
 ## 1. What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
 
