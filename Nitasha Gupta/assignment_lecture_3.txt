@@ -1,0 +1,23 @@
+1. When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done?
+Sol. The /etc/skel directory contains files and directories that are automatically copied over to a new user's home directory when such user is created by the useradd 
+	program.
+	Several user configuration files are placed in /etc/skel by default when the operating system is installed. Typically they might include .bash_profile, .bashrc, 
+	.bash_logout, dircolors, .inputrc and .vimrc.
+	The Home Directory has the following hidden files:
+		->System Settings:
+			->Configuration files
+			->User Profiles
+			->Desktop Environment Settings
+		->Application Configuration Profiles:
+			->Configuration files for applications
+			->Web browser data
+			->Caches
+			->Logs
+
+2. Make sub directories inside a parent directory by using single mkdir command:
+Sol. mkdir -p A/B/C
+
+3. Why user folder is not created in by using useradd command?
+Sol.  When a user is created using useradd command, no shell is allocated to that user, so for the folder of the user to be created, one need to first create user 
+	using useradd and the after assigning a password by in the /etc/passwd file.
+ 
