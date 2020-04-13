@@ -1,0 +1,26 @@
+Ques: What should be the output of the following?
+	(3+4**6-9*10/2)
+Ans: 4054.0
+
+Ques: Let say I have, some string "hello this side regex". Find out the count of the total vowels in this string.
+Ans: >>>vowels='a,e,i,o,u'
+     >>>vowels
+     >>>count=0
+     >>>string='hello this side regex'
+     >>>for s in string:
+  	if s in vowels: count=count+1
+     >>>count
+
+Ques: Find out the area of triangle. You have to take value from user about the base, and the height.
+Ans: >>> b = float(input('Enter base of a triangle: '))
+     >>> h = float(input('Enter height of a triangle: '))
+     >>> area = (b * h) / 2
+     >>> print('The area of the triangle is %0.1f' % area)
+
+Ques: Print the calender on the terminal. If you give the year.
+	-allow the user to input the year.
+	-then print that calender of that year.
+Ans:  import calendar
+      y = int(input("Input the year : "))
+      m = int(input("Input the month : "))
+      print(calendar.month(y, m))
