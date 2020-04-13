@@ -1,0 +1,10 @@
+Q1. When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done ?
+Ans-1) They are commonly used for storing user preferences or preserving the state of a utility. 
+We can see the hidden files using following command:-
+a) ls-la
+b)we can use grep also.
+
+
+Q2. - Make sub directories inside a parent directory by using single mkdir command (refer figure given below).
+Ans-2)$ mkdir -pv dir1/dir2/dir3/dir4/dir5
+
