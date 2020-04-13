@@ -1,0 +1,37 @@
+Ques 1: What should be the output?
+	(3+4**6-9*10/2)
+Ans: first solve exponent:4**6=4096
+     then according to precidence solve->*,/,+,-   (left to right)
+     9*10=90/2=45
+     3+4096=4099-45=4054      	
+	In python->print(3+4**6-9*10/2)
+
+
+Ques 2. Let say I have, some string "hello this side regex"
+	Find out the count of the total vowels
+	vowels - ['a','e','i','o','u']
+
+Ans.	string = "hello this side regex"
+	temp = []
+	for i in range(len(string)):
+    		if string[i]=='a' or string[i]=='e' or string[i]=='i' or string[i]=='o' or string[i]=='u':
+        		if(string[i] not in temp):
+            			temp.append(string[i])
+            			c = string.lower().count(string[i])
+            			print(f"{string[i]} : {c} ")
+
+
+Ques 3. Find out the area of triangle
+	- 1/2 * b * h (formula of area)
+	- You have to take value from user about the base, & the height
+
+Ans.	b, h = input("Enter the value of base and height of the trianhle space seprated : ").split(" ")
+	print(f"Area of Triangle : {1/2 * int(b) * int(h)} ")
+
+
+Ques 4: print the calender on the terminal.If you give the year
+Ans:
+import calendar
+y=int(input("enter year="))
+for i in range(1,13):
+    print(calendar.month(y,i))
