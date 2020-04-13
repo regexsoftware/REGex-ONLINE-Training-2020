@@ -1,0 +1,91 @@
+Q1. Write  aprogram to print new list which contains all the first characters of string present in a list 
+        LIST_STATE=["GOA","RAJASTHAN","KARNATAK","GUJRAT","MANIPUR","MADHYA PRADESH"]
+Ans:	
+	LIST_STATE=["GOA","RAJASTHAN","KARNATAK","GUJRAT","MANIPUR","MADHYA PRADESH"]
+	NEW_LIST=[ ]
+	for i  in LIST_STATE:
+		NEW_LIST.append(i[0])
+	print(NEW_LIST)
+
+
+Q2. Write a program to replace each string with an integer value in a gien list of strings. The replacement interger value should be a sum of ASCCI 
+        values of each character of type corresponding string
+         LIST=['GAnga' , 'Tapti' , 'Kaveri' , 'Yamuna' , 'Narmada']
+Ans:
+	LIST=['GAnga' , 'Tapti' , 'Kaveri' , 'Yamuna' , 'Narmada']
+	NEW_LIST=[]
+	sampleValues=0
+	for total in range(0,len(LIST)):           
+    		for y in LIST[total]:
+        			data=ord(y)
+        			print("Converted: "+str(y)+":"+str(data))
+        			sampleValues=sampleValues+data
+    		NEW_LIST.append(sampleValues)
+    		sampleValues=0
+	print(NEW_LIST)
+
+
+Q3. You have to run Program at 9:00am. Date: 14th April 2020
+Ans:	import datetime
+	import time as t
+	count=0
+	send=False
+	#check=[date,month,year,hour,minute]  Just for format
+	check=[14,4,2020,9,0]
+	while(True):
+    		data=datetime.datetime.now()
+    		b=list([data.day,data.month,data.year,data.hour,data.minute])
+    		for i in range(0,len(check)):
+        			if check[i] == b[i]:
+            				count=count+1
+            				t.sleep(1)
+        			else:
+            				count=0
+    		if(count==len(check)):
+        			send=True
+    		if send==True:
+       			 print("Congratulation!! Time and Date match and your task is complete :)")
+        			send=False	
+
+
+Q4. Take a list  REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+       - Print only those number greator than 20.
+       - Than print those number those are less than 10 or equal to 10.
+       - Store these above number two list in two differrent list.
+Ans:	
+	REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+	GreaterThan=[]
+	LessThan=[]
+	for x in range(0,len(REGex)):
+    		if REGex[x]> 20:
+        			GreaterThan.append(REGex[x])
+    		elif REGex[x] <=10:
+        			LessThan.append(REGex[x])
+	print("This is greater than 20: "+str(GreaterThan))
+	print("This is less and equal to 10: "+str(LessThan))
+
+Q5. Give a tuple:
+       t=('a' , 'l', 'g' , 'o' , 'r' , 'i' , 't' , 'h' , 'm' )
+       - Using the concept of slicing, print the whole tuple
+       - delete the element at the 3rd index, print the tuple
+Ans:	
+	- Slicing and print all data :
+	t=('a' , 'l', 'g' , 'o' , 'r' , 'i' , 't' , 'h' , 'm' )
+	for x in range (0,len(t)):
+    		s=slice(x,x+1)
+    		print(t[s])
+	
+	- Delete the element at the 3rd index ,print tuple  
+	t=('a' , 'l', 'g' , 'o' , 'r' , 'i' , 't' , 'h' , 'm' )
+	l=list(t)
+	l.pop(3)
+	t=tuple(l)
+	print(t)
+
+
+Q6. Execute standard LINUX command using python
+Ans:	
+	import os 
+	os.system('ls')
+	os.system('ls -la')
+	os.system('date')
