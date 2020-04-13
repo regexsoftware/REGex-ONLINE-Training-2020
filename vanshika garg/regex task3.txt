@@ -1,0 +1,31 @@
+ques:- create a new user and at the same time you have to add thet user into the group you have already created.
+ans:-sudo useradd -g group -G garg vanshika
+where
+vanshika- new user 
+group- primary group
+garg- secondary group
+ 
+
+ques:-how to change the group of files and the folders with a single command.
+ans:-sudo chgrp -R vanshika garg
+where
+vanshika-folder
+garg- file
+
+
+ques:-how to unzip bzip2 files.
+ans:-we can't use the tar command because the archive isn't a .tar file. 
+To uncompress a bzip2 file, use the following command but this won't preserve the original .bz2 file.
+bzip2 -d file.xml.bz2
+If we want to extract it and keep the original then we should run this command.
+bzip2 -dk file.xml.bz2
+
+
+ques:-how to add a user and at the same time change the shell of user to /bin/sh. 
+ans:-sudo useradd -s /bin/sh username
+where
+username- new user
+/bin/sh- shell
+
+
+
