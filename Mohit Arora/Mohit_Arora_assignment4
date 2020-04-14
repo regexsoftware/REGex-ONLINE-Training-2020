@@ -1,0 +1,32 @@
+Q1. 3 + 4 ** 6 - 9 * 10 / 2
+Ans: 4054.0
+
+
+
+Q2. String "hello this side regex", Find out the count of that vowels.
+Ans:	a="hello this side regex"
+	b=['a','e','i','o','u']
+	count=0
+	for x in a:
+		for y in range(0,len(b)):
+			if x in b[y]:
+				count+=1
+	print(count) 
+
+
+
+Q3. Find out the areea of triangle- 1/2 * b * h.
+Ans:	base=int(input("Enter the base value for Triangle:"))
+	height=int(input("Enter the height value for Triangle:"))
+	area=1/2*base*height
+	print("Aera is:"+str(area))
+
+
+
+Q4. Print the calendar on the terminal. If you give the year,
+    -Allow the user to input the Year
+    -Then should that calender of that year
+Ans:	import calendar as cal
+	y=int(input("Enter Year:"))
+	m=int(input("Enter Month:"))
+	print(c.month(y,m,w=3,l=0))

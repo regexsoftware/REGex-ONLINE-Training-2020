@@ -1,0 +1,26 @@
+Q1 Find the Armstrong number between the two numbers which are input by user.
+Ans:	L=int(input("Enter low number:"))
+	H=int(input("Enter higher number:"))
+	for b in range(L,H+1):
+		a=0
+		temp=b
+		while temp>0:
+			value=temp%10
+			a+=value**3
+			temp//=10
+		if b==a:
+			print(b)
+
+Q.2 Remove the punctuation like ["@!#$%&*()"] from string "hello this world @2020!!!"
+Ans:	a="hello this world @2020!!!"
+	b="@!#$%&*()"
+	text=a
+	for x in b:
+		txt=txt.replace(x,'')
+	print(txt)
+
+Q3. You have a list with words ["Apple","banana","cat","REGEX","apple"], Sort word in Alphabetical order.
+Ans:	a=["Apple","banana","cat","REGEX","apple"]
+	newList=sorted(a,key=str.lower)
+	print(newList)
+			

@@ -1,0 +1,12 @@
+Q1. Create a new user and at the same time you have to add that user into the group you have already
+Ans:	useradd -G groupname newUserName
+
+Q2. Command to unzip the bzip2 extension file
+Ans:	bzip2 -d filename.bz2 (Decompress File)
+	bzip2 filename (Compress File)
+
+Q3 Read a file & show the data on the terminal using file input & output redirection.
+Ans:	cat <filename.txt  (Read file data and show on terminal by I/O redirection)
+
+Q4. How to change the shell of user to "/bin/sh" at the time of adding user
+Ans:	useradd -s /bin/bash UserName
