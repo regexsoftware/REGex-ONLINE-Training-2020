@@ -1,0 +1,19 @@
+Q1 how to change umask value permanently
+   write a new umask value in the shell configuration file(~/.bashrc for Bash) or in the /etc/profile file
+
+Q2 how to add new user without adduser or useradd
+   add the user in /etc/passwd file then add a group with the same name in /etc/group and then set passwd with passwd command
+
+Q3 can umask value be changed to 0888
+   it can not be changed to 0888 because the maximum value of a umask itself is 0777(r=4, w=2, x=1; 4+2+1=7)
+
+
+Q4 how to add new user with unique id & how to check that unique id
+   useradd -u 1345 username //creates a new user with our desired Unique id (given here 1345)
+   cat /etc/passwd | grep username // prints the userd ID on the terminal
+
+Q5 (a) how to change group of any folder
+       chgrp [options] group filename
+
+   (b)group name of files present in the folder
+      ls -ld

@@ -1,0 +1,27 @@
+Q) output of 3+4**6-9*10/2
+   4054 ( 1. 4**6=4096    2. 10/2=5    3. 9*5=45   4. 3+4096=4099 5. 4099-45=4054)
+Q)string given is "hello this side is regex" count the number of vowels
+  str = "hello this side regex"
+  str1 = str.lower()
+  vow=0
+  for i in str1:
+    if(i=='a'or i=='e' or i=='o' or i=='i' or i=='u')
+      vow=vow+1
+  print("number of vowels are ")
+  print (vow)
+
+Q) calculate area of triangle
+   print("enter the base of triangle")
+   b = int(input())
+   print("enter the height of triangle")
+   h = int(input())
+   area = 0.5*b*h
+   print("area is ")
+   print (area)
+ 
+Q) print calendar of the year given a input
+   import calendar
+   print("enter year and then the month")
+   y = int(input())
+   m = int(input())
+   print(calendar.month(y,m))

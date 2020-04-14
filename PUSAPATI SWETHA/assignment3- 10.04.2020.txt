@@ -1,0 +1,5 @@
+Q) difference between ascii and unicode
+   ASCII uses 7 bits to encode each character whereas unicode uses a variable bit encoding program where we can choose between 8,16, 32 bit encodings
+
+Q) what are the python complilers
+   1. CPython 2.JPython 3.IronPython 4. ActivePython 5.PyJS 6. Nutika 7.Stackless Python 
