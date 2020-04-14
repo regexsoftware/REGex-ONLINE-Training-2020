@@ -1,0 +1,29 @@
+Q1. What should be the output of (3+4**-9*10/2)
+Ans1. 4054.0
+
+Q2. Find out the total count of of vowels in the string "hello this side regex".
+Ans2. 
+li=[]
+str="hello world regex"
+li=list(str)
+li.remove(' ')
+print(li)
+count=0
+for x in li:
+    if x=='a' or x=='e' or x=='i' or x=='o' or x=='u':
+        count=count+1
+print("Total Numer of vowels are:",count)
+
+
+Q3. Find the area of triangle.
+Ans3. 
+h=float(input("Enter the height of triangle:"))
+b=float(input("Enter the value of base:"))
+area= (1/2*b*h)
+print("Area of Triangle is %0.2f" %area)
+
+Q4.Print the calendar on the terminal of the year input by the user.
+Ans4. 
+import calendar 
+yy=int(input("Enter the year")) 
+print(calendar.calendar(yy))

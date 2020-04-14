@@ -1,0 +1,15 @@
+Q1.When we create a user some hidden files are generated in a directory of the same user. How is it done?
+
+Ans1.Hidden files and directories in the home directory contain settings or data that’s accessed by that user’s programs.
+They’re not intended to be edited by the user, only the application. That’s why they’re hidden from the user’s normal 
+
+
+Q2.make subdirectories inside a parent directory using a single mkdir command.
+
+Ans2. mkdir -p A/{sub1,sub2,B/C/{c1,c2},}
+
+
+Q3.why does useradd command does not create a new directory in ubuntu?
+
+Ans3.useradd is a low level utility for adding users in comparsion to useradd. adduser is a friendlier frontend to useradd
+and will do things like create user directories by default. Also, useradd will setup tyhe required groups automatically.
