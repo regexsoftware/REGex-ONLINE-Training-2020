@@ -1,0 +1,5 @@
+Ques1:When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done?
+Answer: Hidden files can be seen using: ls -la
+
+Ques2:Make sub directories inside a parent directory by using single mkdir command.
+Answer: sudo mkdir -p A/B/C
