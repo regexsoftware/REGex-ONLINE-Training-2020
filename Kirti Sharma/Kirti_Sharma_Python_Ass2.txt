@@ -1,0 +1,43 @@
+# Ques 1: What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
+
+# Ans: 4054.0
+
+
+
+# Ques 2: Let say I have, some string "hello this side regex"
+        # Find out the count of the total vowels
+        # vowels - ['a','e','i','o','u']
+
+# Ans:
+vowels = ['a','e','i','o','u']
+a = input('Enter string : ')
+count = 0
+for i in a:
+	if i in vowels:
+		count += 1
+print('Total numbers of vowels are :',count)
+
+
+
+# Ques 3: Find out the area of triangle
+        # - 1/2 * b * h (formula of area)
+        # - You have to take value from user about the base, & the height
+
+# Ans:
+base = float(input('Enter the base : '))
+height = float(input('Enter the height : '))
+area = 0.5 * base * height
+print('Area of triangle is : ', area)
+
+
+
+# Ques 4: Print the calendar on the terminal. If you give the year.
+        # - Allow the user to input the year.
+        # - Then should that calendar of that year.
+
+# Ans:
+import calendar as C
+
+year = int(input('Enter the year : '))
+
+print(C.calendar(year))
