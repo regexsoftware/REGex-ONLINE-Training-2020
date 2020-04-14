@@ -1,0 +1,8 @@
+Linux Assignment Lecture 6
+
+1. What is 'd' in yum install command?
+Sol. The d means "download only" which will download to /var/cache/yum/arch/prod/repo/packages/, but won’t install them.
+
+2. Difference between rpm -e and yum remove.
+Sol. YUM remove can remove rpm packages, but it will only remove the rpm package requested and not anything that package depends on. This is because if you follow the dependencies on removal, you'll end up removing something like libc, or the kernel, which you'd probably rather keep.
+While rpm -e command, reviews the RPM database to find every file listed as being part of the package, and if they do not belong to another package, deletes them. It also checks the RPM database to make sure that no other packages depend on the package being erased and it executes a pre/post-uninstall script (if one exists).
