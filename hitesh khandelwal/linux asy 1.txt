@@ -1,0 +1,18 @@
+Ques 1 When we create user some hidden files are generated in the directory of the same user at that time.
+       how is it done ?
+
+Ques 2 Make subdirectories inside a parent directory by using single mkdir command ?
+
+Ques 3 tac command vs cat command ?
+
+
+Ans 1  when we create a new user then all the files from etc/skel are copied to the home of new user. 
+       the command to view these files is ls -a
+
+Ans 2 mkdir A A/B A/B/C
+
+Ans 3 cat command is used to display the contents of file.
+      from first line to last line.
+      whereas tac command is also used to display the contents of file 
+      but here last line appears at top and first line appears at last.
+      
