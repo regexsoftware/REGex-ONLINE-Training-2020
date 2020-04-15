@@ -1,0 +1,7 @@
+RETURN
+1. It sends a specified value back to its caller.
+2. Itused in Functions.
+YIELD
+1.IT can produce a sequence of values.
+2.We should use yield when we want to iterate over a sequence
+3.Yield are used in Python generators.
