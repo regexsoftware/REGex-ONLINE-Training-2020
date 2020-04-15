@@ -1,0 +1,64 @@
+                                                                        ASSIGNMENT-1(LINUX)
+
+
+Q1-:When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done?
+ANS-: Hidden files can be seen using: ls -la
+
+Q2-:Make sub directories inside a parent directory by using single mkdir command.
+ANS-: sudo mkdir -p A/B/C
+
+
+
+
+
+
+                                                                         ASSIGNMENT-2(LINUX)
+
+
+
+
+Q1-Change the Umask value for any user permanently.
+ANS1-:To change umask value permanently
+Go to /etc/profile file then change default umask value then save & exit. Now your umask value has been changed permanently you can check it on terminal.
+(vi /etc/profile. edit umask value in it. save & exit.)
+
+Q2-Add a new user without using adduser & useradd command.
+ANS2- Add new user without using adduser & useradd command
+Step 1 : add an entry for user in /etc/passwd file
+Step 2 : add an entry for group in /etc/group file
+Step 3 : create home directory for added user with mkdir command
+Step 4 : set new user password using passwd command
+
+Q3-Can we change the umask value to 0888 ?
+ANS3-NO, we can't change the umask value to 0888 as the maximum umask value is can be 0666 as the binaries & scripts in linux have execute permissions.
+
+Q4-How to add a new user with a Unique user id (e.g 1345) & check out the unique
+Id of that user.
+ANS4-To add new user with unique user id & check it
+useradd -u 1234 abc
+to check uid : id -u abc
+
+Q5-Change group of any folder
+ANS5-chgrp grpname directoryname 
+a) group of files present in the directory will not change only thr group of directory is changed
+b)chgrp -R grpname directoryname
+
+
+
+
+
+
+                                                                            ASSIGNMENT-3(LINUX)
+Q1- Create and compress file with extension bzip2.
+Ans1-tar -cvzf ContentFile1.tar.bz2 content.txt
+
+Q2- What should be the argument to be given to unzip that file.?
+Ans2-bzip2 -d filename.bz2 where -d specifies Decompress
+
+Q3- Read a file & show the data on terminal using file input & output redirection
+Ans3-cat < File.txt
+	
+Q4- How to change the shell of user to “/bin/sh” at the time of adding the user
+
+AnS4.useradd  -s  /bin/sh UBUNTU-User
+                                                                          
