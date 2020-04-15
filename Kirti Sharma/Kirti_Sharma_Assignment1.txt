@@ -1,0 +1,83 @@
+use useradd -m nameOFUser to work that command and show folder in home diretory
+
+
+
+
+Q1. Creat new user without using adduser or useradd cmd
+
+Ans: vim /etc/passwd 
+	
+     -user2:x:200:200:username:/home/user2:/bin/bash
+     vim /etc/group
+	
+     -user2:x:200:
+	
+     passwd user2
+	
+     -set password
+
+     cat /etc/shadow |grep user2
+
+     mkdir /home/user2
+
+     cd/home/user2
+	
+     cp -v /etc/skel/.bash* .
+	
+     ls -la
+	
+     su user2
+
+
+
+Q2. Change the Umask value for any user permanently
+
+Ans: vim /home/user1/.bashrc
+
+    -umask 021 (type at last)
+
+     vim /home/user1/.bash_profile
+    -umask 021
+	
+     su user1
+
+     Check Umask
+
+
+
+Q3. Can we change the Umask value to 0888. If yes than how,If no then why?
+
+Ans: Umask value can not extend to 0888 because the number use for umask is in octal
+ 
+     and the maximum permission number is 0777 so if we assign 0778 it show the number
+	
+     is out of range and permission cann't be negative.
+
+
+
+Q4. How to add a new user with a unique user id(eg:1345) & check out the unique id
+ of that user id.
+
+Ans: sudo useradd -u 1345 user2 (To add a new user name user2 and ggive unique id of 1345)
+	
+     id -u user2 (To check unique id of user2 )
+
+
+
+Q5. How to change the group of any folder
+    
+    a)After this checkout the group name of the file present in that folder
+
+    b)Try to change the group of the folder & the files present in the same folder using a simple command
+
+Ans: a) sudo chgrp group2(name of new group) filename(file which you want to change group)
+
+     b) sudo chgrp -R group2(name of new group) foldername then change the directory to that folder 
+        and type ls -l it shows that all files contain by that folder
+        is move to that group2 which we created.
+
+
+
+Q6. Make subdirectories inside a parent directory by using simple mkdir command.
+
+Ans: mkdir -p A/{1,2,B/C/3}

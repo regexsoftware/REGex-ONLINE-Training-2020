@@ -1,0 +1,103 @@
+# Ques1 : Write a Program to print new list which contains all the first Characters of strings present in a list
+        # LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+# Ans : 
+List_states = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+New_list = []
+for i in List_states:
+	first_char = i[0]
+	New_list.append(first_char)
+print(New_list)
+
+
+
+# Ques2 : Write a program to replace each string with an integer value in a given list of strings.
+        # The replacement integer value should be a sum of AScci values of each character of type corresponding string.
+        # LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+# Ans :
+given_list = ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada']
+add = 0
+replaced_list = []
+for i in given_list:
+	for j in i:
+		add = add + ord(j)
+	replaced_list.append(add)
+print(replaced_list)
+
+
+
+# Ques3 : You have to run your Program at 9:00am. Date: 14th April 2020.
+        ### HINT:
+        # You have to use datetime Module or time module.
+        # You have to convert your output in #LIST_FORMAT
+        # [ '2020-04-13' , '17:11:01.952975' ]
+        # you can use this with the help of IF/Else statement
+# Ans :
+from datetime import datetime
+from threading import Timer
+
+x = datetime.today()
+
+date = datetime.strptime('2020-04-14',"%Y-%m-%d")
+y = date.replace(hour=9, minute=0, second=0, microsecond=0)
+
+delta_t = y - x
+
+secs = delta_t.seconds + 1
+
+def hello_world():
+    print("hello world")
+    
+t = Timer(secs, hello_world)
+t.start()
+
+
+
+# Ques4 : GIve a tuple:
+        # tuple = ('a','l','g','o','r','i','t','h','m')
+        # 1. Using the concept of slicing, print the whole tuple
+        # 2. delete the element at the 3rd Index, print the tuple.
+# Ans : 
+
+    # 1.
+given_tuple = ('a','l','g','o','r','i','t','h','m')
+print(given_tuple[::])
+
+    # 2. -> We can't delete the 3rd indexed element from the tuple as TUPLES ARE IMMUTABLE (i.e, we can't change it's contents).
+
+
+
+# Ques5: Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+        # - print only those numbers greator then 20
+        # - then print those numbers those are less then 10 or equal to 10
+        # - store these above two list in two different list.
+# Ans:
+REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+list1 = []
+list2 = []
+
+# Printing the elements > 20
+print('Elements > 20 :')
+for i in REGex:
+    if(i > 20):
+        print(i)
+        
+        list1.append(i)     # adding the element > 20 in list1
+
+# Printing the elements <= 10
+print('Elements <= 10 :')
+for i in REGex:
+    if(i <= 10):
+        print(i)
+
+        list2.append(i)     # adding the elemant <= 10 in list2
+
+print('list of elements > 20 :',list1,'\nlist of elements <= 10 :',list2)
+
+
+
+# Ques6 : Execute standard LINUX Commands using Python Programming.
+# Ans: We can execute any LINUX Command using python by using the following -
+    
+import os 
+
+os.system('command to execute')
