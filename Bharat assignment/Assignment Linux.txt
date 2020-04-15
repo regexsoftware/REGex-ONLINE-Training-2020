@@ -1,0 +1,41 @@
+                                                                                                  Assignment  
+Assignment 1:
+
+1 When we create a user, some hidden files are generated in the directory of the
+same user at that time. How is it done ?
+mkdir .filename (. Is use to create new file )
+
+2 tac command vs cat command
+tac command in Linux is used to concatenate and print files in reverse. The cat (short for “concatenate“) command is one of the most frequently used command in Linux/Unix like operating systems
+Assignment 2
+1 Change the Umask value for any user permanently.
+umask  0231
+2 Add a new user without using adduser & useradd command
+Add an entry for the user in /etc/passwd file.
+Add an entry for the group in /etc/group file.
+Create the home directory for the added user.
+Set the new user password using the passwd command.
+
+3 Can we change the Umask value to 0888.
+ No, because max vale is 777
+
+4 How to change the group of any folder
+chmod  771  filename 
+
+Assignment 3:
+
+1 Create & compress the file with bzip2.
+Create file 
+bzip2 option(s) filenames
+Compress file 
+bzip2 -z filename
+
+2 What should be the argument to be given to unzip that file.
+bzip2 -d filename.bz2
+
+3 Read a file & show the data on terminal using file input & output redirection
+cat filename 
+4  How to change the shell of user to “/bin/sh” at the time of adding the user
+vi /etc/passwd
+
+
