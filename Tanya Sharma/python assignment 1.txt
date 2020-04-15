@@ -1,0 +1,45 @@
+1. 	What are the different types of python compilers? what is Jpython and Cpython?
+Ans.	Different types of Python Compilers:
+
+	1)CPython.
+
+	2)Jython or Jpython.
+
+	3)IronPython.
+
+	4)ActivePython.
+
+	5)PyJS (it also is formerly known as Pyjamas).
+
+	6)Nuitka.
+
+	7)Stackless Python.
+	
+	CPython
+	It is the most widely used interpreter in Python, developed in C and python, 
+	the bindings for the interpreter must be written in a foreign language other than Python.
+	CPython uses a Global Interpreter Lock (GIL) on each process thus python bytecode for 
+	a single process is executed on a single thread.CPython finds its use as many libraries are C optimized 
+	i.e. many libraries will run its processes faster in a C based code.
+	The steps of compilation are as follows:- Decoding, Tokenizing, Parsing, AST(Abstract Syntax Tree), Compiling.
+	
+	 Jython or Jpython 
+	Jython is an implementation that has been designed for the seamless integration of Python code over Java virtual machine, 
+	the advantage of this integration is that it provides an opportunity for an action of a popular scripting language like python 
+	to a vast library of the Java virtual machine. Jython compiles files to .class extensions.
+	The Jython programs can inherit and run any Java class and compile the code to bytecode. Along with this Jython can be
+	used to implement any Java-based packages especially desirable for creating solutions using Servlets, Swing, SWT, 
+	and AWT packages.
+
+2.	Difference between python2 and python3.
+Ans	1. Python2 is legacy, Python3 is the future.
+	2. Python2 and Python 3 have different(sometimes incompatible) libraries.
+	3.There is better unicode support in Python3.
+	4.Python3 has improved integer version.
+	5.They have different print syntax statement.
+
+3.	Difference between ASCII and unicode.
+Ans	1.ASCII uses an 8-bit encoding while Unicode uses a variable bit encoding.
+	2.Unicode is standardized while ASCII isn’t.
+	3.Unicode represents most written languages in the world while ASCII does not.
+	4.ASCII has its equivalent within Unicode
