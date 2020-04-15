@@ -1,0 +1,282 @@
+                                                                   ASSIGNMENT-1
+                                                                    (CLASS 1)
+Q1- WHAT IS JPYHTON AND CPYTHON?
+
+ANS1- 
+cpython- cpython is the default application implementation of the python programming language.it interact efficiently with large data sets, e.g. using multi-dimensional NumPy arrays.
+•	quickly build your applications within the large, mature and widely used CPython ecosystem.
+•	integrate natively with existing code and data from legacy, low-level or high-performance libraries and applications.
+cpython The Cython language is a superset of the Python language that additionally supports calling C functions and declaring C types on variables and class attributes.
+ This allows the compiler to generate very efficient C code from Cython code.
+
+jpython- jpython is the implementtion of python language and use java language.Jython supports static and dynamic compilation and let’s extend Java classes.
+Jython is a Java implementation of Python that combines expressive power with clarity. Jython is freely available for both commercial and non-commercial use.
+
+
+
+Q2-BASIC DIFFERENCE BETWEEN PYTHON-2 AND PYTHON-3?
+
+ANS2-
+PYTHON-2:
+It is more stable and transparent version of python programming language.It is the future of Python designed to address the design flaws in the previous versions.
+The print-syntax is treated as a statement rather than a function which requires text to be wrapped in parenthesis.The print is explicitly treated as a function and replaces by the print() function in python3 which requires an extra pair of parenthesis.
+ASCII string type is used by default to store strings.Unicode is the implicit string type by default.It simply returns an integer to the nearest whole number when dividing two integers.It makes integer division more intuitive using true division for integers and floats.
+
+PYTHON-3:
+It is more stable and transparent version of python programming language.It is the future of Python designed to address the design flaws in the previous versions.
+The print-syntax is treated as a statement rather than a function which requires text to be wrapped in parenthesis.The print is explicitly treated as a function and replaces by the print() function in python3 which requires an extra pair of parenthesis.
+ASCII string type is used by default to store strings.Unicode is the implicit string type by default.It simply returns an integer to the nearest whole number when dividing two integers.	It makes integer division more intuitive using true division for integers and floats.
+
+
+
+Q3-DIFFERENCE BETWEEN ASCII AND UNICODE?
+
+ANS3-
+•ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221 characters, which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+•Unicode is a superset of ASCII, and the numbers 0–127 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means "Latin capital 'A'".
+•Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
+                                                                             
+
+
+                                                                         (CLASS 2)
+
+
+
+
+
+Q1=What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
+
+ANS1- 4054.0
+
+Q2- Let say I have, some string "hello this side regex"
+	Find out the count of the total vowels
+	vowels - ['a','e','i','o','u']
+ANS2-	string = "hello this side regex"
+	temp = []
+	for i in range(len(string)):
+    		if string[i]=='a' or string[i]=='e' or string[i]=='i' or string[i]=='o' or string[i]=='u':
+        		if(string[i] not in temp):
+            			temp.append(string[i])
+            			c = string.lower().count(string[i])
+            			print(f"{string[i]} : {c} ")
+
+
+Q3- Find out the area of triangle
+	- 1/2 * b * h (formula of area)
+	- You have to take value from user about the base, & the height
+ANS3-	import math
+        def Area_of_triangle(b,h):
+              area = (1/2)*b*h
+               print(" The Area of a Triangle is %0.2f" %area)
+                   
+                  b = int(input('Enter second side: '))
+                  h = int(input('Enter third side: '))
+                       Area_of_triangle(b,h)
+
+
+Ques 4- Print the calendar on the terminal. If you give the year.
+	- Allow the user to input the year.
+	- Then should that calendar of that year
+Ans4-	import calendar
+	z = input("enter the year : ")
+	for i in range(1,13):
+		print(calendar.month(int(z),i))
+
+
+
+
+
+
+
+
+
+
+
+                                                                                (CLASS-3)
+
+
+
+Q1-Find the Armstrong Number between the two numbers which are input by user
+       Armstrong number : 153 -> 1*1*1 + 5*5*5 + 3*3*3
+
+ANS1-  import math
+start = int(input(“Enter start value : “))
+end = int(input(“Enter end value : “))
+result = 0
+n = 0
+for i in range(start+1 ,end,1):
+    temp2 = i
+    temp1 = i
+
+    while (temp1 != 0):
+        temp1 = int(temp1/10)
+        n = n + 1
+
+        while (temp2 != 0):
+            remainder = temp2 % 10
+            result = result + math.pow(remainder, n)
+            temp2 = int(temp2/10)
+
+            if (result == i):
+                print(i,” “)
+
+                n = 0
+                result = 0
+
+
+
+Q2-Let’s say you have a string “hello this world @2020!!! ”
+        Remove the punctuation like [“@!#$%&*()”] from the string
+           Final output should be without the punctuation
+                     “hello this world 2020”
+
+ANS2- 
+bad_chars = ['@', '!', '$', '#','%'] 
+test_string = “hello this world @2020!!! "
+print ("Original String : " + test_string) 
+for i in bad_chars : 
+    test_string = test_string.replace(i, '') 
+print ("Resultant list is : " + str(test_string)) 
+
+
+
+
+Q3-You have a list with words - [“Apple”, “banana”, “cat”, “REGEX”,”apple”]
+          Sort words in Alphabetical order
+             If you get output, like [Apple, apple, banana] 
+                       How has it happened?
+
+
+ANS3-  
+lst = [“Apple”, “banana”, “cat”, “REGEX”,”apple”] 
+lst.sort(key = len)   
+print(lst[ :3]) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                        ASSIGNMENT-2
+
+
+
+
+Q1-: Write a Program to print new list which contains all the first Characters of strings present in a List.
+LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR", “MADHYA PRADESH”]
+
+ANS1-:LIST_1 = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR", "MADHYA PRADESH"]
+for i in LIST_1:
+    print(i[0])
+
+ 
+
+Q2-: Write a program to replace each string with an integer value in a given list of strings. The replacement integer value should be a sum of AScci values of each character of type corresponding string.
+LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+
+ANS2:
+LIST_2= ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+d=0 
+for i in LIST_2:
+    j=0
+    sumTotal=0
+    for j in i:
+        sumTotal=sumTotal + ord(j)
+    LIST_2[d]=sumTotal
+    d+=1
+print("\n")
+print(LIST_2)
+
+ 
+
+Q3-: You have to run your any Program at 9:00am. Date: 14th April 2020.
+
+ANS3-:
+import datetime
+import time
+task_date = datetime.datetime(2020, 4, 14, 9, 0, 0)
+while datetime.datetime.now() < task_date:
+    time.sleep(1)
+
+print("YAYY..... Its 14th April")
+
+ 
+
+Q4-:GIve a tuple:
+tuple = ('a','l','g','o','r','i','t','h','m')
+1. Using the concept of slicing, print the whole tuple
+2. delete the element at the 3rd Index, print the tuple.
+
+ANS4-:
+tuple= ('a','l','g','o','r','i','t','h','m')
+print(tuple[0:])
+tuple = tuple[:2] + tuple[3:] 
+print(tuple)
+ 
+
+Q5-: Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+- print only those numbers greator then 20
+- then print those numbers those are less then 10 or equal to 10
+- store these above two list in two different list.
+
+ANS5-:
+REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+list_A=[]
+list_B=[]
+for i in REGex:
+    if i > 20:
+        list_A.append(i)
+    if i <= 10:
+        list_B.append(i)  
+print(list_A)
+print(list_B)
+
+ 
+
+Q6-: Execute standard LINUX Commands using Python Programming
+
+ANS6-:
+import os
+cmd = 'wc -l my_text_file.txt > out_file.txt'
+os.system(cmd)
+
+Q7-: Revise *args and **kwargs Concepts
+
+ANS 7-:
+def totalSum(*args):
+    result = 0
+    for x in args:
+        result += x
+    return result
+
+def concStr(**kwargs):
+    result = ""
+    for arg in kwargs.values():
+        result += arg
+    return result
+
+print(totalSum(1, 2, 3))
+print(concStr(a="This", b="is", c="a", d="Python", e="Program"))
+
+ 
+
+                                                                 
+
+
+
+
+
+                                                                             
