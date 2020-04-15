@@ -1,0 +1,62 @@
+1)
+a)jpython:-
+Jython is an implementation of the Python programming language designed to run on the Java platform.
+
+b)cpython:-
+CPython is the reference implementation of the Python programming language. Written in C and Python.
+
+
+2)
+a)Python2:-
+	->Function print:
+		print "hello"
+	->Division of Integers:
+		When two integers are divided, you always provide integer value.
+	->Unicode:
+		To store Unicode string value, you require to define them with "u".
+	->Syntax:
+		The syntax of Python 2 was comparatively difficult to understand.
+	->Rules of ordering Comparisons:
+		Rules of ordering comparison are very complex.
+	->Iteration:
+		the xrange() is used for iterations.
+	->Exceptions:
+		It should be enclosed in notations.
+	->Leak of variables:
+		The value of the global variable will change while using it inside for-loop.
+	->Backward compatibility:
+		Python version 3 is not backwardly compatible with Python 2.
+	->Library:
+		Many older libraries created for Python 2 is not forward-compatible.
+
+b)Python3:-
+	->Function print:
+		print ("hello")
+	->Division of Integers:
+		Whenever two integers are divided, you get a float value
+	->Unicode:
+		default storing of strings is Unicode.
+	->Syntax:
+		The syntax is simpler and easily understandable.
+	->Rules of ordering Comparisons:
+		In this version, Rules of ordering comparisons have been simplified.
+	->Iteration:
+		The new Range() function introduced to perform iterations.
+	->Exceptions:
+		It should be enclosed in parenthesis.
+	->Leak of variables:
+		The value of variables never changes.
+	->Backward compatibility:
+		Not difficult to port python 2 to python 3 but it is never reliable.
+	->Library:
+		Many recent developers are creating libraries which you can only use with Python 3.
+
+
+3)
+a)ASCII:-
+	ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221 characters, which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+
+b)Unicode:-
+	Unicode is a superset of ASCII, and the numbers 0–127 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means "Latin capital 'A'".
+
+Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
