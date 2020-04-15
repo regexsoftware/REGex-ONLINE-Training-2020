@@ -1,0 +1,46 @@
+                                                                                                  Assignment  
+Python Class 1: 
+1 What is JPython & CPython 
+I python is a interactive shell and CPython is the reference implementation of the Python programming language. Written in C and Python
+
+2 Basic difference between Python2 & python3
+Python 3 default storing of strings is Unicode whereas Python 2 stores need to define Unicode string value with "u." Python 3 value of variables never changes whereas in Python 2 value of the global variable will be changed while using it inside for-loop.
+
+3  Difference between ASCII & Unicode 
+The main difference between the two is in the way they encode the character and the number of bits that they use for each. ASCII originally used seven bits to encode each character.In contrast, Unicode uses a variable bit encoding program where you can choose between 32, 16, and 8-bit encodings.
+
+Python Class 2:
+
+1 What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
+4054.0
+
+2  Find out the count of the total vowels
+ vowels - ['a','e','i','o','u']
+str1=("hello this side regex")
+vowels = 0
+for i in str1:
+    if(i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u' or i == 'A'
+       or i == 'E' or i == 'I' or i == 'O' or i == 'U'):
+
+     vowels = vowels + 1
+
+    print(vowels)
+
+
+
+
+3 Find out the area of triangle
+- 1/2 * b * h (formula of area)
+b = float(input('Enter the B: '))  
+h = float(input('Enter the H: '))  
+  
+area =1/2 * b * h 
+print('The area of the triangle is %0.2f' %area)   
+
+4 Print the calendar on the terminal. If you give the year.
+import calendar
+year = int(input("Enter Year: "))
+print(calendar.calendar(year))
+
+
+                                                                          
