@@ -1,0 +1,17 @@
+ASSIGNMENT-1
+
+Q1. When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done ?
+Ans.
+Most commonly, hidden files and directories in the home directory contain settings or data that’s accessed by that user’s programs. They’re not intended to be edited by the user, only the application. That’s why they’re hidden from the user’s normal view.
+ The hidden files in our Linux home directory are used to store user settings. This includes settings for command-line utilities as well as GUI-based applications. Removing them will remove user settings. Typically, it won’t cause a program to break.
+If we run ls -la on our home directory, we will discover a pile of hidden files and directories with dot prefixes.
+
+Q2. - Make sub directories inside a parent directory by using single mkdir command.
+Ans.
+When we want to create sub-directories , we will need to use – p parameter. This parameter will create parent directory first, if mkdir cannot find it. Let say we want to create directory named 'letter and directory named 'important' under directory letter. Then the syntax will be like this:
+mkdir – p letter/important
+
+
+
+SUBMITTED BY:
+SHRESHTHA GUPTA

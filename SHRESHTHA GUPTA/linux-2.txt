@@ -1,0 +1,55 @@
+ASSIGNMENT-2
+LINUX
+1)	How to change the Umask value for any user permanently?
+Ans.
+vim /home/username/.bashrc then type umask 024(eg) save and quit then vim /home/username/.bash_profile then type again umask 024(eg) save and quit then su user and check umask value if you exit terminal and open again and check umask the value is 024.
+
+2)	How to add a new user  without using adduser & useradd command?
+Ans.
+•	Add an entry for the user in /etc/passwd file.
+•	Add an entry for the group in /etc/group file.
+•	Create the home directory for the added user.
+•	Set the new user password using the passwd command.
+
+•	/etc/skel directory contains all the defaults files which are present inside the home folder of any user.
+
+So, Now,copy the contents from /etc/skel inside /home/user.
+
+3) Can we change the Umask value to 0888.
+If yes, then how. If no then why ?
+Ans. No we cannot change the Umask value to 0888 because the maximum umask value itself if 777.
+
+4)How to add a new user with a Unique user id (e.g 1345) & check out the unique Id of that user?
+Ans.
+We can use the -u option to create a user with a specific Unique User Id.
+For example , to create a new user named username with UID of 1345 we would type
+Sudo  useradd -u 1345 username
+We can also verify the user’s UID, using the id command.
+id -u username
+It will display the output as 1345.
+
+5) How to change the group of any folder?
+5(a) After this checkout the group name of the files present in that folder?
+Ans.
+Sudo chgrp groupname filename
+        Where groupname is name of the new group or the group ID (GID)
+         And filename is name of one or more files.
+      To find out to which group the files present in the folder belongs to , We can use the ls  -l command.
+
+5(b) Try to change the group of the folder & the files present in the same folder using a single command.
+
+Ans. We can use the -R option then.
+          Sudo chgrp -R groupname filename
+
+
+
+SUBMITTED BY:-
+SHRESHTHA GUPTA
+
+
+
+
+
+
+
+
