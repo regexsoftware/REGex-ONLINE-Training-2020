@@ -1,0 +1,17 @@
+1.	create,compress and unzip the file with bzip2.
+Ans	Creating a file
+	#yes "R" >> regex.txt
+	ctrl+c
+	Compressing the file
+	#bzip2 regex.txt
+	Decompressing the file
+	#bzip2 -d regex.txt.bz2
+
+2.	Read a file and show the data on terminal using file input output redirection.
+Ans	File input output redirection symbol is  >.
+	-> to see the output
+	cat < date1.txt
+
+3. 	How to change the shell of user to "/bin/sh" at the time of adding the user? 
+Ans	To change the shell we use chsh command
+	chsh -s /bin/bash
