@@ -1,0 +1,19 @@
+ASSIGNMENT – 2
+Q1. Create new user and at the same time you have to add the user into group
+We can do this by using the following command: 
+useradd -G groupname username
+
+Q2. How to unzip the bz2 file?
+We can do this by using the following command: 
+bzip2 -d filename.bz2  
+-d = decompress
+
+Q3. Create archive + compressed file with extension bz2 and in that include some file with data & folder
+We can do this by using the following command: 
+tar -cfvj archive.tar.bz2 data_file_1 dat_file_2
+
+Q4. Add user and at the same time change the shell of the user to /bin/sh
+We can do this by using the following command: 
+useradd -s /bin/sh username
+
+
