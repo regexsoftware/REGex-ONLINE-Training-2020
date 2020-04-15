@@ -1,0 +1,54 @@
+Q)Output Should be :
+Loading.
+Loading..
+Loading...
+Loading....
+Loading.....
+Here it shows you 5 output but you have to print only "Loading....." in animated
+form.
+
+import time 
+i = 0
+for i in range(5)
+	time.sleep(2)
+	print("loading..")
+
+Q) Difference between Return and Yield ?
+
+return: * it sends a specified value back to its caller
+        * causes a function to exit
+        * terminates the execution of a function & destroys local variables
+
+yield:  * used to define generators
+        * replaces the return value of a function to suspend its execution without
+        destroying the local variables
+        * used when the generator returns an intermediate result to caller
+
+Q)Add anything in tuple.. example: (1,2,3,4) -> new tuple (1,2,3,4,5)
+
+x = (1,2,3,4)
+y = list(x)
+y[4] = 5
+x = tuple(y)
+print(x)
+
+Q)WhatsApp texting using webbrowser Lib.
+
+import webbrowser
+webbrowser.open_new_tab("https://web.whatsapp.com/")
+
+Q)Make digital Clock and run it for 5 sec.
+Output:
+16:39:08
+:09
+:10
+:11
+:12
+
+import time
+
+for i in range(5)
+	a = str(time.ctime())
+	b = a.split(" ")
+	print(b[3])
+	time.sleep(1)
