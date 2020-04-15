@@ -1,0 +1,13 @@
+Assignment Ques. - 2 
+
+
+Difference between Return and Yield ?
+
+
+
+
+The yield statement is used in Python generators to replace the return of a function to send a value back to its caller without destroying local variables. A generator is a special function in Python that returns a generator object to the caller rather than a data value. 
+The return statement, unlike the yield statement, exits from a function, handing back a value to its caller. Typically, a return statement appears at the very end of a function block to return the final result of executing all statements contained in that function. All functions return a value and if there is no value specified, it will return “None”.
+Generators vs. Functions in Python Yield and Return
+The yield statement is explicitly used with Python generators. Syntactically, a generator is a function with a yield statement. While a function can have multiple return statements, only one of them can be called for any given invocation of the function.
+Unlike a function which only returns once, generators can halt execution and yield intermediate results. Each generator is defined as a function, but instead of the return keyword, yield keyword is used inside the function block to indicate that the return value is only temporary and the whole generator can be resumed even after the return value is obtained.
