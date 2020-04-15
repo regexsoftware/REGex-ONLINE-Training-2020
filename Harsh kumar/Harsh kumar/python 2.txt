@@ -1,0 +1,31 @@
+Ques 1. What should be the output? 
+	( 3 + 4 ** 6 - 9 * 10 / 2 )
+Ans.  4054.0
+
+Ques 2. Let say I have, some string "hello this side regex"
+	Find out the count of the total vowels
+	vowels - ['a','e','i','o','u']
+Ans.	string = "hello this side regex"
+	temp = []
+	for i in range(len(string)):
+    		if string[i]=='a' or string[i]=='e' or string[i]=='i' or string[i]=='o' or string[i]=='u':
+        		if(string[i] not in temp):
+            			temp.append(string[i])
+            			c = string.lower().count(string[i])
+            			print(f"{string[i]} : {c} ")
+
+
+Ques 3. Find out the area of triangle
+	- 1/2 * b * h (formula of area)
+	- You have to take value from user about the base, & the height
+Ans.	b, h = input("Enter the value of base and height of the trianhle space seprated : ").split(" ")
+	print(f"Area of Triangle : {1/2 * int(b) * int(h)} ")
+
+
+Ques 4. Print the calendar on the terminal. If you give the year.
+	- Allow the user to input the year.
+	- Then should that calendar of that year
+Ans.	import calendar
+	y = input("enter the year : ")
+	for i in range(1,13):
+		print(calendar.month(int(y),i))
