@@ -1,0 +1,11 @@
+Assignment3 
+
+Q1.yum install bzip2 (create)
+      bzip2 filename (compress)
+       bzip2 -z backup.tar(compress tar file)
+
+Q2.     yum install unzip
+          unzip filename 
+
+Q4.   useradd -s /bin/sh <username>
+             

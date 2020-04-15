@@ -1,0 +1,19 @@
+Assignment 2
+
+Q1.  change the umask value for:=
+	current user:-  /.bashrc
+	other user:-    /etc/.bashrc
+
+Q2.   add an entry of user details in:-  # vi /etc/passwd
+         create a group with same name so add  a new entry in:- #vi  /etc/passwd
+         assign a password to the user:-  # passwd user
+          login with newely create user:- #su -user
+
+Q3. NO, because Out of range maximum value is 777.
+
+Q4. useradd -u<username> <id>
+
+Q5. chgrp <groupname> <id>
+	A. cd<foldername>
+	     ls -lh
+	B. chgrp -R<foldername>
