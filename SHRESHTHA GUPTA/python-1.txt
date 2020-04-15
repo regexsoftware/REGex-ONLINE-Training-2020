@@ -1,0 +1,31 @@
+PYTHON ASSIGNMENT-1
+
+Q1. What is Jpython and Cpython?
+Ans
+Jython is an implementation of the Python programming language designed to run on the Java platform. The implementation was formerly known as JPython until 1999.
+Jython programs can import and use any Java class. Except for some standard modules, Jython programs use Java classes instead of Python modules. Jython includes almost all of the modules in the standard Python programming language distribution, lacking only some of the modules implemented originally in C. For example, a user interface in Jython could be written with Swing, AWT or SWT. Jython compiles Python source code to Java bytecode (an intermediate language) either on demand or statically.
+
+CPython is the reference implementation of the Python programming language. Written in C and Python, CPython is the default and most widely used implementation of the language.
+CPython can be defined as both an interpreter and a compiler as it compiles Python code into bytecode before interpreting it. It has a foreign function interface with several languages including C, in which one must explicitly write bindings in a language other than Python.
+
+Q2.What is the Basic difference between Python2 & python3?
+Ans
+Python 3 syntax is simpler and easily understandable whereas Python 2 syntax is comparatively difficult to understand. Python 3 default storing of strings is Unicode whereas Python 2 stores need to define Unicode string value with "u."
+
+Q3.What is the Difference between ASCII & unicode?
+Ans
+ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221characters, which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+Unicode is a superset of ASCII, and the numbers 0–128 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means "Latin capital 'A'".
+Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
+C follows ASCII and Java follows UNICODE.
+
+
+SUBMITTED BY:-
+SHRESHTHA GUPTA
+
+
+
+
+
+
+
