@@ -1,0 +1,58 @@
+1.  What should be the output ? (3 + 4* 6 - 9 * 10 / 2)
+solution - a = (3 + 4* 6 - 9 * 10 / 2)
+                    print(a)
+
+                  output-  4054.0
+
+2. Let say I have, some string "hello this side regex". Find out the count of vowels.
+solution- vowel=['a','e','i','o','u']
+                  str="hello this side regex"
+                   count=0
+                   for alphabet in str:
+                          if alphabet in vowel :
+                                        count = count + 1
+                    print("Total number of vowels: ",count)
+                     
+      output-  Total number of vowels: 7
+
+3.Find out the area of triangle,where you have to take value from user about the base and height.
+solution- b = float(input("enter the base of the triangle"))
+                  h = float(input("enter the height of the triangle"))
+                  area = (1/2)*b*h
+                   print(area)
+
+             output - enter the base of triangle: 5
+                             enter the height of triangle: 6
+                             15.0
+
+4.Print the calendar on terminal . Allow thw user to input the year.
+solution- import calander
+                  year = int(input("Enter year: "))
+                  month = int(input("Enter Month: "))
+                  print( calender,calender(year))
+
+                 output - Enter year  : 2019
+
+                                            January			
+Su	Mo	Tu	We	Th	Fr	Sa
+ 	 	 	1	2	3	4
+5	6	7	8	9	10	11
+12	13	14	15	16	17	18
+19	20	21	22	23	24	25
+26	27	28	29	30	31
+
+                                              Feburary	 
+Su	Mo	Tu	We	Th	Fr	Sa
+ 	 	 	 	 	 	1
+2	3	4	5	6	7	8
+9	10	11	12	13	14	15
+16	17	18	19	20	21	22
+23	24	25	26	27	28	29
+
+                                                March
+Su	Mo	Tu	We	Th	Fr	Sa
+1	2	3	4	5	6	7
+8	9	10	11	12	13	14
+15	16	17	18	19	20	21
+22	23	24	25	26	27	28
+29	30	31	 	  

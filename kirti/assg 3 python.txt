@@ -1,0 +1,38 @@
+1. Find the Armstrong Number between the two numbers which are input by user.
+solution - first = int(input("Enter first number: "))
+                  second = int(input("Enter seond number: "))
+                  for num in range(first,second + 1):
+                        sum = 0
+                        temp= num
+                      while temp  > 0:
+                         digital = temp % 10
+                          sum+ + digit ** 3 
+                           temp / /= 10
+                  if num == sum:
+                           print(num)
+
+  output - Enter first number: 100
+                  Enter second number: 500  
+                  153
+                  370
+                  371
+                  407
+ 
+2. Remove the punctuation like [“@!#$%&*()”] from string 
+solution - punctuations = “@!#$%&*()”
+                   my_str = “hello this world @2020!!! ”
+                  no_punct = " " 
+                  for char in my_str:
+                        if char not in punctuations:
+                            no_punct = no_punct + char
+                 print(no_punct)
+
+  output- hello this world 2020
+
+3. Sort words in Alphabetical order.
+solution - 1st = ["Apple" , "banana" , "cat" , "REGEX" , "apple"]
+                   sorted(1st)
+                   print(1st)
+
+  output -  ["Apple" , "banana" , "cat" , "REGEX" , "apple"]
+
