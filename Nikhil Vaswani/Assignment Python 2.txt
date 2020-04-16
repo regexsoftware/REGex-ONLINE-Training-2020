@@ -1,0 +1,27 @@
+1. What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
+=> 4054.0
+
+
+
+2. Let say I have, some string "hello this side regex". Find out the count of the total vowels.
+=> vowels='aeiou'
+   count = 0
+   string="hello this side regex"
+   for s in string:
+   	if s in vowels: 
+		count += 1
+   print(count)
+     
+
+
+3. Find out the area of triangle.
+=>   h = int(input("Enter height: ")
+     b = int(input("Enter base: ")
+     area = 1/2 * b * h
+     print(area)
+
+
+4. Print the calendar on the terminal.
+=>   year = int(input("Enter the year: "))
+     import calendar 
+     print(calendar.calendar(year))

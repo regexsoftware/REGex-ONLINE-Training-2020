@@ -1,0 +1,19 @@
+1. What is JPython & CPython?
+=> Jython is an implementation of the Python programming language designed to run on the Java platform.
+   CPython is the reference implementation of the Python programming language. Written in C and Python, 
+   CPython is the default and most widely used implementation of the language.	
+
+
+
+
+2. Basic difference between Python2 & python3
+=> In Python 3, default storing of strings is Unicode.	
+   In Python2, to store Unicode string value, you require to define them with "u".
+
+
+
+
+3. Difference between ASCII & unicode
+=> ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221characters,
+   which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+

@@ -1,0 +1,44 @@
+1. Find the Armstrong Number between the two numbers which are input by user
+=> Armstrong number : 153 -> 1*1*1 + 5*5*5 + 3*3*3
+=>  x, y = input("Enter a two value: ").split()
+    x=int(x)
+    y= int(y)
+    for num in range(x,y,1) :  
+	sum = 0
+        temp = num
+     	while temp > 0:
+            digit = temp % 10
+            sum += digit ** 3
+            temp //= 10
+        if num == sum:
+            print(num,"is an Armstrong number")
+
+
+
+2. Let’s say you have a string “hello this world @2020!!! ”
+=> Remove the punctuation like [“@!#$%&*()”] from the string
+=> Final output should be without the punctuation
+=> “hello this world 2020”
+
+   s='hello this world @2020!!! '
+   s=list(s)
+   p=['@','!','#','$','%','&','*','(',')'] 
+   a=[]
+   for i in s:
+       if i in p:
+           continue
+       else:
+           a.append(i)           
+   ''.join(str(i) for i in a)  
+
+
+
+
+
+3. You have a list with words - [“Apple”, “banana”, “cat”, “REGEX”,”apple”]
+=> Sort words in Alphabetical order
+=> If you get output, like [Apple, apple, banana]
+=> How has it happened?
+
+    o =['Apple', 'banana', 'cat', 'REGEX','apple']
+    o.sort()

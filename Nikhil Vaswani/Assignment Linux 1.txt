@@ -1,0 +1,38 @@
+1. Change the umask value for any user permanently.
+=> run command vim /etc/bashrc
+=> change umask value there
+
+
+2. add a new user without using adduser & useradd commmand.
+=> When we add a user using useraddd command it is created in locked state, thats why it is not visible in home directory . To unlock it we need to set a password for that user.
+=> useradd nikhil
+=> passwd nikhil
+
+
+
+
+3. Can we change umask value to 0888?
+=> No, we can't because the max possible umask value is 0777.
+
+
+
+4. How to add a new user with a unique user id & check out the unique id of that user.
+=> just add a new user using adduser, it will automatically assign a unique userid
+=> to check userid , just run command vim /etc/passwd, and search for your user 
+
+
+
+
+5. How to change the group of any folder.
+=> chgrp new_grp_name folder_name 
+
+5.a => ls --l command , the group of files are same as that of folder\
+
+5.b => sudo chgrp -R group_name folder_name
+
+
+
+6. Make subdirectories in a single command.
+=> mkdir new_dir
+=> cd new_dir 
+=> mkdir -p new_dir/{sub_dir1, sub_dir2, sub_dir2}
