@@ -1,0 +1,151 @@
+                                                         Linux Assignments:
+                                           [Submitted by: Shubham(shubhambit92@gmail.com)]
+                                           
+========================================================================================================================================
+Assignment 1:                                           
+
+Ques1.) When we create a user, some hidden files are generated in the directory of the same user at that time. How is it done?
+
+Ans1.) UNIX allows users to have files which are not listed, by default, by the ls command. These are called hidden files and are 
+      distinguishable from other files by the fact that their filenames begin with a dot (.). Such a file is .profile which is executed 
+      every time you log in to the system. Hidden files are listed by adding the -a option to the ls command.The useradd is a low-level 
+      utility for adding users. The useradd command only creates the user since it is a low-level utility for adding a user. We will  
+      have to create the directory for the user explicitly in /home directory. While the command adduser will add users to the system 
+      according to command-line options and configuration information in /etc/adduser.conf. It will automatically create a directory for 
+      a user in the /home directory. Also when we check the /etc/passwd file then the last field, that is, the user shell for ‘adduser’ 
+      is bash (/bin/bash) and for ‘useradd’ it is sh (/bin/sh). Also, adduser is a friendlier frontend to useradd and will do things like 
+      creating user directories by default. This is why it doesn't show on frontend utility and therefore kept hidden i.e in the home 
+      directory.
+     
+
+Ques2.) Make sub directories inside a parent directory by using single mkdir command. (refer to the figure given)
+ 
+Ans2.)  mkdir -p A/{dir1,dir2,B/{C/dir3}}   (-p for parent directoy option).
+
+
+Ques3.) tac command vs cat command ?
+
+Ans3.)Cat Command: Cat Command, an acronym for Concatenate, is one of the most used commands in Linux systems. This Command is used to 
+      read/print the contents of a file on your terminal. We can view multiple file content at the same time.
+        	  Syntax: cat filename
+		                cat filename1 filename2
+      Tac Command: On the other hand, a lesser-known and less used command in Linux systems is Tac Command. This is used to print files 
+      in reverse order. Tac is practically the reverse version of cat command (also spelt backwards) which prints each line of a file 
+      starting from the bottom line and finishing on the top line to your machine standard output.
+	          Syntax:  tac filename
+
+=======================================================================================================================================
+
+Assignment 2:                                           
+
+Ques1.) Change the Umask value for any user permanently.
+
+Ans1.) Linux is a multiuser network operating system where the same Shell is being accessed by several users. 
+        To provide a customized version of the same Shell to everyone (user, script or process), a layer is inserted between 
+        actual shell and end-user. In this layer, several configuration files are used to create a user-specific environment. 
+        Permanent umask setting is also configured in this layer. Based on the requirement, umask setting can be configured 
+        in multiple levels. To configure umask setting correctly, we have to understand how the shell is being accessed. 
+        A shell can be accessed in two ways; login and non-login.         
+<<Login shell>>
+        This is the shell environment which the user receives just after the login. It provides a customized interface to interact with    
+        the system. It takes input command from the user and displays the result on the standard output device. The command prompt which user 
+        receives just after the login is an example of a login shell.       
+<<non-login shell>>
+        This is the additional Shell interface which user accesses from login shell to perform a specific task. 
+        Since it is accessed from a login shell, it inherits all customized properties of parent (logged in) shell. 
+        But at the same time, it is also a separate shell which allows us to override the default properties.
+        Any terminal which we open in GUI to execute the command is the example of a non-login shell.               
+
+Based on targeted user and shell access type, permanent umask setting can be configured in four files.       
+        ```grep umask /etc/bashrc		      // This sets for non login shell.
+              umask 002```
+
+        ```grep umask /etc/profile	      	// This sets it for login shell.
+              umask 002```
+
+
+Ques2.) Add a new user without using adduser & useradd command
+ 
+Ans2.)  Steps for adding a new user without using adduser & useradd command:
+     • Add an entry for the user in `/etc/passwd` file.            
+     • Add an entry for the group in `/etc/group` file.             
+     • Create the home directory for the added user.              
+     • Set the new user password using the passwd command.     
+
+
+Ques3.) Can we change the Umask value to 0888. 
+          •If yes, then how. If not then why ?
+
+Ans3.) We can setup umask in `/etc/bashrc` or `/etc/profile` file for all users. By default most Linux distro set it to 0022 (022) or 0002 (002).            
+  •Open `/etc/profile` or `~/.bashrc` file, enter:           
+      `vi /etc/profile`            
+      `umask 022`           
+  •Save this file. 
+  ->Changes will take effect in the 'next login'.        
+     
+
+Ques4.) How to add a new user with a Unique user id (e.g 1345) & check out the unique
+
+Ans4.) We can use :                           
+	              ``` sudo useradd -u 1345 <username>
+       To check the ID we  can use :
+	              id -u <username>```
+
+
+Ques5.) How to change the group of any folder. 
+            • After this checkout the group name of the files present in that folder. 
+            • Try to change the group of the folder & the files present in the same folder using a single command
+            
+Ans5.) The chgrp command changes the group ownership of given files.          
+            ```chgrp [OPTIONS] GROUP FILE```             
+       GROUP, name of the new group or the group ID (GID).                                  
+       Numeric GID must be prefixed with the + symbol. FILE.., name of one or more files.             
+          To checkout the group name:                
+            ```
+	                users <username>
+            eg:	users Shubham
+	              id -g -n Shubham	primary group
+	              id -G -n Shubham	secondary group
+            ```
+        Also we can use:                    
+            ```
+               	grep <username> /etc/group
+            eg:	grep Shubham /etc/group
+            ```
+       To change group with a single command use :                   
+            ```
+              	chgrp <options>  <group>  <file or fies>  
+            ```
+
+========================================================================================================================================
+
+Assignment 3:                                           
+
+Ques1.) Create & compress the file with bzip2.
+
+Ans1.) Bzip2 is a well known compression tool and it’s available on most if not all the major Linux distributions. We use:
+	                  sudo apt install bzip2
+                  	bzip2 option(s) filenames		            #Creation
+                  	bzip2 -z filename			                  #Compress
+                  	bzip2 -z linux.tar		                	#Compress a tar file.
+  
+
+Ques2.) What should be the argument to be given to unzip that file.
+
+Ans2.) Use unzip:
+	            sudo apt install unzip
+	            unzip backup.zip
+  
+  
+Ques3.) Read a file & show the data on terminal using file input & output redirection
+
+Ans3.) Use command:
+	              gedit file.txt		                    #Type the required info
+	              cat file.txt
+	              echo Name >>file.txt
+  
+  
+Ques4.) How to change the shell of user to “/bin/sh” at the time of adding the user
+
+Ans4.)  useradd -s /bin/sh <username>
+            eg:	useradd -s /bin/sh Shubham
