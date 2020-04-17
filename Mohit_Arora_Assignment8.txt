@@ -1,0 +1,56 @@
+Q1. Write a python to read a file line by line and store it into list.
+Ans:	
+	List=[]
+	a=open("FileName.txt","r")
+	f=a.readlines()
+	for i in f:
+    		List.append(i.strip())
+	print(List)
+
+Q2. Write a python program to read a file line by line store it into an array.
+Ans:
+	import numpy as np
+	m=[]
+	a=open("FileName.txt","r")
+	f=a.readlines()
+	for i in f:
+    		m.append(i.strip())
+x=np.array(m)
+print(x[0])
+print(type(x))
+
+
+Q3. Write  a python program to read a random line from a file.
+Ans:	
+	import random
+	a=open("FileName.txt").read().splitlines()
+	print(random.choice(a))
+
+Q4. Write a python program to combine each line from first file with the corresponding line in second file.
+Ans:
+	c=[]
+	a=open("File1.txt").read().splitlines()
+	b=open("File2.txt").read().splitlines()
+	for i in range(len(a)):
+   		c.append(a[i]+b[i])
+	print(c)
+
+Q5. Write a python program to generate 26 text files named A.txt,B.txt and so on up to Z.txt.
+Ans:
+	for i in range(65,65+26):
+    		a=chr(i)
+    		fileName=a+str('.txt')
+    		open(fileName,"w")
+
+Q6. Write a python program to create a file where all letters of English alphabet are listed by specified number of letter on each other.
+Ans: 
+	import bs4 as bs
+	import requests
+	url="https://www.worldometers.info/coronavirus/"
+	source=requests.get(url)
+
+	link=bs.BeautifulSoup(source.content,'html.parser')
+	Datas=link.findAll('div', attrs={'class':'maincounter-number'})
+	print("Total Corona Cases: {}".format(Datas[0].span.text))
+	print("Total Death Cases: {}".format(Datas[1].span.text))
+	print("Total Recovered Cases: {}".format(Datas[2].span.text))
