@@ -1,0 +1,38 @@
+Q1. Find the Armstrong number between the numbers input by the user.
+Ans1.
+import math 
+a=int(input("Enter the lower limit:"))
+b=int(input("Enter the upper limit:"))
+lst=[]
+for i in range(a,b+1):
+    x=i
+    n=0
+    while x!=0:
+        x=x//10
+        n=n+1
+
+    p_sum=0
+    x=i
+    while x!=0:
+        digit=x%10
+        p_sum=p_sum+ math.pow(digit,n)
+        x=x//10
+
+    if p_sum==i:
+        lst.append(i)
+print(lst)
+
+Q2. Remove the special characters except spaces from the string " hello this world @2020!!!"
+Ans2.
+import re
+string = "hello this world @2020!!!"
+string = re.sub('[^a-zA-Z.\d\s]', '', string)
+print(string)
+
+Q3. You have a list of words=['Apple','banana','cat','REGEX','apple']. Sort the words in alphabetical order.
+Ans3.
+words=['Apple','banana','cat','REGEX','apple']
+words.sort()
+print(words)
+**The reason for this type of order is due the ASCII value. 
+For capital letters its starts from 65 whereas for small letters it starts from 97.
