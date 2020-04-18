@@ -1,0 +1,68 @@
+#python program to read file line by line and make a list .
+def read_function(file_name):
+        with open(file_name) as f:
+                content_list = f.readlines()
+                print(content_list)
+     
+read_function(\'test.txt\')
+
+#python program to read a file and make a array.
+def read_function(file_name):
+        content_array = []
+        with open(file_name) as f:
+                for line in f:
+                        content_array.append(line)
+                print(content_array)
+                   
+read_function('test.txt')
+
+#Write a Python program to read a random line from a file
+import random
+def random_line(fname):
+    lines = open(fname).read().splitlines()
+    return random.choice(lines)
+print(random_line('test.txt'))
+
+#Write a Python program to combine each line from first file with the corresponding line in second file
+with open('abc.txt') as fh1, open('test.txt') as fh2:
+    for line1, line2 in zip(fh1, fh2):
+        # line1 from abc.txt, line2 from test.txtg
+        print(line1+line2)
+
+#Write a Python program to generate 26 text files named A.txt, B.txt, and so on up to Z.txt
+import string, os
+if not os.path.exists("letters"):
+   os.makedirs("letters")
+for letter in string.ascii_uppercase:
+   with open(letter + ".txt", "w") as f:
+       f.writelines(letter)
+
+#Write a Python program to create a file where all letters of English alphabet are listed by specified number of letters on each line
+import string
+def letters_file_line(n):
+   with open("words1.txt", "w") as f:
+       alphabet = string.ascii_uppercase
+       letters = [alphabet[i:i + n] + "\n" for i in range(0, len(alphabet), n)]
+       f.writelines(letters)
+letters_file_line(3)
+
+##MAIN TASK
+#scrap worldometer site and print india data and also print number of coronavirus cases,deaths and recovered
+
+import requests
+from bs4 import BeautifulSoup
+url="worldometers.info/coronavirus/"
+page=requests.get(url)
+Soup=BeautifulSoup(page.text , 'html.parser')
+a=Soup.findAll("tr" , {"class":"even"})
+for i in a:
+	if "Soup.find("a" , {"href":"Country/india/")":
+		print(a.prettify())
+b=Soup.findAll("div" , {"class":"maincounter-number"})
+for i in b:
+	print(i)
+	print(i.text)
+
+		
+
+
