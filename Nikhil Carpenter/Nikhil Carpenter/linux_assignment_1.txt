@@ -1,0 +1,13 @@
+1)LINUX allows users to have files which are not listed, by default, by the ls command.
+These are called hidden files and are distinguishable from other files by the fact that their filenames begin with a dot (.).
+Such a file is .profile which is executed every time you log in to the system.
+Hidden files are listed by adding the -a option to the ls command.
+
+2)mkdir -p A/B/C
+
+3)Cat command can be used to display the content of a file,
+copy content from one file to another, 
+concatenate the contents of multiple files, display the line number.
+on the other hand, Tac command will display the file content in reverse order.
+It prints the last line first, then second last and so on.
+Such way, it prints the first line at last.
