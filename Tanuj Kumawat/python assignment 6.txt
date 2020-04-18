@@ -1,0 +1,72 @@
+Ques 1. Write a Python program to read a file line by line and store it into a list.
+Ans.	f = open('file.txt','r')
+	for i in f:
+    		l = f.readlines()
+	print(l)
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Ques 2. Write a Python program to read a file line by line store it into an array.
+Ans.	import numpy as np
+	f = open('file.txt')
+	file = []
+	for i in f:
+    		file.append(i)
+	arr_file = np.array(file)
+	print(arr_file)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Ques 3. Write a Python program to read a random line from a file.
+	import random
+	f = open('file.txt','r')
+	file = []
+	for i in f:
+    		file.append(i.strip())
+	print(random.choice(file))
+
+------------------------------------------------------------------------------------------------------------------------
+
+Ques 4. Write a Python program to combine each line from first file with the corresponding line in second file.
+Ans.	f1 = open('file1.txt','r')
+	f2 = open('file2.txt','r')
+	for i,j in zip(f1,f2):
+		print(i+j)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Ques 5. Write a Python program to generate 26 text files named A.txt, B.txt, and so on up to Z.txt.
+Ans.	for i in range(65,91):
+    		f = open(f" {chr(i)}.txt ","w")
+    		f.write(f" {chr(i)} ")
+    		f.close()
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Ques 6. Write a Python program to create a file where all letters of English alphabet are listed by specified number of 	letters on each line.
+Ams.	import string
+	n = 3
+	f = open('file1.txt','w')
+	alphabet = string.ascii_uppercase
+	letters = [alphabet[i:i + n] + "\n" for i in range(0, len(alphabet), n)]
+	f.writelines(letters)
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Ques 7. To scrap data from worldometer example: INDIA Data and run it
+	on live mode.
+	Print Additionally total number of Coronavirus Cases, Deaths, Recovered.
+Ans.	import requests
+	from bs4  import BeautifulSoup
+	import time
+	while True:
+    		time.sleep(2)
+    		url = "https://www.worldometers.info/coronavirus/country/india/"
+    		page = requests.get(url)
+    		soup = BeautifulSoup(page.content,'html.parser')
+    		b = soup.findAll('h1')
+    		c = soup.findAll('div',{'class':'maincounter-number'})
+    		blist=[i.text for i in b]
+    		clist=[j.text for j in c]
+    		for i,j in zip(blist[1:],clist):
+        		print(i+j)
