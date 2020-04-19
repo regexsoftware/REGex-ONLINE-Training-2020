@@ -1,0 +1,90 @@
+Ques 1. Hint:
+	-> Make a use of Time Module and for Loop
+	-> Output Should be :
+	Loading.
+	Loading..
+	Loading...
+	Loading....
+	Loading.....
+	Here it shows you 5 output but you have to print only "Loading....." in animated form.
+Ans.	print('Loading',end="")
+	i=1
+	while(i<6):
+    		print('.',end="")
+    		time.sleep(1)
+    		i=i+1
+
+
+Ques 2. Difference between Return and Yield ?
+Ans.	RETURN:
+	->The keyword return causes the function to exit and hands back a value to its caller.
+	->The return statement is used when a function is ready to exit and return a value to its caller.
+	->returns a single value to its caller
+	->terminate the loop immediately
+	->exit the function
+	Eg:
+	def func(n):
+              for i in range(0,n):
+                if (i % 2) == 0:
+                  return i
+            func(10)
+	output: 0
+	
+	YIELD:
+	->The keyword yield causes the function to hand back a generator object to its caller. yield will not cause the 	  	  function to exit nor terminate the loop. A generator can be parsed into a list.
+	->To calculate a series of results one-by-one on the fly.
+	Eg:
+	def func(n):
+                for i in range(0,n):
+                    if (i % 2) == 0:
+                        yield i
+            list(func(10))
+	output: [0, 2, 4, 6, 8]
+
+
+Ques 3. Make digital Clock and run it for 5 sec.
+	Output:
+	16:39:08
+	     :09
+	     :10
+	     :11
+	     :12
+Ans.	i = 1
+	while(i<6):
+    		d = time.ctime().split(" ")
+    		time.sleep(1)
+    		print(d[3])
+    		i=i+1
+
+Ques 4. Add anything in tuple.. example: (1,2,3,4) -> new tuple (1,2,3,4,5)
+Ans. 	t = (1,2,3,4)
+	a = list(t)
+	a.append(5)
+	t = tuple(a)
+	print(t)
+
+Ques 5. WhatsApp texting using webbrowser Lib.
+Ans.	import webbrowser as wb
+	import time
+	import pyautogui as g
+	given_time = input("Enter the time : ")
+	send = False
+	while True:
+		t = time.ctime()
+		str(t)
+		a = t.split(" ")
+		if a[3] == given_time:
+			send=True
+		if send == True:
+			print("send")
+			send=False
+			time.sleep(1)
+			url = 'https://wa.me/'+str(54646466645)+'?text='+st('hi')
+			print(url)
+			wb.open(url)
+			time.sleep(5)
+			g.moveTo(670,315)
+			g.click()
+			time.sleep(5)
+			g.press('enter')
+			print("done")
