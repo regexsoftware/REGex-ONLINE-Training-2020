@@ -1,0 +1,106 @@
+1. Write a Python program to read a file line by line and store it into a list.
+Sol : f=open("pyth.txt","r")
+
+      l=f.readlines()
+      print(l)
+
+2. Write a Python program to read a file line by line store it into an array.
+Sol : f=open("pyth.txt","r")
+
+      l=[]
+      for i in f:
+          l.append(i)
+      print(l)
+
+3. Write a Python program to read a random line from a file.
+Sol : n=int(input("Enter line Number:"))
+      f=open("pyth.txt","r")
+
+      l=f.readlines()
+      print(l[n-1])
+
+4. Write a Python program to combine each line from first file with the
+   corresponding line in second file.
+Sol : #First File
+      f=open("pyth.txt","r")
+      #Convert list
+      l=f.readlines()
+      #Second File
+      f1=open("pyth1.txt","r")
+      #Convert list
+      l1=f1.readlines()
+
+      l2 = l + l1
+      #print(l2)
+
+     f2=open("p.txt","w")
+
+     for i in l2:
+         f2.write(i)
+     f2.close()
+
+5. Write a Python program to generate 26 text files named A.txt, B.txt, and
+   so on up to Z.txt.
+Sol : l=[]
+      for i in range(65,91):
+          s=chr(i)
+          l.append(s)
+      #print(l)
+      for i in l:
+          f=open(i+".txt","w")
+          f.close()
+
+6. Write a Python program to create a file where all letters of English
+   alphabet are listed by specified number of letters on each line.
+Sol : f=open("Harsh.txt","w")
+      n=int(input("Enter a number:"))
+      num=26 % n
+      count=1
+      s=""
+      l=[]
+      for i in range(65,91):
+          if count < n:
+              s+=chr(i)
+              count+=1
+          elif count == n:
+              s+=chr(i)
+              count=1
+              l.append(s)
+              s=""
+      s=""
+      for i in range(91-num,91):
+          s+=chr(i)
+      l.append(s)
+      for i in l:
+          f.writelines(i+"\n")
+      f.close()
+
+7. #### MAIN TASK ####
+   - To scrap data from worldometer example: INDIA Data and run it on live mode.
+   - Print Additionally total number of Coronavirus Cases, Deaths, Recovered.
+Sol : import requests
+      from bs4 import BeautifulSoup
+
+      url="https://www.worldometers.info/coronavirus/"
+
+      page = requests.get(url)
+      #print(page)
+
+      page = page.text
+
+      soup = BeautifulSoup(page,"html.parser")
+
+      #print(soup)
+      a=soup.findAll("tbody")
+      l=[]
+      for i in a:
+          l.append(i.text)
+     for i in l:
+         print(i)
+     a2=soup.findAll("div",{"id" :"maincounter-wrap" })
+    l2=[]
+    #print(a1.text)
+    for i in a2:
+        l2.append(i.text)
+    for i in l2:
+        print(i)

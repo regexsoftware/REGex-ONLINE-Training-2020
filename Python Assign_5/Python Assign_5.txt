@@ -1,0 +1,49 @@
+1. Hint:
+   -> Make a use of Time Module and for Loop
+   -> Output Should be :
+   Loading.
+   Loading..
+   Loading...
+   Loading....
+   Loading.....
+   Here it shows you 5 output but you have to print only "Loading....." in animated form.
+Sol : import time
+      print("Loading",end="")
+      for i in range(5):
+          print(".",end="")
+          time.sleep(2)
+
+2. Difference between Return and Yield ?
+Sol : Return is the financial gain or loss on an investment and is typically expressed as the change in
+      dollar value of an investment over time. Return is also referred to as total return and expresses 
+      what an investor earned from an investment during a certain period. Total return includes interest,
+      dividends, and capital gain, such as an increase in the share price. In other words, a return is 
+      retrospective, or backward-looking.
+      Yield is the income returned on an investment, such as the interest received from holding a security.
+      The yield is usually expressed as an annual percentage rate based on the investment's cost, current
+      market value, or face value. Yield may be considered known or anticipated depending on the security 
+      in question, as certain securities may experience fluctuations in value.
+
+3. Make digital Clock and run it for 5 sec.
+   Output:
+          16:39:08
+	       :09
+	       :10
+	       :11
+  	       :12
+Sol : import time
+
+      for i in range(5):
+          a=str(time.ctime())
+          b=a.split(" ")
+          print(b[3])
+          time.sleep(1)
+
+4. Add anything in tuple.. example: (1,2,3,4) -> new tuple (1,2,3,4,5)
+Sol : t=(1,2,3,4)
+      print(t)
+      t=t+(5,)
+      print(t)
+
+5. WhatsApp texting using webbrowser Lib.
+Sol : 
