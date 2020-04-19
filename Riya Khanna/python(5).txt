@@ -1,0 +1,45 @@
+Q1. Make a use of time Module and for loop to print Loading in animated form
+Ans1. 
+import time
+print("Loading", end="")
+for i in range(0,5):
+    print(".", end="",flush=True)
+    time.sleep(1)
+
+
+Q2. Make a digital clock and run it for 5 seconds.
+Ans2. 
+import time
+
+for i in range(0,6):
+    localtime = time.localtime()
+    result = time.strftime("%I:%M:%S %p", localtime)
+    print(result)
+    time.sleep(1)
+
+Q3. Difference between return and yield.
+Ans3.
+The yield statement suspends function’s execution and sends a value back to the caller, but retains enough state to enable function to resume where it is left off. 
+When resumed, the function continues execution immediately after the last yield run. 
+This allows its code to produce a series of values over time, rather than computing them at once and sending them back like a list. 
+Return sends a specified value back to its caller whereas Yield can produce a sequence of values.
+We should use yield when we want to iterate over a sequence, but don’t want to store the entire sequence in memory.
+
+Q4. Add anything in tuple.
+Ans4. 
+t1=(1,2,3,4)
+t2=((5,))
+new=t1[:]+t2[:]
+print(new)
+
+Q5. Whatsapp Texting using webbrowser library.
+Ans5. 
+import webbrowser
+import keyboard
+
+num=int(input("Enter the number you want to send message to: \n"))
+message=str(input("Enter your message: \n"))
+url=("https://wa.me/"+num+"?text="+message)
+webbrowser.open_new_tab(url)
+keyboard.press("enter")
+    
