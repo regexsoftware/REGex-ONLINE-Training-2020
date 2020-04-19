@@ -1,0 +1,6 @@
+Ques 1: To find out d mean in yum install command?
+Sol : The d means "download only", which sounds like it will just fetch the packages for your update but not apply them.
+      It is the same as yum --download-only according to this mailing list archive.
+
+Ques 2: What is difference between these two command "yum remove software_name" and "rpm -e software_name"
+Sol :  
