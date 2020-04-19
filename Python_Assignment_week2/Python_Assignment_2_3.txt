@@ -1,0 +1,300 @@
+						Assignment 2 
+
+Q1. Write a Program to print new list which contains all the first Characters of strings present in a
+list.....
+LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR",
+MADHYA PRADESH]
+
+Answer. 
+ LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR",
+MADHYA PRADESH]
+ def firstLetterWord(LIST_STATES): 
+    result = "" 
+    v = True
+    for i in range(len(LIST_STATES)): 
+          
+        if (LIST_STATES[i] == ' '): 
+            v = True
+  
+        elif (LIST_STATES[i] != ' ' and v == True): 
+            result += (LIST_STATES[i]) 
+            v = False
+  
+    return result 
+	
+    print(firstLetterWord(LIST_STATES))
+
+Q2. 2. Write a program to replace each string with an integer value in a given list of strings.
+The replacement integer value should be a sum of AScci values of each character of type
+corresponding string........
+LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+
+Answer.
+LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+def ASCIIWordSum(LIST, sumArr): 
+  
+    l = len(LIST) 
+    sum = 0
+    bigSum = 0
+    for i in range(l): 
+        if (LIST[i] == ' '): 
+  
+            bigSum += sum
+            sumArr.append(sum) 
+            sum = 0
+          
+        else: 
+            sum += ord(LIST[i])      
+    sumArr.append(sum) 
+    bigSum += sum
+    return bigSum 
+    sumArr = [] 
+    sum = ASCIIWordSum(LIST, sumArr) 
+  
+    print("Sum of ASCII values:" ) 
+    for x in sumArr: 
+        print(x, end = " ") 
+          
+    print() 
+    print("Total sum -> ", sum) 
+
+Q3. You have to run your Program at 9:00am. Date: 14th April 2020.
+#HINT:
+# You have to use datetime Module or time module..
+# You have to convert your output in #LIST_FORMAT
+# [ '2020-04-13' , '17:11:01.952975' ]
+# you can use this with the helf of IF/Else statement
+
+Answer. 
+
+now = datetime.now()
+print ("Today's date & time: ", str(now))
+
+one_day_ago = now - timedelta(days = 1)
+print('Date & time one day ago: ', one_day_ago)
+
+
+Q4. GIve a tuple:
+tuple = ('a','l','g','o','r','i','t','h','m')
+1. Using the concept of slicing, print the whole tuple
+2. delete the element at the 3rd Index, print the tuple.
+
+Answer.
+tuple = ('a','l','g','o','r','i','t','h','m')
+tuple[0:9]   #prints the whole tuple
+tuplex = tuplex[:3] + tuplex[4:]        #removes 0 from the tuple
+print(tuplex)
+
+Q5. Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+- print only those numbers greator then 20
+- then print those numbers those are less then 10 or equal to 10
+- store these above two list in two different list.
+
+Answer.		print only those numbers greator then 20:
+
+			value=20	
+			print ("The list : " + str(REGex))
+
+			for i in REGex : 
+    				if i > value : 
+        					print(i)
+					new_list=[]
+					new_list.append(i)
+
+		print those numbers those are less then 10 or equal to 10
+
+
+			value=10
+			print ("The list : " + str(REGex))
+
+			for i in REGex : 
+    				if i <= value : 
+        					print(i)
+					new_list.append(i)
+
+Q6. Execute standard LINUX Commands using Python Programming
+
+Answer. 
+
+	import subprocess 
+	import os
+	cmd = 'wc -l textfile.txt > out.txt'
+	os.system(cmd)	
+	os.system("cal")
+	os.system("date")
+	subprocess.call("date")
+	p = subprocess.Popen("date", stdout=subprocess.PIPE, shell=True)
+	(output, err) = p.communicate()
+	print ("Today is", output)
+
+Q7. Revise *args and **kwargs Concepts
+
+Answer.  
+There are two special symbols:
+
+1) *args (Non Keyword Arguments):
+Python has *args which allow us to pass the variable number of non keyword arguments to function.
+The arguments are passed as a tuple and these passed arguments make tuple inside the function with 
+same name as the parameter excluding asterisk *
+
+2) **kwargs (Keyword Arguments)
+Python passes variable length non keyword argument to function using *args but we cannot use this to pass keyword argument
+In the function, we use the double asterisk ** before the parameter name to denote this type of argument. The arguments are passed as a dictionary and these arguments make a dictionary inside function with name same as the parameter excluding double asterisk 
+
+
+We use *args and **kwargs as an argument when we are unsure about the number of arguments to pass in the functions.
+
+
+						Assignment 3
+
+
+Q1. Hint:
+-> Make a use of Time Module and for Loop
+-> Output Should be :
+Loading.
+Loading..
+Loading...
+Loading....
+Loading.....
+Here it shows you 5 output but you have to print only "Loading....." in animated form
+
+Answer.
+	
+import time
+import sys
+	def animate():
+    	while True:
+		
+        		sys.stdout.write('\rloading.')
+        		time.sleep(0.8)
+       		 sys.stdout.write('\rloading..')
+        		time.sleep(0.8)
+        		sys.stdout.write('\rloading...')
+        		time.sleep(0.8)
+        		sys.stdout.write('\rloading....')
+        		time.sleep(0.8)
+		sys.stdout.write('\rloading.....')
+		time.sleep(0.8)
+
+
+
+Q2. Difference between Return and Yield
+
+Answer.
+RETURN:
+
+The keyword return causes the function to exit and hands back a value to its caller.
+
+The return statement is used when a function is ready to exit and return a value to its caller.
+	It:
+	->returns a single value to its caller
+	->terminate the loop immediately
+	->exit the function
+
+Example :
+	def func(n):
+                       for i in range(0,n):
+                		if (i % 2) == 0:
+                  			return i
+
+            func(10)		#output=0
+
+YIELD:
+
+The keyword yield causes the function to hand back a generator object to its caller. 
+Yield will not cause the function to exit nor terminate the loop.
+A generator can be parsed into a list.
+
+To calculate a series of results one-by-one on the fly.
+	It:
+	->returns a generator object (can parse into a list)
+	->keep the loop going
+
+Example:
+	def func(n):
+                		for i in range(0,n):
+                    		if (i % 2) == 0:
+                        			yield i
+            
+	list(func(10))	#output= [0, 2, 4, 6, 8]
+
+
+Q3. Make digital Clock and run it for 5 sec
+
+Answer. 
+	import time
+
+	while True:
+  		localtime = time.localtime()
+  		result = time.strftime("%I:%M:%S %p", localtime)
+  		print(result)
+  		time.sleep(1)
+
+Q4.Add anything in tuple.. example: (1,2,3,4) -> new tuple (1,2,3,4,5)
+
+Answer.
+
+	tuple=(1,2,3,4)
+	newtuple=tuple + (5,)
+	print(newtuple)
+
+Q5.  WhatsApp texting using webbrowser Lib.
+
+Answer. 	import webbrowser
+	webbrowser.open_new_tab("https://wa.me/919981311234?text=hello!!")
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
