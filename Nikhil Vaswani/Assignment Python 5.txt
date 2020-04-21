@@ -1,0 +1,44 @@
+1.Print Loading...
+=> from time import sleep
+   s="Loading"
+   d="."
+   print(s,end="")
+   for i in range(1,4):
+       print(d,end="")
+       sleep(1)
+
+
+
+2. Difference bw yield and return.
+=> Return send a specific value back to its caller.
+=> Yield can produce a seq. of values.
+
+
+
+
+3. Make a clock and run for 5 sec.
+=> import time
+   for i in range(5):
+       print(time.ctime().split(" ")[3])
+       time.sleep(1)
+
+
+
+4. Add anything to a tuple.
+=> t1=(1,2,3)
+   t2=(4,5)
+   t3=t1+t2
+   print(t3)
+
+
+
+5. Whatsapp texting using webbrowser module.
+=>
+import webbrowser as wb
+from time import sleep
+from pyautogui import click
+wb.open("https://web.whatsapp.com/send?phone=917976368213&text=hi")
+sleep(10)
+click(1790,970,button='left')
+sleep(5)
+click(1890,30)

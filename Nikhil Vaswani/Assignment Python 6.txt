@@ -1,0 +1,109 @@
+1. WAP to read a file line by line and store it in a list.\
+=>
+f = open("a.txt","r")
+l = f.readlines()
+f.close()
+print(l) 
+
+
+
+
+2. WAP to read a file line by line and store it in a array.
+=>
+import random
+from array import array
+f = open("a.txt","r")
+l = f.read().splitlines()
+a = array('i',[])
+for i in l:
+    a.append(int(i))    
+print(a)
+
+
+
+
+3. WAP to read a random line from a file.
+=> 
+import random
+f = open("a.txt","r")
+l = f.read().splitlines()
+print(random.choice(l))
+f.close()
+
+
+
+
+4. WAP to combine content of 2 files line by line.
+=>
+f1 = open("a.txt","r")
+f2 = open("B.txt","r")
+l1 = f1.read().splitlines()
+l2 = f2.read().splitlines()
+n = min(len(l1),len(l2))
+for i in range(n):
+    print(l1[i],l2[i])
+if len(l1) > len(l2):
+    print(*l1[i+1:])
+else:
+    print(*l2[i+1:])
+
+
+
+
+5. Write a Python Program to generate 26 files named A.txt to Z.txt.
+=>
+name = ord("A")
+extension = ".txt"
+for i in range(26):
+    filename = chr(name)+extension 
+    x = open(filename,"w")
+    x.close()
+    name += 1
+
+
+
+
+6. Write a program to create a file where all letters of english alphabet are listed by specified no. of letters in each new line.
+=>
+import string
+letters = string.ascii_uppercase
+print(letters)
+n = int(input("Enter a no. to print no. of char. in each line "))
+i=0
+f = open("a.txt","a")
+while(i<26):
+    f.write(letters[i:i+n]+"\n")
+    i += n   
+f.close()
+
+
+
+
+
+7. Show data of coronavirus for india and all over the world.
+=>
+import requests
+import time
+from bs4 import BeautifulSoup
+url = "https://www.worldometers.info/coronavirus/country/india/"
+page = requests.get(url)
+soup = BeautifulSoup(page.content,'html.parser')
+b = soup.findAll("h1")
+c = soup.findAll("div",{"class":"maincounter-number"})
+b = b[1:]
+t = time.ctime().split(" ")[3].split(":")[0] # for updating each hour
+while(True):    
+    if int(time.ctime().split(" ")[3].split(":")[0]) > int(t) : # for eg. t=2 then as 3 o'clock will be the time we will update the data
+        t += 1                                         # here now current time is 3 then data will be update at 4
+        print("CoronaVirus cases in India =>")
+        for i in range(len(b)):
+            print(b[i].text,c[i].text)
+        url = "https://www.worldometers.info/coronavirus/"
+        page = requests.get(url)
+        soup = BeautifulSoup(page.content,'html.parser')
+        b = soup.findAll("h1")
+        c = soup.findAll("div",{"class":"maincounter-number"})
+        print("\n")
+        print("Corona cases all over the world =>")
+        for i in range(len(b)):
+            print(b[i].text,c[i].text)
