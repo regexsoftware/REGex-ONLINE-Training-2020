@@ -1,0 +1,17 @@
+AWS Assignment 1
+
+1) How to access an instance if PEM file is lost?
+Sol:
+An ec2 instance can be accessed using another instance in same region and VPC by following steps:
+1. First, create a new instance by creating new access file, call it 'helper' instance with same region and VPC as of the lost pem file instance.
+2. Now stop the lost pem file instance. Remember not to terminate instance but to stop it.
+3. Go to EBS volumes, select the root volume of the lost pem file instance and detach.
+4. Now again select the detached volume and this time you have to attach this volume to helper instance which we created before. Since helper instance already has a root volume by default as /dev/sda1, the newly attached volume will be secondary (eg: /dev/sdf).
+5. Login to your helper instance with its pem file.
+6. Execute below commands:
+	a. # mount /dev/xvdf1 /mnt
+	b. # cp /root/.ssh/authorized_keys /mnt/root/.ssh/
+	c. # umount /mnt
+7. Detach the secondary volume from helper instance.
+8. Again, attach the volume back to our recovery instance. Start the instance. Terminate the helper instance.
+
