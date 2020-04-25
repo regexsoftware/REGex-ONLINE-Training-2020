@@ -33,34 +33,7 @@ Ans.	Use the -u (--uid) option to create a user with a specific UID.
 	id -u username
  1345	
 
-
-6.	 Tac vs Cat command
-Ans	Cat command is a well known Unix utility that reads files sequentially. 
-	Writing them to conventional output. The name is derived from its function for concatenating and listing the documents. 
-	Tac (that is “cat” backwards) concatenates every record to traditional output much like the cat command. 
-	However in opposite line-by means of-line, printing the last line first. 
-
-	The basic example of cat command:-
-	1. $ cat text.txt
-	The above command is to read files and display them.
-	2. $ cat text.txt text2.txt>text3.txt
-	This command can also be used to concatenate (join) multiple files into one single file using the “>” 
-	3. The cat command is also used to copy the content from one file to an other new file.
-	
-	The basic example of tac command:-
-	1.$ tac text3.txt
-
-7.	How to add user without using adduser or useradd command?
-Ans	Step1 :Add an entry for the user in /etc/passwd file.
-	Step2: Add an entry for the group in /etc/group file.
-	Step3: Create the home directory for the added user.
-	Step4: Set the new user password using the passwd command.
-
-8. 	How to change the group of any folder ?
-Ans	to change the group of any folder we use *chgrp command*.
-	
-
-9.	How to change the group of files and the folder with a single command?
+6.	How to change the group of files and the folder with a single command?
 Ans.	Using the chgrp command 
 	chgrp [OPTIONS] GROUP FILE..
 
@@ -69,6 +42,6 @@ GROUP, name of the new group
 	
 FILE... name of one or more files.
 
-10.	Create a new user and at the same time you have to add that user into the group you already have?
+7.	Create a new user and at the same time you have to add that user into the group you already have?
 Ans. 	useradd -G groupname username
 	
