@@ -1,0 +1,107 @@
+1. Write a Program to print new list which contains all the first Characters of strings present in a
+list.....
+LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR",
+MADHYA PRADESH]
+
+for i in LIST_STATES:
+    print(i[0])
+
+2. Write a program to replace each string with an integer value in a given list of strings.
+The replacement integer value should be a sum of AScci values of each character of type
+corresponding string........
+LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+
+k=0 
+for i in LIST:
+    j=0
+    sum_=0
+    for j in i:
+        sum_=sum_ + ord(j)
+    LIST[k]=sum_
+    k+=1
+print(LIST)
+
+
+3. ###### You have to run your Program at 9:00am. Date: 14th April 2020.
+#HINT:
+# You have to use datetime Module or time module..
+# You have to convert your output in #LIST_FORMAT
+# [ '2020-04-13' , '17:11:01.952975' ]
+# you can use this with the helf of IF/Else statement
+
+from datetime import datetime
+from threading import Timer
+
+x=datetime.today()
+y=x.replace(day=x.day+1, hour=1, minute=0, second=0, microsecond=0)
+delta_t=y-x
+
+secs=delta_t.seconds+1
+
+def hello_world():
+    print "hello world"
+    #...
+
+t = Timer(secs, hello_world)
+t.start()
+
+
+
+4. GIve a tuple:
+tuple = ('a','l','g','o','r','i','t','h','m')
+1. Using the concept of slicing, print the whole tuple
+2. delete the element at the 3rd Index, print the tuple.
+
+print(t[0:])
+
+t = t[:2] + t[3:] 
+print(t)
+
+
+5. Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+- print only those numbers greator then 20
+- then print those numbers those are less then 10 or equal to 10
+- store these above two list in two different list.
+
+REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+l1=[]
+l2=[]
+for i in REGex:
+    if i > 20:
+        print(i)
+        l1.append(i)
+    if i <= 10:
+        print(i)
+        l2.append(i)            
+
+print(l1)
+print(l2)
+
+
+6. Execute standard LINUX Commands using Python Programming
+
+import os
+cmd = 'wc -l my_text_file.txt > out_file.txt'
+os.system(cmd)
+
+
+7. Revise *args and **kwargs Concepts
+
+def my_sum(*args):
+    result = 0
+    # Iterating over the Python args tuple
+    for x in args:
+        result += x
+    return result
+
+print(my_sum(1, 2, 3))
+
+
+def concatenate(**kwargs):
+    result = ""
+    # Iterating over the Python kwargs dictionary
+    for arg in kwargs.values():
+        result += arg
+    return result
+
+print(concatenate(a="Real", b="Python", c="Is", d="Great", e="!"))
