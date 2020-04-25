@@ -1,0 +1,121 @@
+##### PYTHON TASK:
+1. Write a Python program to read a file line by line and store it into a list.
+
+filename="1.txt"
+l=[]
+for line in open(filename, 'r'):
+    l.append(line)
+    
+print(l)
+
+
+2. Write a Python program to read a file line by line store it into an array.
+
+import  numpy as np
+l=[]
+filename="1.txt"
+for line in open(filename, 'r'):
+    l.append(line)
+ 
+arr = np.array(l)    
+print(arr)
+
+3. Write a Python program to read a random line from a file.
+
+import random
+def random_line(fname):
+    lines = open(fname).read().splitlines()
+    return random.choice(lines)
+print(random_line("1.txt"))
+
+4. Write a Python program to combine each line from first file with the
+corresponding line in second file
+
+with open('1.txt') as fh1, open('2.txt') as fh2:
+    for line1, line2 in zip(fh1, fh2):
+        
+        print(line1+line2)
+
+5. Write a Python program to generate 26 text files named A.txt, B.txt, and
+so on up to Z.txt.
+
+for i in range(65,91):
+    q=str(chr(i))+".txt"       
+    f = open(q, "a")        
+    f.close()
+
+6. Write a Python program to create a file where all letters of English
+alphabet are listed by specified number of letters on each line.
+
+f = open("2.txt", "w")
+j=1
+for i in range(65,91):
+    f.write(str(chr(i))+" : "+str(j)+"\n")
+    j+=1
+f.close()
+
+
+7. #### MAIN TASK ####
+- To scrap data from worldometer example: INDIA Data and run it
+on live mode.
+- Print Additionally total number of Coronavirus
+Cases, Deaths, Recovered.
+
+import requests
+import re
+import time
+from bs4 import BeautifulSoup
+def cv():
+    url="https://www.worldometers.info/coronavirus/country/india/"
+    page = requests.get(url)
+    
+    page=page.text
+    soup = BeautifulSoup(page, "html.parser" )
+    l1=[]
+    b = soup.findAll("h1")
+    for i in b:
+        y=i.text
+        res1 = "".join(re.split("[^a-zA-Z]*", y))
+        l1.append(res1)
+    
+    d={}
+    
+    c =soup.findAll("div", {"class":"maincounter-number"})
+    j=1
+    for i in c:
+        
+        x=i.text
+        res = str(re.sub("\D", "", x))
+        d[l1[j]]=res
+        j+=1
+    
+    print("\n\n",l1[0]," Stats")    
+    for x, y in d.items():
+      print(x,":", y)
+      
+      
+    url2="https://www.worldometers.info/coronavirus/"
+    page2 = requests.get(url2)
+    
+    page2=page2.text
+    
+    
+    soup2 = BeautifulSoup(page2, "html.parser" )
+    c2 =soup2.findAll("div", {"class":"maincounter-number"})
+    d={}
+    
+    j=1
+    for i in c2:
+        
+        x=i.text
+        res = str(re.sub("\D", "", x))
+        d[l1[j]]=res
+        j+=1  
+    
+    print("\n\nWorld Stats")
+    for x, y in d.items():
+      print(x,":", y)
+
+for i in range(0,3,1):
+    cv()
+    time.sleep(120)
