@@ -1,0 +1,92 @@
+PYTHON ASSIGNMENT-6
+
+Q1.Write a Python program to read a file line by line and store it into a list.
+
+Ans.
+def file_read(fname):
+        with open (fname, "r") as myfile:
+                data=myfile.readlines()
+                print(data)
+file_read(r'C:\Users\shreshtha\Desktop\abc.txt')
+
+Q2.Write a Python program to read a file line by line and store it into an array.
+
+Ans.
+def file_read(fname):
+        content_array = []
+        with open(fname) as f:
+                     
+                for line in f:
+                        content_array.append(line)
+                print(content_array)
+                type(content_array)
+
+file_read(r'C:\Users\shreshtha\Desktop\abc.txt')
+
+Q3.Write a Python program to read a random line from a file.
+Ans.
+
+import random
+def random_line(fname):
+    lines = open(fname).read().splitlines()
+    return random.choice(lines)
+print(random_line(r'C:\Users\shreshtha\Desktop\abc.txt'))
+
+Q4.Write a Python program to generate 26 text files named A.txt, B.txt, and
+so on up to Z.txt.
+
+Ans.
+import string, os
+if not os.path.exists("letters"):
+   os.makedirs("letters")
+for letter in string.ascii_uppercase:
+   with open(letter + ".txt", "w") as f:
+       f.writelines(letter)
+
+Q5.Write a Python program to combine each line from first file with the
+corresponding line in second file.
+
+Ans.
+
+with open(r'C:\Users\shreshtha\Desktop\abc.txt') as fh1, open(r'C:\Users\shreshtha\Desktop\shre.txt') as fh2:
+    for line1, line2 in zip(fh1, fh2):
+        # line1 from abc.txt, line2 from test.txtg
+        print(line1+line2)
+
+Q6.Write a Python program to create a file where all letters of English
+alphabet are listed by specified number of letters on each line.
+Ans.
+
+import string
+def letters_file_line(n):
+   with open("words1.txt", "w") as f:
+       alphabet = string.ascii_uppercase
+       letters = [alphabet[i:i + n] + "\n" for i in range(0, len(alphabet), n)]
+       f.writelines(letters)
+letters_file_line(3)
+
+Q7.To scrap data from worldometer example: INDIA Data and run it
+on live mode.
+- Print Additionally total number of Coronavirus
+Cases, Deaths, Recovered.
+
+Ans.
+
+import requests
+from bs4 import BeautifulSoup
+url='https://worldometers.info/coronavirus/'
+
+page=requests.get(url)
+page=page.text
+#print(page)
+
+soup=BeautifulSoup(page,"html.parser")
+#print(soup)
+
+a=soup.findAll("div",{"class":"maincounter-number"})
+b=soup.findAll("h1")
+for i in a:
+    print(i.text)
+for j in b:
+        print(j.text)
+

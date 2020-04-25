@@ -1,0 +1,93 @@
+PYTHON ASSIGNMENT-4
+Q1.Write a Program to print new list which contains all the first Characters of strings present in a
+list.
+LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+
+Ans.
+LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+LIST_STATES
+
+mylist = []
+for i in LIST_STATES:
+    mylist.append(i[0])
+print(mylist)
+
+Q2.Write a program to replace each string with an integer value in a given list of strings.
+The replacement integer value should be a sum of AScci values of each character of type
+corresponding string.
+LIST: ['Ganga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+
+Ans.
+list=['Ganga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+new=[]
+for i in range(0,len(list)):
+    j=0
+    sum=0
+    while(j<len(list[i])):
+          sum+=ord(list[i][j])
+          
+          j=j+1
+    new.append(sum)
+    
+    
+i=i+1          
+
+print(new)          
+          
+Q3.You have to run your Program at 9:00am. Date: 14th April 2020.
+#HINT:
+# You have to use datetime Module or time module.
+# You have to convert your output in #LIST_FORMAT.
+# [ '2020-04-13' , '17:11:01.952975' ]
+# you can use this with the help of IF/Else statement.
+
+Ans.
+
+import datetime
+a=str(datetime.datetime.now())
+print(a)
+b=a.split(" ")
+if(b[0]=='2020-04-23' and  b[1][1]=='9'):
+    print("hello world!")
+else:
+    print("wrong timings!")
+
+Q4.Given a tuple:
+tuple = ('a','l','g','o','r','i','t','h','m')
+1. Using the concept of slicing, print the whole tuple.
+2. delete the element at the 3rd Index, print the tuple.
+
+Ans.
+1.tuple = ('a','l','g','o','r','i','t','h','m')
+print(tuple[:])
+
+2.my_tuple = ('a','l','g','o','r','i','t','h','m')
+my_list = list(my_tuple)
+my_list.pop(3)
+my_tuple = tuple(my_list)
+print(my_tuple)
+
+Q5.Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+- print only those numbers greator then 20
+- then print those numbers those are less then 10 or equal to 10
+- store these above two list in two different list.
+
+Ans.
+
+
+1.REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+list1=[]
+for i in REGex:
+    if(i>20):
+        list1.append(i)
+print(list1)
+
+
+2.REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+list2=[]
+
+for i in REGex:
+    if(i<=10):
+        list2.append(i)
+print(list2)
+
