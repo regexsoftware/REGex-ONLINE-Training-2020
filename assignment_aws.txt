@@ -1,0 +1,30 @@
+Ques-->If your .pem key has been lost.... how will you connect to an instance
+
+Step 1: Before Starting, we must have to note down the original instance availability zone , Instance name and id we can find this on EC2 dashboard after selecting instance.
+
+Step 2: Launch a new instance with same availability zone.
+
+Step 3 : At last while we are launching instance we will see the key-pair section (at last) from there we have an option for creating and downloading a new key pair and then we can launch the instance. Now we have to login with a newly created instance using new key-pair.
+
+Step 4: As we know each instance contain one or more EBS volumes, that is instance storage, we have find out EBS volume of lost private-key instance, for that we have to click on Instance Description and find , 'Root device' .
+
+Step 5: Now click on EBS ID this will redirect to EBS Volume page and give a name to this EBS volume so we can identify each volumes. Then we have to detach this volume from the original instance (production instance) for that we have to stop instance (left click on instance select Instance state -> click stop).
+
+Step 6: Once production instance is stopped, detach EBS volume (left click on volume and select detach) and attach it to the newly created instance.
+
+Step 7: After Attaching EBS to the newly created instance, now we are able to connect this EBS using newly created instance. For that we have to do log in to newly created instance terminal.
+
+Step 8: After that we have to check whether new EBS is attached successfully or not with new instance we can check by running below command.
+
+Step 9: If we find another disk than EBS is attached successfully, now we have to replace old authorized_eys (production or lost .pem) with new created authorized_keys for that we have to run commands.
+Commands-->
+ 1. sudo mkdir /mnt/removery_vol
+ 2. sudo mount /dev/xvdf1/mnt/recovery_vol
+ 3. cp .ssh/authorized_keys /mnt/recovery_vol/home/ubuntu/.ssh/authorized_keys
+
+Step 10: After successfully changes on authorized_keys, detach the volume from new instance and attach it with Production (lost private-key) instance, after attaching now start production instance.
+
+Step 11:Now we can connect to this instance using newly created instance Private key (.pem) file.
+
+
+
