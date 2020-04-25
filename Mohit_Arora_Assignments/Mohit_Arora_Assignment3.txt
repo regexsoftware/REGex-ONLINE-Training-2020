@@ -1,0 +1,41 @@
+Q1. What is JPython and CPython?
+Ans:	CPython happens to be implemented in C.CPython compiles your Python code into bytecode (transparently) 
+	and interprets that bytecode in a evaluation loop.Python-the-language development uses CPython as the base.
+
+	JPython is the current implementation of the Python programming language; this implemented in Java, 
+	C# and RPython (a subset of Python), respectively. Jython compiles your Python code to Java bytecode, so 
+	Python code can run on the JVM.
+
+Q2. Basic difference between Python2 and Python3.
+Ans:	Function print --	print ("hello") --	print "hello"
+
+	Division of Integers 	Whenever two integers are divided,  --	you get a float value 	When two integers are divided, you always provide integer value.
+
+	Unicode --	In Python 3, default storing of strings is Unicode. --	To store Unicode string value, you require to define them with "u".
+
+	Syntax --	The syntax is simpler and easily understandable. --	The syntax of Python 2 was comparatively difficult to understand.
+
+	Rules ordering of Comparisons -- 	In this version, Rules of ordering comparisons have been simplified. --	Rules of ordering comparison are very complex.
+
+	Iteration --	The new Range() function introduced to perform iterations. 	In Python 2, the xrange() is used for iterations.
+
+	Exceptions --	It should be enclosed in parenthesis. -- 	It should be enclosed in notations.
+
+	Leak of variables --	The value of variables never changes. 	  --    The value of the global variable will change while using it inside for-loop.
+
+	Backward compatibility 	 --	Not difficult to port python 2 to python 3 but it is never reliable. --	Python version 3 is not backwardly compatible with Python 2.
+
+	Library --  Many recent developers are creating libraries which you can only use with Python 3. --  any older libraries created for Python 2 is not forward-compatible. 
+
+Q3. Difference between ASCII and Unicode.
+Ans:	they are standards on how to represent difference characters in binary so that they can be written, stored, transmitted, and read in digital media. The main difference 
+	between the two is in the way they encode the character and the number of bits that they use for each. ASCII originally used seven bits to encode each character. This was 
+	later increased to eight with Extended ASCII to address the apparent inadequacy of the original. In contrast, Unicode uses a variable bit encoding program where you can 
+	choose between 32, 16, and 8-bit encodings. Using more bits lets you use more characters at the expense of larger files while fewer bits give you a limited choice but you 
+	save a lot of space. Using fewer bits (i.e. UTF-8 or ASCII) would probably be best if you are encoding a large document in English.
+
+	One of the main reasons why Unicode was the problem arose from the many non-standard extended ASCII programs. Unless you are using the prevalent page, which is used by 
+	Microsoft and most other software companies, then you are likely to encounter problems with your characters appearing as boxes. Unicode virtually eliminates this problem 
+	as all the character code points were standardized.
+
+

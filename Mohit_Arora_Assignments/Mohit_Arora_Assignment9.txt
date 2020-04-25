@@ -1,0 +1,15 @@
+Q1. You have to scrap whole table given on worldmeter site.You have to store your data in file output
+       should be in " , " (comma seperated form)
+Ans:
+	import bs4 as bs
+	import requests
+	totalurl="https://www.worldometers.info/coronavirus/"
+	totalsource=requests.get(totalurl)
+	totallink=bs.BeautifulSoup(totalsource.content,'html.parser')
+	totalDatas=totallink.find("table", {"id":"main_table_countries_today"})
+	f=str(totalDatas.text.strip()).replace(",","").replace("\n",",").replace(",,","")
+	print(f)
+	a=open("Corona.txt",'a')
+	a.write(f)
+	a.close()
+	print(r)
