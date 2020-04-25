@@ -1,0 +1,98 @@
+Ques 1: Write a Program to print new list which contains all the first Characters of strings present in a list.....
+	LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+Ans 1:  List = []
+	List= ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+	for i in List:
+    	print(i[0])
+	s= list(List)
+	print(s)
+
+Ques 2: Write a program to replace each string with an integer value in a given list of strings.
+	The replacement integer value should be a sum of AScci values of each character of type corresponding string........
+	LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+Ans 2:  LIST= ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+	LIST
+	k=0 
+	for i in LIST:
+    		j=0
+    		sum=0
+    		for j in i:
+       		 sum=sum + ord(j)
+    		    LIST[k]=sum
+   		     k+=1
+	print(LIST)
+
+Ques 3: You have to run your Program at 9:00am. Date: 14th April 2020.
+	#HINT:
+	# You have to use datetime Module or time module...
+	# You have to convert your output in #LIST_FORMAT
+	# [ '2020-04-13' , '17:11:01.952975' ]
+	# you can use this with the help of If/Else statement
+Ans 3: import time
+     while True:
+     x= time.ctime()
+     ls= x.split(" ")
+     print(ls)
+     if ls== ['Wed', 'Apr', '15', '14:30:03', '2020']:
+      print("This is the time!!")
+      break
+     else:
+      continue  
+
+Ques 4: Given a tuple: tuple = ('a','l','g','o','r','i','t','h','m')
+	1. Using the concept of slicing, print the whole tuple
+	2. delete the element at the 3rd Index, print the tuple.
+Ans 4:  1. print(tuple[0:])
+	2. #tuples are immutable, so you can not remove elements
+	   #using merge of tuples with the + operator you can remove an item and it will create a new tuple
+
+	  tuple = tuple[:3] + tuple[4:]
+
+Ques 5: Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+	- print only those numbers greator then 20
+	- then print those numbers which are less then 10 or equal to 10
+	- store the above two lists in two different list.
+Ans 5:  l1=[]
+	l2=[]
+	for i in REGex:
+    	if i > 20:
+          print(i)
+          l1.append(i)
+        if i <= 10:
+          print(i)
+          l2.append(i)            
+
+	print(l1)
+	print(l2)
+
+Ques 6: Execute standard LINUX Commands using Python Programming.
+Ans 6: import os
+       cmd = 'wc -l my_text_file.txt > out_file.txt'
+       os.system(cmd)
+
+Ques 7: Revise *args and **kwargs Concepts.
+Ans 7:  *args (Non Keyword Arguments)
+	**kwargs (Keyword Arguments)
+	We use *args and **kwargs as an argument when we are unsure about the number of arguments to pass in the functions.
+	i.) *args:
+	def adder(*num):
+   	sum = 0
+    
+        for n in num:
+         sum = sum + n
+
+         print("Sum:",sum)
+
+	adder(3,5)
+	adder(4,5,6,7)
+	adder(1,2,3,5,6)
+
+	ii.) **kwargs:
+	def intro(**data):
+    	print("\nData type of argument:",type(data))
+
+    	for key, value in data.items():
+        	print("{} is {}".format(key,value))
+
+	intro(Firstname="Sita", Lastname="Sharma", Age=22, Phone=1234567890)
+	intro(Firstname="John", Lastname="Wood", Email="johnwood@nomail.com", Country="Wakanda", Age=25, Phone=9876543210)

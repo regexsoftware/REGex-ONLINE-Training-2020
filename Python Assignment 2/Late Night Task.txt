@@ -1,0 +1,43 @@
+Ques 1: You have to make a Script to send "Hi" 5 times to a friend.
+
+Ans:	import webbrowser as web
+	import pyautogui as pg
+	import time
+
+	count = 0                              #initializing count with zero
+	while count<5:                    # To send a message 5 times
+    
+        	web.open('https://web.whatsapp.com/send?phone=number, &text=Hi')     # phone = contact number of a reciever with a country code. -> eg: +91xxx-xxx-xxxx
+    
+                   time.sleep(10)               
+    	pg.press('enter')             # To send the message by automatically pressing "enter" on the keyboard.
+    	time.sleep(3)                  # To wait for the message to send so that the tab can be closed easily
+    	pg.hotkey('ctrl','w')        # To close the tab
+    	count += 1
+    
+	web.open('http://web.whatsapp.com')        
+
+
+
+
+Ques 2: You have to make a script to run a program and send a same message to 6 persons through a script.
+
+Ans:	import webbrowser as web
+	import pyautogui as pg
+	import time
+
+	# NOTE : number should start with +91 .  eg: +91xxx-xxx-xxxx
+	numbers = ['number1', 'number2', 'number3', 'number4', 'number5', 'number6']   
+
+
+	url1 = 'https://web.whatsapp.com/send?phone='
+	url2 = ',&text=Hi' 
+
+	for i in numbers:                   
+   	  web.open(url1+i+url2)        # Open Whatsapp Web with a perticular contact
+   	  time.sleep(10)                       
+    	  pg.press('enter')                   
+   	  time.sleep(3)                       
+    	  pg.hotkey('ctrl','w')              # To close the tab
+    
+	web.open('http://web.whatsapp.com')        

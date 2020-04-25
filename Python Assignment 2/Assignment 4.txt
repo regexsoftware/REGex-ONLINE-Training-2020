@@ -1,0 +1,64 @@
+Ques 1: Write a Python program to read a file line by line and store it into a list.
+Ans 1:  def read_file(filename):
+        	with open(filename) as f:     
+                	content_list = f.readlines()
+                	print(content_list)
+
+	read_file('Assignment 4.txt')
+
+Ques 2: Write a Python program to read a file line by line and store it into an array.
+Ans 2:  def file_read(filename):
+            content_array = []
+        	with open(filename) as f:    
+                	for line in f:
+                       	 content_array.append(line)
+                	print(content_array)
+
+	file_read('Assignment 4.txt')
+
+Ques 3: Write a python program to read a random line from a file.
+Ans 3: import random
+	def random_line(filename):
+    		lines = open(filename).read().splitlines()
+    		return random.choice(lines)
+	print(random_line('Assignment 4.txt'))
+
+Ques 4: Write a python program to combine each line from first file with the corresponding line in the second file.
+Ans 4:  with open('Asignment 3.txt') as f1, open('Assignment 4.txt') as f2:
+    	  for line1, line2 in zip(f1, f2):
+      		  print(line1+line2)
+
+Ques 5: Write a python program to generate 26 text files named A.txt, B.txt, and so on uo to Z.txt.
+Ans 5:  import os, string
+	if not os.path.exists("letters"):
+   		os.makedirs("letters")
+	for letter in string.ascii_uppercase:
+   		with open(letter + ".txt", "w") as f:
+       		     f.writelines(letter)
+
+Ques 6: Write a python program to create a file where all letters of English alphabet are listed by specified number of letters on each line.
+Ans 6: import string
+       def letters_file_line(n):
+    	  with open("words.txt", "w") as f:
+       		alphabet = string.ascii_uppercase
+       		letters = [alphabet[i:i + n] + "\n" for i in range(0, len(alphabet), n)]
+                f.writelines(letters)
+       letters_file_line(3)
+
+Ques 7: ##MAIN TASK##
+	- To scrap data from worldometer example: INDIA Data and run it on live mode.
+	- Print additionally total no. of Coronavirus Cases, Deaths, Recovered.
+Ans 7:  import requests  
+	from bs4 import BeautifulSoup
+	import time
+	while True:
+    		url = "https://www.worldometers.info/coronavirus/country/india/"
+        	time.sleep(10)
+    		page = requests.get(url)
+    		soup = BeautifulSoup(page.content,'html.parser')
+    		b = soup.findAll('h1')
+    		c = soup.findAll('div',{'class':'maincounter-number'})
+    		list_b=[i.text for i in b]
+    		list_c=[j.text for j in c]
+    		for i,j in zip(list_b[1:],list_c):
+        		print(i+j)
