@@ -1,0 +1,16 @@
+Q1. what is JPython & CPython?
+ans1.JPython is an implementation of the Python programming language designed to run on the Java platform. The implementation was formerly known as JPython until 
+     1999.
+     CPython is the reference implementation of the Python programming language. Written in C and Python, CPython is the default and most widely used implementation
+     of the language.
+
+Q2.Basic diff. b/w python2 & python3?
+ans2. Python 2 made code development process easier than earlier versions. It implemented technical details of Python Enhancement Proposal (PEP).
+      Python released version 3.0. This version was mainly released to fix problems which exist in Python 2. The nature of these change is such that Python 3 was 
+      incompatible with Python 2. It is backward incompatible Some features of Python 3 have been backported to Python 2.x versions to make the migration process easy 
+      in Python 3.
+Q3. Diff. b/w ASCII & UNICODE?
+ans3. ASCII originally used seven bits to encode each character. This was later increased to eight with Extended ASCII to address the apparent inadequacy of the 
+      original.
+      Unicode uses a variable bit encoding program where you can choose between 32, 16, and 8-bit encodings. Using more bits lets you use more characters at the 
+      expense of larger files while fewer bits give you a limited choice but you save a lot of space.
