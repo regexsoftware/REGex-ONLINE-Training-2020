@@ -1,0 +1,3 @@
+Ques: When we create a new user some hidden files are created in the directory of the same user at that time. How is it done ?
+
+Ans: 'adduser' command reads the content of the /etc/login.defs file. This file contains configuration for the shadow password suite such as password expiration policy, ranges of user IDs used when creating system and regular users and more. So as this file contains login details so some hidden files are created at the time of creating a new user.
