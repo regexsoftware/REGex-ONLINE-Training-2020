@@ -1,0 +1,30 @@
+ASSIGNMENT 1 : :
+
+
+Answer 1.	PROBLEM  : CHANGING UMASK VALUE FOR ANY USER PERMANENTLY 
+		SOLUTION : Logged In as the user whose usermask i wanted to change and then opened terminal and typed in "gedit ~/.bashrc"
+			   And in gedit i just edited the umask value to 0002 and it remains the same until i change it
+			   
+Answer 2.	PROBLEM  : ADDING A NEW USER WITHOUT USING ADDUSER AND USERADD COMMAND 
+		SOLUTION : Opened Terminal And edited the /etc/passwd file with vi editor and added user following the same syntax as written for other users.
+			   Then assigned a password by using passwd command. At Last By using terminal logged in as the new user typed in "whoami" so as to verify that new user is created and logged in.
+
+Answer 3. 	PROBLEM : CAN WE CHANGE UMASK TO 0888
+		SOLUTION : No We Cannot change the umask value to 0888 because it is out of range. Highest Umask is 0777
+
+Answer 4.	PROBLEM : ADDING USER WITH UNIQUE USER ID
+		SOLUTION :  By Using "useradd -u 1200 username" command we can simply add new user with specifying the userid. To check we can see the /etc/passwd file where all users are listed with userid.
+		
+Answer 5.	PROBLEM : CHANGE GROUP OF ANY FOLDER
+		SOLUTION : Using chgroup command the group of any file or folder can be changed. The Group of folder and file inside it cannot be changed by this command so to do that we use "chgrp -R" command so that
+			   the group of files and folder inside a directory changes recursively.
+			   
+			   
+			   
+ASSIGNMENT 2 : :
+
+	PROBLEM : HOW TO UNZIP BZ2 FILES
+	SOLUTION : To unzip bz2 files using bunzip command
+	
+	PROBLEM : TO ADD A NEW USER AND AT SAME TIME ADD IT TO A GROUP WHICH IS EXISTING ALREADY
+	SOLUTION : By Using "useradd -g groupname" command we can make a new user and add it the group at the same time.
