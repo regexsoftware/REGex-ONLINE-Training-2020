@@ -1,0 +1,144 @@
+Ques 1: How to create a new user and at the same time define a pre-existing group to it ?
+
+Ans 1: This can be achived by using the command
+
+	sudo adduser -g username groupname
+(this groupname can be existing)
+
+
+
+Ques 2:How to unzip the bz2 file
+
+Ans 2: bz2 file is unzipped using 
+	$ bzip2 -d filename.bz2
+(here d means decompress)
+
+e.g., 
+
+priya@ubuntu:~/shubh$ ls -lh
+total 50M
+-rwxrwxrw- 1 priya priya  50M Apr  8 12:46 1
+-r--r---w- 1 priya priya    0 Apr  8 10:56 11
+-rw-r--r-- 1 priya priya    0 Apr  7 13:58 file
+dr--rw---x 2 priya priya 4.0K Apr  7 14:04 folder
+dr-xr---wx 2 priya priya 4.0K Apr  8 10:56 hello
+priya@ubuntu:~/priya$ yes "Priyansh" >> 11
+bash: 11: Permission denied
+priya@ubuntu:~/priya$ cat 11
+priyaz@ubuntu:~/priya$ yes "Priyansh" >> 11
+bash: 11: Permission denied
+priya@ubuntu:~/priya$ yes "Priyansh" > 11
+bash: 11: Permission denied
+priya@ubuntu:~/priya$ touch 12
+priya@ubuntu:~/priya$ yes "Priyansh" > 12
+^C
+priya@ubuntu:~/priya$ ls -lh
+total 89M
+-rwxrwxrw- 1 priya priya  50M Apr  8 12:46 1
+-r--r---w- 1 priya priya    0 Apr  8 10:56 11
+-rw-r--r-- 1 priya priya  40M Apr  8 12:48 12
+-rw-r--r-- 1 priya spriya    0 Apr  7 13:58 file
+dr--rw---x 2 priya priya 4.0K Apr  7 14:04 folder
+dr-xr---wx 2 priya priya 4.0K Apr  8 10:56 hello
+priya@ubuntu:~/shubh$ bzip2 1
+priya@ubuntu:~/shubh$ ls -lh
+total 40M
+-r--r---w- 1 priya priya    0 Apr  8 10:56 11
+-rw-r--r-- 1 priya priya  40M Apr  8 12:48 12
+-rwxrwxrw- 1 priya priya 4.5K Apr  8 12:46 1.bz2
+-rw-r--r-- 1 priya priya    0 Apr  7 13:58 file
+dr--rw---x 2 priya priya 4.0K Apr  7 14:04 folder
+dr-xr---wx 2 priya priya 4.0K Apr  8 10:56 hello
+priya@ubuntu:~/priya$ bzip2 -d 1.bz2
+priya@ubuntu:~/priya$ ls
+1  11  12  file  folder  hello
+priya@ubuntu:~/priya$ 
+
+
+Ques 3 : Archive and compress files with data and folder using bz2 extension
+
+Ans 3:This can be achived by using the command 
+	$ tar -cvzf filename.tar.bz2 file1name file2name foldername
+
+priya@ubuntu:~$ cd shubh
+priya@ubuntu:~/shubh$ mkdir newfolder
+priya@ubuntu:~/shubh$ cd newfolder
+priya@ubuntu:~/shubh/newfolder$ touch newfile1
+priya@ubuntu:~/shubh/newfolder$ touch newfile2
+priya@ubuntu:~/shubh/newfolder$ ls
+newfile1  newfile2
+priya@ubuntu:~/shubh/newfolder$ cd ..
+priya@ubuntu:~/shubh$ ls
+1  11  12  file  folder  hello  newfolder
+priya@ubuntu:~/shubh$ tar -cvzf compressed.tar.bz2 1 12 newfolder
+1
+12
+newfolder/
+newfolder/newfile1
+newfolder/newfile2
+priya@ubuntu:~/priya$ ls
+1  11  12  compressed.tar.bz2  file  folder  hello  newfolder
+priya@ubuntu:~/priya$
+
+
+
+Ques 4 :How can we add a user and at the same time define its shell as /bin/bash.
+Ans 4 : This can be achived by using the command:
+	$ sudo useradd -s /bin/bash username
+
+priya@ubuntu:~/priya$ cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/bin/rbash
+/bin/dash
+priya@ubuntu:~/shubh$ sudo useradd -s /bin/bash spiderman
+[sudo] password for priya: 
+priya@ubuntu:~/shubh$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd/netif:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd/resolve:/usr/sbin/nologin
+syslog:x:102:106::/home/syslog:/usr/sbin/nologin
+messagebus:x:103:107::/nonexistent:/usr/sbin/nologin
+_apt:x:104:65534::/nonexistent:/usr/sbin/nologin
+uuidd:x:105:111::/run/uuidd:/usr/sbin/nologin
+avahi-autoipd:x:106:112:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+usbmux:x:107:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:108:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+rtkit:x:109:114:RealtimeKit,,,:/proc:/usr/sbin/nologin
+cups-pk-helper:x:110:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+speech-dispatcher:x:111:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+whoopsie:x:112:117::/nonexistent:/bin/false
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+saned:x:114:119::/var/lib/saned:/usr/sbin/nologin
+pulse:x:115:120:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+avahi:x:116:122:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/usr/sbin/nologin
+colord:x:117:123:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+hplip:x:118:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+geoclue:x:119:124::/var/lib/geoclue:/usr/sbin/nologin
+gnome-initial-setup:x:120:65534::/run/gnome-initial-setup/:/bin/false
+gdm:x:121:125:Gnome Display Manager:/var/lib/gdm3:/bin/false
+shubhangvats:x:1000:1000:Shubhang Vats,,,:/home/shubhangvats:/bin/bash
+yash:x:1001:1001:,,,:/home/yash:/bin/bash
+regex:x:999:1002::/home/regex:/bin/sh
+superuser:x:888:1003::/home/superuser:/bin/sh
+vats:x:1002:1004:,,,:/home/vats:/bin/bash
+spiderman:x:1003:1005::/home/spiderman:/bin/bash
+priya@ubuntu:~/shubh$ 
