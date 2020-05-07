@@ -1,0 +1,91 @@
+Ques 1. Write a Program to print new list which contains all the first Characters of strings present in a list.....
+	LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+Ans. 	LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+	l = []
+	for i in range(len(LIST_STATES)):
+    		l.append(LIST_STATES[i][0])
+	print(l)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Ques 2. Write a program to replace each string with an integer value in a given list of strings.
+	The replacement integer value should be a sum of AScci values of each character of type
+	corresponding string........
+	LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+Ans. 	river = ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+	r = []
+	for i in range(len(river)):
+    		sum = 0
+    		for j in river[i]:
+        		sum = sum + ord(j)
+    		r.append(sum)
+	print(r)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Ques 3. You have to run your Program at 9:00am. Date: 14th April 2020.
+	HINT:
+	You have to use datetime Module or time module..
+	You have to convert your output in #LIST_FORMAT
+	[ '2020-04-13' , '17:11:01.952975' ]
+	you can use this with the helf of IF/Else statement
+Ans. 	#this program will run at 10am 
+	import time
+	while True:
+    		if(time.ctime() == 'Tue Apr 14 10:00:00 2020'):
+        		print('hello')
+        		break
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Ques 4. GIve a tuple:
+	tuple = ('a','l','g','o','r','i','t','h','m')
+	1. Using the concept of slicing, print the whole tuple
+	2. delete the element at the 3rd Index, print the tuple.
+Ans. 	tuple = ('a','l','g','o','r','i','t','h','m')
+	print(tuple[:])
+	print(tuple[0:3]+tuple[4:])
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Ques 5. Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+	- print only those numbers greater then 20
+	- then print those numbers those are less then 10 or equal to 10
+	- store these above two list in two different list.
+Ans. 	REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+	greater = []
+	less = []
+	for i in REGex:
+    		if i > 20:
+        		greater.append(i)
+    		if i <= 10:
+        		less.append(i)
+	print(greater)
+	print(less)
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Ques 6. Execute standard LINUX Commands using Python Programming
+Ans. 
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Ques 7. Revise *args and **kwargs Concepts
+Ans. 	# *args : arbitart argument -> when we don't no the no. of argument we pass
+	def a(*args):
+    		print(*args)
+	a(1,2,3)
+	a('Hello', 'World')
+	
+	# **kwargs is use for key value pair
+	def a(**kwargs):
+		print("name is : "+kwargs["name1"])
+	a(name1="hello",name2="world")
+	
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+Ques 1. World meter coronacases table
+Ans. 	import requests
+	from bs4 import BeautifulSoup
+	url = "https://www.worldometers.info/coronavirus/"
+	page = requests.get(url)
+	soup = BeautifulSoup(page.content,'html.parser')
+	data=soup.find("table", {"id":"main_table_countries_today"})
+	a=str(data.text.strip()).replace(",","")
+	a=a.replace("\n",",").replace(",,","")
+	print(a)
+	f=open("world_data.txt",'a')
+	f.write(a)
+	f.close()
