@@ -1,0 +1,57 @@
+1. 
+def findArmstrong(low, high) : 
+	
+	for i in range(low + 1, high) : 
+		
+		# number of digits calculation 
+		x = i 
+		n = 0
+		while (x != 0) : 
+			x = x / 10
+			n = n + 1
+			
+		# compute sum of nth power of 
+		pow_sum = 0
+		x = i 
+		while (x != 0) : 
+			digit = x % 10
+			pow_sum = pow_sum + math.pow(digit, n) 
+			x = x / 10
+			
+		# checks if number i is equal to 
+		# the sum of nth power of its digits 
+		if (pow_sum == i) : 
+			print(str(i) + " "), 
+
+num1 = 100
+num2 = 400
+findArmstrong(num1, num2) 
+print("") 
+
+2.
+def Punctuation(string): 
+
+	# punctuation marks 
+	punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+	for x in string.lower(): 
+		if x in punctuations: 
+			string = string.replace(x, "") 
+
+	# Print string without punctuation 
+	print(string) 
+
+# Driver program 
+string = "hello this world @2020!!!"
+Punctuation(string) 
+
+3.
+# Python program to sort a list of strings 
+
+lst = [“Apple”, “banana”, “cat”, “REGEX”,”apple”]
+
+# Using sorted() function 
+for ele in sorted(lst): 
+	print(ele) 
+
+
