@@ -1,0 +1,82 @@
+       LINUX                                                  ASSIGNMENT-1
+
+ 1. when we create a user, some hidden files are generated in the directory of the same user at that time. How is it done?
+Ans:-Because this files are in the folder /etc/skel/ and which files we place in this folder those files will be made available in the home directory
+     of all the users which we create afterward.
+     Some Commands to create a file are:
+            touch testfile
+            useradd Redhatuser
+ 2. Make subdirectories inside a parent directory by using single mkdir command.(Given fig.)
+Ans:-mkdir ; parent directory ....A/B/C
+ 3. tac command vs cat command.
+Ans:-tac command is used to concatenate and print files in reverse, and the cat command which is one of the most frequently used command allows us to 
+     to create single or multiple files,concatenate files and redirect output in terminal or files.
+
+                                                        ASSIGNMENT-2
+
+ 1. Change the Umask value for any user permanently.
+Ans:- Go to /etc /profile and go to line no 62
+      change the Umask value whichever you want
+      Save  and then exit file.
+ 2. Add a new user without using adduser & useradd command.
+Ans:-Add a entry for the user in /etc /passwd file;
+     Add a entry for the group in /etc/group file;
+     Create the home directory for the dder user and set the new user passwd using the passwd command. 
+ 3. Can we change the Umask value to 0888.If yes then how,if not then why?
+Ans:-No, we can't change the Umask value to 0888 because if we use it then by default permission for file and directory go to negative and less than
+     0 that is not possible.
+ 4. How to add a new user with a unique user id(e.g 1345) & check out the unique Id of that user?
+Ans:-Useradd;
+     To check unique Id of that particular user;
+     Go to VIM/etc/passwd
+ 5. HOw to change the group of any folder; (a)after this heckout the group name of the files present in that folder.
+                                           (b)Try to change the group of the folder and the files present in the same folder using a single command.
+Ans:-(a)-To check the groupname of the files in the folder
+          #11 file /folder
+     (b)- chowm  -R:
+          groupname   parentdirectory
+              R for recursively
+
+                                                      ASSIGNMENT-3
+
+ 1. Create & compress the file with bzip2.
+Ans:- #tar -cvzf contentFile.tar.bz2 content.txt.
+ 2. What should be the argument to be given to unzip that file?
+Ans:- #bzip2 -d filename.bz2 
+             (-d for decompess).
+ 3. Read a file & show the data on terminal using file input & output redirection.
+Ans:- #cat < file.
+ 4. How to change the shell of user to "/bin/sh" at the time of adding the user?
+Ans:- 3useradd  -s  /bin/sh   username. 
+
+
+   PYTHON                                             ASSIGNMENT 1
+
+
+ 1. What is JPython and CPython?
+Ans-JPython:-JPython is an implementation of the Python programming language designed to run on the Java platform.JPyhthon is extremely useful because
+    it provides the productivity features of a mature scripting language while running on a JVM.
+    CPython:-Reference implementation of Python is called CPython which is written in C language.CPython compiles your python code into bytecode and 
+    interprets that bytecode in a evaluation loop.CPython is the default and most widely used implementation of the language.
+
+ 2. Basic difference between Python2 and Python3.
+Ans-                     Python2:-                                                                   Python3
+
+      # It is the more stable and transparent version of the Pyhton         # It is  of the future of python designed to address the design
+        programming language.                                                 flaws in the previous versions.
+      # The print syntax is treated as a statement rather than a            # The print is explicity traeted as a function and replaced by 
+        function which requires text to be wrapped in parenthesis.            the print() function in pyhton3 which requires an extra pair 
+      # ASCII string type is used by default to store string.                 of parenthesis.
+      # It simply return an integer to the nearest whole number when        # Unicode is the implict string type by default.
+        dividing two integers.                                              # It males integer division more intuitive by using true division
+      # In python2, the xrange() is used for iterations.                      for integer and floats.
+                                                                            # In python3, the range() function to perform iterations.
+
+
+ 3. Difference between ASCII & Unicode.
+Ans-                     ASCII                                                                    UNICODE 
+      # Stands for American Standard code for Information Interchange.      # Stands for Universal character Set.
+      # It supports 128 characters.                                         # It supports a wide range of character.
+      # Uses 7 bits to represent a character.                               # Uses 8 bit, 16 bit, and 32 bit depending on the encoding type
+      # It requires less space.                                             # It requires more space.
+      # ASCII is not standardized.                                          # Unicode is standardized.                                                        
