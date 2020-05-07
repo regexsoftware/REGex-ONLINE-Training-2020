@@ -1,0 +1,44 @@
+			                  Python Assignment - 2
+
+1) What should be the output? ( 3 + 4 ** 6 - 9 * 10 / 2 )
+
+2) Let say I have, some string "hello this side regex"
+	-> Find out the count of the total vowels
+	-> vowels - ['a','e','i','o','u']
+
+3) Find out the area of triangle
+	-> 1/2 * b * h (formula of area)
+	-> You have to take value from user about the base, & the height
+
+4) Print the calendar on the terminal. If you give the year.
+	-> Allow the user to input the year.
+	-> Then show the calendar of that year.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Ans 1	4054
+
+Ans 2	str1 = "My name is khAn"
+	vow = "aAeEiIoOuU"
+	count=0
+	for i in str1:
+	    if i in vow: 
+	       count+=1
+	print(count)
+
+Ans 3 	x = int(input("Enter base value for Triangle "))
+	y = int(input("Enter height vaalue for Triangle "))
+	z = 1/2*x*y
+	print("Area of Triangle is ", z)
+
+Ans 4	import calendar
+	cal_display=calendar.TextCalendar()
+	x = int(input("Enter Year"))
+	print(cal_display.formatyear(x, 1, 1, 0, 3))
+	
+		:- x for taking year input from user
+		:- 1 for column width
+		:- 1 for space between line per week
+		:- 0 for no. of space between month column
+		:- 3 for no. of months in one line
+	
