@@ -1,0 +1,74 @@
+##------------------- ASSIGNMENT - 02 ---------------##
+
+1. LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+   for i in LIST_STATES:
+	print(i[0])
+
+2. LIST = ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+   count = 0 
+   for i in LIST:
+	    j = 0
+	    summ = 0
+   for j in i:
+        summ = summ + ord(j)
+        LIST[count] = summ
+        count = count + 1
+   print(LIST)
+
+3. import datetime  
+   def change(given_time): 
+     format = '%b %d %Y %I:%M%p' 
+     new_str = datetime.datetime.strptime(date_time, format)  
+     return new_str  
+   given_time = ' Dec 4 2018 10:07AM '
+   print(change(given_time)) 
+
+4.  tuple = ('a','l','g','o','r','i','t','h','m')
+    print(tuple[0:])
+    tuple = tuple[:2] + tuple[3:] 
+    print(tuple)
+
+5.  REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+    a=[]
+    b=[]
+    for i in REGex:
+        if i > 20:
+            a.append(i)
+        if i <= 10:
+            b.append(i)  
+    print(a)
+    print(b)
+
+6. import os
+   os.system("tput setaf 2 ")
+   os.system("cal")
+   os.system("ifconfig")
+   os.system("date")
+   os.system("init 0")
+
+7. *args - It is used to pass a non-keyworded, variable-length argument list.
+   -------
+   example
+   -------
+   def tryy(*args): 
+	for i in args: 
+		print (i) 
+   tryy('Hiii', 'There', 'how', 'are' , 'you') 
+
+   ******************************
+
+   **kwagrs - It has double stars which allows to pass a key-value pair to a function.
+   -------
+   example
+   -------
+   
+   def tryy(**kwargs): 
+	for key, value in kwargs.items(): 
+		print ("%s : %s" %(key, value)) 
+   tryy(First_name = 'Krushna', Middle_name = 'Prasad', Last_name = 'Sahoo')	 
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+##### DevOps Task -- 01 #######
+
+--> Yes , I have installed Docker in Red Hat Linux.
+
+---------------------------
+Devops Late Night Questions
+---------------------------
+
+1 . Yes , I'm using httpd docker image , put html the code inside it .
+    I can access the webpage successfully .
+
+2. To delete all the exited containers in command is :
+    # docker rm -rf $(docker ps -aq)
+
+
+!!!!!!!!!!!!-------------------------------------------!!!!!!!!!!!!!!!!!!!
+
+
+##### DevOps Task -- 01 #######
+
+1. After putting my own codes inside webserver container I used commit command for 
+   creating my customised web server :
+    # docker commit mynginx_server web_image:v1 
+
+2. For launching 10 containers :
+
+   # vim container.py
+   ~ import os
+   ~ os.system("systemctl start docker")
+   ~ os.system("docker container run -dit --name container_one centos:latest ")
+   ~ os.system("docker container run -dit --name container_two centos:latest ")
+   ~ os.system("docker container run -dit --name container_three centos:latest ")
+   ~ os.system("docker container run -dit --name container_four centos:latest ")
+   ~ os.system("docker container run -dit --name container_five centos:latest ")
+   ~ os.system("docker container run -dit --name container_six centos:latest ")
+   ~ os.system("docker container run -dit --name container_seven centos:latest ")
+   ~ os.system("docker container run -dit --name container_eight centos:latest ")
+   ~ os.system("docker container run -dit --name container_nine centos:latest ")
+   ~ os.system("docker container run -dit --name container_ten centos:latest ")
+   ~ tell = input("\nDo you want to see the all container list ? Type yes or no ")
+   ~ if tell == 'yes' :
+	os.system("docker ps -aq ")
+   ~ else :
+	exit();
+   # python3 container.py
+   
+
+3. For running nginx server in my host machine on port no. 7777 I exposed it . Nginx 
+   runs on port no 80 . So I can enable port forwarding while launching the container by
+   using -p 7777:80 in the command .  

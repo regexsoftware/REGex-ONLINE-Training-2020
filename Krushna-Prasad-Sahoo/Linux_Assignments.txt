@@ -1,0 +1,64 @@
+
+#####______ ASSIGNMENT -- 01 ______######
+
+
+1. The 'useradd' command is used for creating new user. The variables defined in 
+   '/etc/default/useradd' file causes the command to produce other files. The command 
+    also reads the content of the '/etc/login.defs' file, which contains configuration 
+    for the shadow  password suite such as password expiration policy, ranges of user IDs
+    used when creating system and regular users and more. This command adds an entry to the 
+    '/etc/passwd', '/etc/shadow', '/etc/group' and '/etc/gshadow' files.
+
+2. The command for creating multiple subdirectories inside any directory using a single 
+   mkdir command is : 
+   # mkdir -p car/{audi/headlight , bmw/dashboard , peugeot/tail_light }/wheels
+   This will create a parent directory 'car' inside which 3 subdirectories 
+   'audi' , 'bmw' , 'peugeot' will be created . Inside them 'headlight' , 'dashboard' &
+   'tail_light' subdirectories will be created respectively. And the last directory 'wheels'
+   will be created inside just previous subdirectories.
+
+3. 'tac' command is used to concatenate and print files in reverse. This command writes the
+   file to standard output as showing the last line first and so on.
+   'cat' command is also used for the same purpose as 'tac' like showing the contents of 
+   file , concatenation , overwrite etc but not in reverse order. It gives output in forward
+   direction. 
+ 
+----------------------------------------------------------------------------------------------------
+
+#####______ ASSIGNMENT -- 02 ______######
+
+1. For changing the umask value permanently we can go to '/etc/profile' file using vi editor 
+   and change there the umask value.
+   # vi /etc/profile
+   ` umask 027
+
+2. To add the a new user without using useradd/adduser command is :
+	-Add an entry for the user in '/etc/passwd' file.
+	-Add an entry for the group in '/etc/group' file.
+	-Create the home directory for the added user.
+	-Set the new user password using the passwd command.
+
+3. I think no, not supported by the system.
+
+4. To add a new user with id 1345 & checking out it :
+   # useradd -u 1345 Regex
+   # id -u Regex
+
+5. # chgrp newgrp myfile
+   # ls -l
+
+--------------------------------------------------------------------------------------------------------
+
+#####______ ASSIGNMENT -- 03 ______######
+
+1. # bzip2 file.txt  -> is used for compressing any file
+
+2. # bzip2 -d file.txt.bz2 -> is used for decompressing that file.
+   # bunzip file.txt.bz2 -> it can also be used for unzipping.
+
+3. Suppose the file we want to read is info.txt. Using standard input output funtion :
+   # cat info.txt > $(tty)   or  
+   # cat info.txt > /dev/tty3
+
+4. To change the shell to '/bin/sh' of a user while adding it :
+   # useradd -s /bin/sh new_user 
