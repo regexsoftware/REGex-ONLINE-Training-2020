@@ -1,0 +1,38 @@
+Python Late-Night Task
+
+1. Make a script to send “Hi” 5 times to a friend.
+Sol.
+import webbrowser as web
+import pyautogui as pg
+import time
+count = 0
+number=int(input("Enter the number with country code as prefix: "))
+while count<5:
+	web.open('https://web.whatsapp.com/send?phone='+str(number)+'&text=Hi')
+	time.sleep(30)
+	pg.press('enter')
+	time.sleep(3)
+	pg.hotkey('ctrl','w')
+	count += 1
+
+2. Make a script to send same message to 6 persons
+Sol.
+import webbrowser as web
+import pyautogui as pg
+import time
+numbers = []
+count=0
+while count<6:
+	num=input("Enter "+str(count)+" numbers to send message to: ")
+	numbers.append(num)
+	count+=1
+count=1
+url1 = 'https://web.whatsapp.com/send?phone='
+url2 = ',&text=Hi'
+for i in numbers:
+	web.open(url1+i+url2+' You are '+str(count)+' person')
+	time.sleep(15)
+	count+=1
+	pg.press('enter')
+	time.sleep(3)
+	pg.hotkey('ctrl','w')
