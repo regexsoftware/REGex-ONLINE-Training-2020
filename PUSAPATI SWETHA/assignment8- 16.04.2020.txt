@@ -1,0 +1,59 @@
+Q)Write a Python program to read a file line by line and store it into a list.
+  def readfile(fname):
+        with open(fname) as f:
+                list = f.readlines()
+                print(list)
+   readfile('test.txt')
+
+Q)Write a Python program to read a file line by line store it into an array.
+  def readfile(fname):
+        array = []
+        with open(fname) as f:
+                for line in f:
+                        array.append(line)
+                print(array)
+
+readfile('test.txt')
+
+Q)Write a Python program to read a random line from a file.
+  import random
+  def random_line(fname):
+      lines = open(fname).read().splitlines()
+      return random.choice(lines)
+  print(random_line('test.txt'))
+
+Q)Write a Python program to combine each line from first file with the
+  corresponding line in second file
+  with open('abc.txt') as fh1, open('test.txt') as fh2:
+    for line1, line2 in zip(fh1, fh2):
+           print(line1+line2)
+
+Q)Write a Python program to generate 26 text files named A.txt, B.txt, and
+  so on up to Z.txt.
+  import string, os
+  if not os.path.exists("letters"):
+     os.makedirs("letters")
+  for letter in string.ascii_uppercase:
+     with open(letter + ".txt", "w") as f:
+         f.writelines(letter)
+
+Q)Write a Python program to create a file where all letters of English
+  alphabet are listed by specified number of letters on each line.
+  import string
+  def letters_file_line(n):
+     with open("words1.txt", "w") as f:
+         alphabet = string.ascii_uppercase
+         letters = [alphabet[i:i + n] + "\n" for i in range(0, len(alphabet), n)]
+         f.writelines(letters)
+  letters_file_line(3)
+
+Q)webscraping
+  import requests
+from bs4 import BeautifulSoup
+url = "https://www.worldometers.info/coronavirus/"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, 'html.parser')
+b = soup.find("div", {"class":"maincounter-number"})
+c = soup.findAll("h1")
+for i in c:
+    print(i.text)

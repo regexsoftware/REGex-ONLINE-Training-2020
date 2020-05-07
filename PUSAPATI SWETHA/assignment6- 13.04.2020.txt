@@ -1,0 +1,66 @@
+Q) print first letter of each character of strings in the list and add it to 
+a new list
+
+LIST_STATES = ["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR",
+MADHYA PRADESH]
+a = [ ]
+for x in LIST_STATES:
+    a.append(x[0])
+    
+print (a)
+
+Q)Write a program to replace each string with an integer value in a given list of strings.
+The replacement integer value should be a sum of AScci values of each character of type
+corresponding string........
+LIST: ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+
+mylist = ['GAnga', 'Tapti', 'Kaveri', 'Yamuna', 'Narmada' ]
+a = [ ]
+for x in mylist:
+    sum=0
+    for i in x:
+        sum += ord(i)
+    a.append(sum)
+print (a)
+
+Q)You have to run your Program at 9:00am. Date: 14th April 2020.
+
+import time()
+a = time.ctime()
+b = a.split(" ")
+if (b[1] == 'apr' && b[2] == 14 && b[3] == 09:00:00)
+	print("your program is now running)
+
+Q)GIve a tuple:
+tuple = ('a','l','g','o','r','i','t','h','m')
+1. Using the concept of slicing, print the whole tuple
+2. delete the element at the 3rd Index, print the tuple.
+
+tupple1 = ('a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm')
+x = slice(0,9)
+print(a[x])
+
+tupple1 = ('a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm')
+y = list(tupple)
+y[2] = " "
+tupple1 = tuple(y)
+
+print(tupple1)
+
+Q)Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+- print only those numbers greator then 20
+- then print those numbers those are less then 10 or equal to 10
+- store these above two list in two different list.
+
+REGex = [1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+list1 = [ ]
+list2 = [ ]
+for i in REGex:
+	if i>20:
+		print (i)
+		list1.append(i)
+for j in REGex:
+	if j>=10:
+		print(j)
+		list2.append(j)
+
