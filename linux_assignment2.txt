@@ -1,0 +1,23 @@
+Assignment-2
+
+1) To change umask value permanently
+Go to /etc/profile file then change default umask value then save & exit. Now your umask value has been changed permanently you can check it on terminal.
+(vi /etc/profile. edit umask value in it. save & exit.)
+
+2) Add new user without using adduser & useradd command
+Step 1 : add an entry for user in /etc/passwd file
+Step 2 : add an entry for group in /etc/group file
+Step 3 : create home directory for added user with mkdir command
+Step 4 : set new user password using passwd command
+
+3)Can we change the umask value to 0888 ?
+no, we cannot change the umask value to 0888 as the maximum umask value is can be 0666 as the binaries & scripts in linux have execute permissions.
+
+4)To add new user with unique user id & check it
+useradd -u 1234 abc
+to check uid : id -u abc
+
+5) Change group of any folder
+chgrp grpname directoryname 
+a) group of files present in the directory will not change only thr group of directory is changed
+b)chgrp -R grpname directorynam
