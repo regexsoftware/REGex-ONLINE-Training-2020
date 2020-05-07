@@ -1,0 +1,68 @@
+Assignment - 1
+Q-1 when we create a user ,some hidden files are genrated in the directory of the same user at that time . how is it done ?
+A-1 ls -a cmd use for to see the hidden file in linux
+      . / .. it is show that folders are hidden or not.
+Q-2 make subdirectories inside a parent directory by using single mkdir command .
+A- mkdir a/b/v
+
+Q-3 tac & cat cmd
+A- The word tac is reverse of the word cat. 
+    The tac command functionality is also reverse of the cat command. 
+    cat command prints the file. tac command prints the file in reverse order with the last line first
+
+
+Assignment - 2
+q-1 Chnge the Umask value for any user permanently.
+A. man -k umask 
+    sudo gedit /etc/login.defs
+chng umask value 
+    if usergroups_enab = yes , chnage into no
+then change the umask value
+
+Q-2 addd a new user without using adduser & useradd cmd
+A- add a new user
+     #vim /etc/passwd
+     then press insert key and add user
+
+Q-3 can we change the umask value to 0888.
+A- No, we can't change the umask value to 0888.
+     highest value is 0777
+     -rwx have h 777 value
+
+Q-4 how to add a new user with a unique user id &check out the unique id of that user.
+A- #useradd jass
+    #usermod jass
+    #id jass
+    #sudo usermod -u 1345 jass
+
+Q-5 how to change the group of any folder.
+A- 1) 
+      In kali we can't change the root.
+      In other o.s. we chnage folder
+    2)
+      #chgrp jass file.txt
+        go to jass then #ll to see jass group is make or not.
+
+
+
+Assignment -3 
+Q-1 create & compress the file with bzip2
+A- #bzip2 jass
+    #bunzip2 jass
+
+Q-2 what should be the argument to be given to unzip that file .
+A- #gzip jass
+    #gunzip jass
+    #unzip jass
+
+Q-3 read a file & show the data on terminal using file input & output redirection.
+A- #cat < jass > file.txt
+
+Q-4 how to change the shell of user to "/bin/sh" at the time of adding the user.
+A- firstly check the type of shell 
+    #sudo cat /etc/shells
+    #/etc/shells
+       aftr
+    #sudo chsh -s /bin/bash jass 
+      jass is new usr
+    #sudo nano /etc/passwd
