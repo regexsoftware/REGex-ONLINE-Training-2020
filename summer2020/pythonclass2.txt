@@ -1,0 +1,22 @@
+Q1.  4054
+
+Q2.   str1="Hello this side regex"
+	l=str1.lower()
+	vc={}
+	for i in "aeiou":
+		count=l.count(i)
+		vc[i]=count
+	print(vc)
+
+
+Q3.	print("Enter the base",end="")
+	b=float(input())
+	print("Enter the height",end="")
+	h=float(input())
+	area=0.5*b*h
+	print("Area is : ",end="", area)
+
+Q4.  import os
+	print("Enter the year")
+	year=int(input())
+	print(os.system cal -y year)

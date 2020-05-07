@@ -1,0 +1,10 @@
+
+Q1. ls -a cmd -> use for to see the hidden file in linux 
+          mkdir .filename(. use create hidden files)
+Q2. mkdir -p a/{a1,a2,b/c/c1} 
+
+Q3. The word tac is reverse of the word cat.
+	tac command functionality is also reverse of the cat 	command.
+	cat command prints the file and tac command prints the 	file in reverse order with last line first.
+
+

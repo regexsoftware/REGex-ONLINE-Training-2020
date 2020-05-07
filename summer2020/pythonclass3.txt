@@ -1,0 +1,32 @@
+python class 3
+
+Q1 x, y = input("Enter a two value: ").split()
+    x=int(x)
+    y= int(y)
+   for num in range(x,y,1) :
+   
+     sum = 0
+    
+     temp = num
+     while temp > 0:
+        digit = temp % 10
+        sum += digit ** 3
+        temp //= 10
+     if num == sum:
+       print(num,"is an Armstrong number")
+
+Q2
+ s='hello this world @2020!!! '
+s=list(s)
+p=['@','!','#','$','%','&','*','(',')'] 
+a=[]
+for i in s:
+    if i in p:
+        continue
+    else:
+        a.append(i)           
+''.join(str(i) for i in a)  
+
+Q3
+o =['Apple', 'banana', 'cat', 'REGEX','apple']
+o.sort()
