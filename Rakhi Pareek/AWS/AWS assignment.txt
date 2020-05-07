@@ -1,0 +1,62 @@
+Q:-- If your .pem key has been lost then how will you connect to an instance.
+
+Ans:--
+METHOD: 1---
+1. Create a new key pair.
+
+2.If you create the private key in the Amazon EC2 console, retrieve the public key for the key pair.
+
+3.Open the Amazon EC2 console.
+
+4.Stop your instance.
+
+5.Choose Actions, Instance Settings, and then choose View/Change User Data.
+
+6.Copy the following script into the View/Change User Data dialog box:
+	Content-Type: multipart/mixed; boundary="//"
+	MIME-Version: 1.0
+
+	--//
+	Content-Type: text/cloud-config; charset="us-ascii"
+	MIME-Version: 1.0
+	Content-Transfer-Encoding: 7bit
+	Content-Disposition: attachment; filename="cloud-config.txt"
+
+	#cloud-config
+	cloud_final_modules:
+	- [users-groups, once]
+	users:
+  		- name: username
+    		ssh-authorized-keys: 
+   		 - PublicKeypair
+Replace username with your user name, such as ec2-user. You can enter the default user name, or enter a custom user name, if one was previously set up for the instance. For a list of default user names, see General Prerequisites for Connecting to Your Instance.
+Replace PublicKeypair with the public key retrieved in step 2. Be sure to enter the entire public key, starting with ssh-rsa.
+
+7. Choose Save.
+
+8. Start your instance.
+
+9. After the cloud-init phase is complete, validate that the public key was replaced.
+
+10. Stop your instance.
+
+11. Choose Actions, Instance Settings, and then choose View/Change User Data.
+
+12. Delete all the text in the View/Change User Data dialog box, and then choose Save.
+
+13. Start your instance.
+
+
+METHOD: 2--- Use AWS Systems Manager
+
+If your unreachable instance is listed in AWS Systems Manager as a managed instance, you can use the AWSSupport-ResetAccess document to recover from a lost key pair scenario. This Automation document uses the EC2Rescue for Linux tool on the specified EC2 instance to automatically generate and add a new SSH (Public/Private) key pair.
+
+The new SSH private key for your instance is encrypted and saved in the Parameter Store. The parameter name is /ec2rl/openssh/instance_id/key. Create a new .pem file with this parameter's value as its content and use it to connect back to your unreachable instance.
+
+Note: The Automation workflow creates a backup, password-enabled Amazon Machine Image (AMI). The new AMI is not automatically deleted and remains in your account.
+
+To locate these AMIs:
+
+1.    Open the Amazon EC2 console, and then choose AMIs.
+
+2.    Enter the Automation execution ID in the search field.
