@@ -1,0 +1,26 @@
+
+
+
+1.	What if the .pem key file or the .ppk key file to our ec2 machine is lost?
+In  the cases where the private key file having the RSA is lost, unfortunately there is no wat to get back the key file but there surely is a way to get our instance back.
+To do so we need to perform some tasks listed below:
+a.	Create an Image of the ec2 instance:
+1.	Select the instance from EC2 Dashboard
+2.	Under the Actions tab goto image and click Image
+
+3.	Enter an appropriate image name and image description and Create Image.
+
+4.	After doing this a request to generate image has successfully been placed on the AWS account. To check the status of image one can go to AMI’s section under IMAGES from the right navigation pane.
+
+5.	After the image has been created you can launch the new instance using that Image from AMI section or from EC2 Launch Wizard.
+
+6.	If you launch from EC2 launch wizard be sure you choose the Image that you created, it would be available under “My AMIs” section.
+
+7.	And do not forget to create a new key pair while launching it.
+
+8.	Select the image and launch the instance. A new instance with all the data of the old instance is now ready to use.
+
+9.	The image created can also be further migrated to any other AWS account (not AWS Educate accounts).
+
+
+

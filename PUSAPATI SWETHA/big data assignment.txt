@@ -1,0 +1,29 @@
+Q)differences between hadoop1 and hadoop2.
+
+hadoop1:* it has map reduce
+*it has job tracker and task tracker
+*In Hadoop 1, there is HDFS which is used for storage and top of it, 
+ Map Reduce which works as Resource Management as well as Data Processing.
+ Due to this workload on Map Reduce, it will affect the performance
+*Hadoop 1 is a Master-Slave architecture. It consists of a single master and multiple slaves. 
+Suppose if master node got crashed then irrespective of your best slave nodes, your cluster will be destroyed. 
+Again for creating that cluster means copying system files, image files, etc. on another system is too much time consuming which will not be tolerated by organizations in today’s time.
+
+
+hadoop2:*it has YARN
+*it has resource manager and node manager
+*In Hadoop 2, there is again HDFS which is again used for storage and on the top of HDFS, there is YARN which works as Resource Management. 
+It basically allocates the resources and keeps all the things going on.
+*Hadoop 2 is also a Master-Slave architecture. But this consists of multiple masters (i.e active namenodes and standby namenodes) and multiple slaves. 
+If here master node got crashed then standby master node will take over it. You can make multiple combinations of active-standby nodes. 
+Thus Hadoop 2 will eliminate the problem of a single point of failure.
+
+
+Q) why hadoop has block of 128 mb
+
+ minimize the cost of seek and reduce the meta data information generated per block.
+
+
+Q)why does name node rely on memory
+The namenode keeps all of the filesystem layout information (files, blocks, directories, permissions, etc) and the block locations. 
+The filesystem layout is persisted on disk and the block locations are kept solely in memory
