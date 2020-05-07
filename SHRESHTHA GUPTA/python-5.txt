@@ -1,0 +1,84 @@
+PYTHON ASSIGNMENT-5
+
+Q1.Hint:
+-> Make a use of Time Module and for Loop.
+-> Output Should be :
+Loading.
+Loading..
+Loading...
+Loading....
+Loading.....
+Here it shows you 5 output but you have to print only "Loading....." in animated
+form.
+
+Ans.
+
+import time
+for i in range(10):
+    time.sleep(1)
+    print("Loading....")
+
+
+Q2.Difference between yield and return?
+Ans.The yield statement suspends function’s execution and sends a value back to the caller, but retains enough state
+to enable function to resume where it is left off.When resumed, the function continues execution immediately after 
+the last yield run.This allows its code to produce a series of values over time, rather than computing them at 
+once and sending them back like a list.
+
+Return sends a specified value back to its caller whereas Yield can produce a sequence of values. We should use 
+yield when we want to iterate over a sequence, but don’t want to store the entire sequence in memory.
+
+
+Q3.Make digital Clock and run it for 5 sec.
+Output:
+16:39:08
+     :09
+     :10
+     :11
+     :12
+
+Ans.
+import time
+for i in range(5):
+    time.sleep(1)
+    current_time = time.ctime()
+    time_format = current_time[11:19]
+    print(time_format)
+
+
+Q4.Add anything in tuple.example: (1,2,3,4) -> new tuple (1,2,3,4,5)
+
+Ans.
+my_tuple = (1,2,3,4)
+my_list = list(my_tuple)
+my_list.append(5)
+my_tuple = tuple(my_list)
+print(my_tuple)
+
+Q5.WhatsApp texting using webbrowser Lib.
+
+Ans.
+import webbrowser
+import time
+import datetime
+
+name = input('Enter the contact number of a person you want to send message in WhatsApp: ')
+message = input('Enter the message: ')
+time1 = input('Enter time in {hh:mm:ss} format: ')
+print(f'Time entered by user: {time1}')
+while True:
+    current_time = time.ctime()
+    time_format = current_time[11:19]
+    time.sleep(1)
+    print(f'Current time: {time_format}')
+    if time1 == time_format:
+        webbrowser.open_new_tab(f'https://web.whatsapp.com/send?phone=+91{name}&text={message}')
+        print(message)
+        break
+    elif time1 < time_format:
+        print('Enter correct time')
+        break
+    else:
+        print('waiting..')
+
+
