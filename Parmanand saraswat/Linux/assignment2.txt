@@ -1,0 +1,23 @@
+Ans  1 	Go to vim /etc/bashrc
+	Go to line no 73 in RHEL 7 
+		OR
+	You can go to /etc/profile and go to line no 62
+	Change the umask value whichever you want 
+	Save and exit file with :wq.
+ 
+Ans  2        Add an entry for the user in /etc/passwd file.
+                  Add an entry for the group in /etc/group file.
+	Create the home directory for the added user.
+	Set the new user password using the passwd command.
+
+Ans  3	No, we cannot change the umask value to 0888 because if we use it then by default permission for 
+	file and directory go to negative or less than zero that is not possible.
+
+Ans  4 	# useradd   -u   1345   username.
+	To check unique id of that user :
+	   	Go to  vim /etc/passwd
+
+Ans  5 	#chgrp     groupname      file/directory
+        5(a)   To check the groupname of files inside folder
+     	#ll     file/folder
+        5(b)   #chown    -R      :groupname      ParentDirectory (-R for Recursively)

@@ -1,0 +1,7 @@
+Ans 1    #tar -cvzf ContentFile.tar.bz2 content.txt.
+
+Ans 2    #bzip2 -d filename.bz2 (-d specifies Decompress).
+
+Ans 3    #cat  <  file.
+
+Ans 4    #useradd    -s      /bin/sh       username.
