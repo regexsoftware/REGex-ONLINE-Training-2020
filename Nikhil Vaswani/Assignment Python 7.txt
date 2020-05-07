@@ -1,0 +1,41 @@
+1. Send a messsage in whatsapp to a person.
+=>
+import webbrowser as wb
+from time import sleep
+from pyautogui import click
+wb.open("https://web.whatsapp.com/send?phone=917976368213&text=hi")
+sleep(10)
+click(1790,970,button='left')
+
+
+
+
+
+2. Send a same message to 6 different persons.
+=>
+import webbrowser as wb
+from time import sleep
+from pyautogui import click
+numbers = {917976368213 , 919413426213 , 919414686313 , 917976352313 , 919828582261}
+for i in numbers:
+    wb.open("https://web.whatsapp.com/send?phone={}&text=hi".format(i))
+    sleep(10)
+    click(1790,970,button='left')
+    sleep(5)
+    click(1890,30)
+
+
+
+
+
+3. Send a msg to a person 5 times.
+=>
+import webbrowser as wb
+from time import sleep
+from pyautogui import click
+for i in range(5):
+    wb.open("https://web.whatsapp.com/send?phone=917976368213&text=hi")
+    sleep(10)
+    click(1790,970,button='left')
+    sleep(5)
+    click(1890,30)

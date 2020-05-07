@@ -1,0 +1,20 @@
+1. Create & compress the file with bzip2.
+=> touch file1
+   bzip2 file1
+	
+
+
+2. What should be the argument to be given to unzip that file.
+=> bzip2 -d file1
+
+
+
+
+3. Read a file & show the data on terminal using file input & output redirection
+=> sort < file_list.txt > sorted_file_list.txt
+
+
+
+
+4. How to change the shell of user to “/bin/sh” at the time of adding the user
+=> useradd -s /bin/bash testuser
