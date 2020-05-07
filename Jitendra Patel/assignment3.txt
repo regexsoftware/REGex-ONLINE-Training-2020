@@ -1,0 +1,46 @@
+Q1. Find the Armstrong Number between the two numbers which are input by user
+    ○ Armstrong number : 153 -> 1*1*1 + 5*5*5 + 3*3*3
+ANS:-m=int(input("enter number1 :"))
+     n=int(input("enter number2 :"))
+     for num in range(m,n+1):
+     	sum=0
+        temp=num
+        while temp>0:
+        	rem=temp%10
+        	sum+=rem**3
+        	temp=temp/10
+    	 if num==sum:
+         	print(num)
+         else:
+         	continue
+
+	OUTPUT:-enter number1 :151
+      		enter number2 :154
+		153
+
+Q2. Let’s say you have a string “hello this world @2020!!! ”
+    ○ Remove the punctuation like [“@!#$%&*()”] from the string
+      ■ Final output should be without the punctuation
+        ● “hello this world 2020”
+ANS:- string=input("enter your string :")
+      for i in string:
+      	if i.isalnum() or i==' ':
+        	print(i,end="")
+	
+	OUTPUT:-enter your string :hello this world @2020!!!
+                hello this world 2020
+
+Q3. You have a list with words - [“Apple”, “banana”, “cat”, “REGEX”,”apple”]
+    ○ Sort words in Alphabetical order
+	■ If you get output, like [Apple, apple, banana]
+	    ● How has it happened?
+ANS:- 
+         l=["Apple", "banana", "cat", "REGEX","apple"]
+	 print(sorted(l)) #we also can use here l.sort() and then print(l)
+	 
+	 OUTPUT:- ['Apple', 'REGEX', 'apple', 'banana', 'cat']
+
+  REASON:-- Python put uppercase items first because the ASCII value(Python2) or unicode(Python3) value for 
+	     uppercase items is less than lowercase items. And hence if we sort them in increasing order, the
+	     upper case will come before the lower case.
+        

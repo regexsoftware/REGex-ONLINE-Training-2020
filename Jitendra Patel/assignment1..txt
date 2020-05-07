@@ -1,0 +1,31 @@
+Q1. What is Jpython and Cpython?
+ANS:- Cpython is standard implementation of Python which is written in C.We call it Cpython to distinguish Python implementation
+       of the language engine from Python programming language itself.It is ends up producing bytecode(machine instruction set) 
+       which is Python specific and then executes it.The reason to convert Python code to a bytecode because it's easier to
+       imolement an interpreter if it is looks like machine instructions.
+      Jpython is the other implementation of Python which is implemented for Java. Jpython is used to converts Python code 
+       in Java bytecode so it can be implemented in JVM. JVM is used to converts Java code in machine language and executes it.
+
+Q2. What is difference between Python2 and Python3?
+ANS:-              PYTHON 2                                                   PYTHON 3
+	1. In Python2, print statement is used to print        1. In python3, print function is used to print any 
+	   data.    						   data.
+	   Ex:- print "hello"					   Ex:- print("hello")
+	2. In this version of Python xrange() function	       2. range() function is used for iterations.
+	   is uses for iterations.    
+	3. Default storing of string is ASCII code. To	       3. Default storing of string is unicode.
+	   store Unicode string value, you require to 
+	   define them with "u".
+	4. Exceptions should be enclosed in notations.         4. Exceptions should be enclosed in parenthesis.
+	5. Value of global value can be changed while 	       5. Value of variable snever changed. 
+	   using it inside for loop.   
+	6. Whenever two integer are divided, you get a	       6. Whenever two integer are divided, you get a float value.
+	    int value.   
+
+Q3. What is difference between unicode and ASCII code?
+ANS:-ASCII Extended solves the problem for languages that are based on the Latin alphabet.
+     ASCII defines 128 characters, which map to the numbers 0–127.
+     Unicode sis used to solve the problem for all type of languages.Unicode is superst of ASCII code.
+      And the numbers 0–127 have the same meaning in ASCII as they have in Unicode. For example, the number
+      65 means "Latin capital 'A'".
+                         
