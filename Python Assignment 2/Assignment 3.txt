@@ -1,0 +1,58 @@
+Ques 1: Make a use of time module and for loop and create Loading..... animation 5 times. Note: you have to print only Loading.... in the animated form.
+Ans 1: import time as t
+       import sys
+       sys.stdout.write('Loading')
+       for i in range(5):
+    	sys.stdout.write('.')
+    	t.sleep(1)
+
+Ques 2: Difference between Return and Yield ?
+Ans 2: Return: Returns the value to the caller
+	     Return statement runs only one time
+	     Return statement causes a function to exit.
+	     Code written after return statement won't execute
+	     Every function calls run the function from the start.
+        
+       Yield: Yield returns the value to the caller and also preserve the current state
+	     Yield statement can run multiple times.	
+	     Yield statement is used to define the generators.
+	     Code written after yield statement execute in next function call.
+	     Yield statement function is executed from the last state from where the function get paused.
+
+Ques 3: Make digital clock and run it for 5 sec.
+Ans 3:  import time as t
+	for i in range(5):
+    		a=str(t.ctime())
+    		b=a.split(" ")
+    		print(b[3])
+    		t.sleep(1)
+
+Ques 4: Adding anything in tuple eg:(1,2,3,4) -> (1,2,3,4,5)
+Ans 4:  old=(1,2,3,4)
+	lists=list(old)
+	print(type(lists))
+	x=input("Enter value: ")
+	lists.append(x)
+	new=tuple(lists)
+	print(new,type(new))
+
+Ques 5: Whatsapp texting using web browser library.
+Ans 5: 	import webbrowser as wb
+	import time
+	import datetime
+	number= input("Please enter the whatsapp number of the person you want to send message to:")
+	message= input("Enter the message you want to send:")
+	t= input("Enter the time (hh:mm:ss):")
+	while True:
+  		c_time= time.ctime()
+  		t_format= c_time[10:18]
+  		time.sleep(1)
+ 		 print(f'c_time : {t_format}')
+  		if t==t_format :
+    	 	  webbrowser.open_new_tab(f'https://web.whatsapp.com/send?phone=+91{number} and text={message}')
+   	        break
+  		elif t<t_format :
+   	 	print("Please enter the correct time!")
+   	 	break
+  		else :
+   	 	print("Please wait for a second...")    
