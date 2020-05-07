@@ -1,0 +1,65 @@
+##-----------ASSIGNMENT-----------##
+
+Python Class 1 :
+
+1. Jpython is an implementation of the Python programming language designed to run on the Java platform.
+   Cpython is the reference implementation of the Python programming language. Written in C and Python, CPython is the default and most widely used implementation of the language.
+2. Python 3 default storing of strings is Unicode whereas Python 2 stores need to define Unicode string value with "u." Python 3 value of variables never changes whereas in Python 2 value of the global variable will be changed while using it inside for-loop.
+   Also Python 3 has good standards and powerful library over Python 2 .
+3. ASCII originally used seven bits to encode each character. However, Unicode uses a variable bit encoding program where you can choose between 32, 16, and 8-bit encodings.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Python Class 2 :
+
+1. The output of 3 + 4 ** 6 - 9 * 10 / 2 is -> 4054.0
+
+2. def Check_Vow(string, vowels): 
+     final = [each for each in string if each in vowels] 
+     print(len(final)) 
+     print(final)  
+  string = "Hello this side regex"
+  vowels = "AaEeIiOoUu"
+  Check_Vow(string, vowels); 
+
+3. b, h = input("Enter the value of base and height of the trianhle space seprated : ").split(" ")
+	print(f"Area of Triangle : {1/2 * int(b) * int(h)} ")
+
+4. import calendar
+   y=int(input("Enter the year="))
+   for i in range(1,13):
+   	print(calendar.month(y,i))
+--------------------------------------------------------------------------------------------------------------
+
+Python Class 3 :
+
+1. //Armstrong Number
+
+	lower=int(input("Enter the lower limit: "))
+	upper = int(input("Enter the upper limit: ")) 
+	arm_num=[]
+	for num in range(lower,upper + 1): 
+	   sum = 0 
+	   temp = num
+	   while temp > 0:
+	       digit = temp % 10
+	       sum += digit ** 3
+	       temp //= 10	   
+	   if num == sum:
+	       arm_num.append(num)
+	print("\nThe armstrong Numbers between "+str(lower)+" and "+str(upper)+" are:")
+	for i in arm_num:
+	    print(i)
+
+2. //Remove all punctuations  
+	punctuations = '''!()-[]{};:'"\\,<>./?@#$%^&*_~'''
+	statement=input("\nEnter your string: ")
+	extract = ""
+	for char in statement:
+	   if char not in punc:
+	       extract = extrct + char
+	print(extract)
+
+3. //sorting the list
+	given_list = ['Apple', 'banana', 'cat','apple']
+	final_list=sorted(given_list)
+	print("\nThe Sorted List is: ",final_list)
