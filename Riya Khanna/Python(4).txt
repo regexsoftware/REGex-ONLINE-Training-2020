@@ -1,0 +1,86 @@
+Q1. Write a program to print new list which contains all the first character of the strings present in a list.
+Ans1.
+list=["GOA","RAJASTHAN","KARNATAKA","GUJRAT","MANIPUR","MADHYA PRADESH"]
+new_list=[]
+for i in list:
+    new_list.append(i[0][0])
+print(new_list)
+
+Q2. Write a program to replace each string with an integer value in a given list of strings.
+The replaced integer value should be the sum of ASCII values of each character  of type corresponding string.
+Ans2.
+l=['GAnga','Tapti','Kaveri','Yamuna','Narmada']
+c=[] 
+for i in l:
+    j=0
+    sum=0
+    for j in i:
+        sum=sum + ord(j)
+    c.append(sum)
+print(c)
+
+Q3. Run any Program at 9:00m. Date: 14th April 2020.
+Ans3. 
+import datetime
+import time
+task_date = datetime.datetime(2020, 4, 14, 9, 0, 0)
+while datetime.datetime.now() < task_date:
+    time.sleep(1)
+
+print("Hello! Its 14th April")
+
+
+Q4.Given a tuple:
+tuple = ('a','l','g','o','r','i','t','h','m')
+1. Using the concept of slicing, print the whole tuple
+2. delete the element at the 3rd Index, print the tuple.
+Ans4. 1) print(tuple[:])
+2.) 
+tuple=tuple[0:3]+tuple[4:]
+print(tuple)
+
+Q5. Take a list REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+- print only those numbers greater than 20
+- then print those numbers those are less then 10 or equal to 10
+- store these above two list in two different list.
+
+REGex=[1,2,3,4,5,6,7,8,9,0,77,44,15,33,65,89,12]
+lst1=[]
+lst2=[]
+for i in REGex:
+    if i >20:
+        lst1.append(i)
+
+    if i <=10:
+        lst2.append(i)
+
+
+print(lst1)
+print(lst2)
+
+Q6. Execute standard LINUX Commands using Python Programming.
+Ans6.
+import os
+cmd = 'wc -l my_text_file.txt > new.txt'
+os.system(cmd)
+
+Q7.Revise *args and **kwargs Concepts.
+*args passes variable number of non-keyworded arguments list and on which operation of the list can be performed.
+**kwargs passes variable number of keyword arguments dictionary to function on which operation of a dictionary can be performed.
+1) *args
+def sum(*n):
+    sum = 0
+    for i in n:
+        sum = sum + i
+
+    print("Sum:",sum)
+
+sum(3,5)
+sum(4,5,6,7)
+sum(1,2,3,5,6)
+
+2) **kwargs
+def print_kwargs(**kwargs):
+        print(kwargs)
+
+print_kwargs(kwargs_1="riya", kwargs_2='khanna', kwargs_3=True)
