@@ -1,0 +1,28 @@
+CREATING SUB-DIRECTORY UNDER DIRECTORY USING ONE MKDIR COMMAND
+
+
+priya@ubuntu:~$ pwd
+/home/priya
+priya@ubuntu:~$ mkdir -p A/B/C
+priya@ubuntu:~$ ls
+A        Documents  examples.desktop  Pictures  priya  Desktop  Downloads  Music             Public    Templates  Videos
+priya@ubuntu:~$ cd A
+priya@ubuntu:~/A$ ls
+B
+priya@ubuntu:~/A$ cd B
+priya@ubuntu:~/A/B$ ls
+C
+priya@ubuntu:~/A/B$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
