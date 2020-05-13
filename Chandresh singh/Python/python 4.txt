@@ -1,0 +1,49 @@
+Ques 1-
+
+You have to run your Program at 9:00PM on 14th April 2020.
+ Whatsapp Automation
+
+
+import datetime
+x = datetime.datetime.now()
+a = str(x)
+ls = a.split(" ")
+
+import time
+while True:
+    x = time.ctime()
+    ls = x.split(" ")
+    print(ls)
+    if ls == ['Wed', 'Apr', '14', '21:00:00', '2020']:
+        print("It's 9 PM")
+        break
+    else:
+        continue
+        
+
+Ques 2-
+
+GIve a tuple:
+
+t=()
+t = ('R','e','g','e','X')
+
+for i in t:
+    print(t[i])
+
+Ques 3-
+
+Create a list of integers print number greater than 20 also separate the numbers greater than 10 to another list
+
+a=[]
+b=[]
+
+ls=[1,2,3,4,5,6,7,8,9,10,11,13,14,15,25,26,27,28,29,30]
+for i in ls:
+    if i>20:
+	print(ls[i])
+        a.append(i)
+    elif i <= 10:
+        b.append(i)
+print(a)
+print(b)

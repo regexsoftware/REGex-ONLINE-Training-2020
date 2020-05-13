@@ -1,0 +1,11 @@
+1)Create new user also add it into the group that you already have
+useradd -g grpname usrname
+
+2)To unzip bzip2 file
+bzip2 -d filename.bz2
+
+3)Archieve & compress bz2 file with some files with data & a folder
+tar -czvf xyz.tar.bz2 /home/ubuntu/d1/  /home/ubuntu/file1.txt  /home/ubuntu/file2.txt
+
+4)Add a user & at the same time change its shell to /bin/sh
+useradd -s /bin/sh usrname
