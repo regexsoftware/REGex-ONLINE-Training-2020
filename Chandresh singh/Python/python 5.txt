@@ -1,0 +1,64 @@
+Ques 1-
+
+Time Module loop
+     Loading.
+     Loading..
+     Loading...
+     Loading.... 
+     Loading.....
+
+import time
+print("Loading", end = "")
+i = 1
+while(i < 6):
+    print('.', end = "")
+    time.sleep(1)
+    i += 1
+
+Ques 2-
+Difference between Return and Yield?
+The keyword return causes the function to exit and hands back a value to its caller.The return statement is used when a function is ready to exit and return a value to its caller.
+The keyword yield causes the function to hand back a generator object to its caller. yield will not cause the function to exit nor terminate the loop. A generator can be parsed into a list.
+
+Ques 3-
+
+Create a digital clock that run for 5 seconds
+import time
+
+i=0
+while i < 5:
+    t = time.ctime()
+    print(t[11:19])
+    time.sleep(1)
+    i = (i+1)
+
+Ques 4-
+
+Whatsapp Automation
+
+import webbrowser
+import time
+import pyautogui
+send = False
+number = int(input("Enter the number to send message: "))
+message = input("Enter the message")
+YourTime = input("Enter time at which u want to send message as format (hh:mm:ss): ")
+print(time.ctime())
+while(True):
+    t = time.ctime()
+    str(t)
+    a = t.split(" ")
+    if a[3] == YourTime:
+        send = True
+    if send == True:
+        print("send")
+        send = False
+        time.sleep(1)
+        url = 'https://wa.me/'+str(number)+'?text='+str(message)
+        webbrowser.open(url)
+        time.sleep(5)
+        pyautogui.moveTo(670, 315)
+        pyautogui.click()
+        time.sleep(5)
+        pyautogui.press('enter')
+        

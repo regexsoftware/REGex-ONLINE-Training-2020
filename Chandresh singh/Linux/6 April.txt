@@ -1,0 +1,3 @@
+Diffrence between adduser and useradd
+adduser command - adduser command creates user as well as set up the user's directory in home folder with account's other default settings.
+useradd command - useradd olny creates the user & doesnot creates user's directory automatically if not specified with -m.

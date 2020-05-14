@@ -1,0 +1,57 @@
+Ques 1-
+Reading a file line by line and storing in list
+
+ls=list()
+
+f = open("name.txt")
+
+for line in f:
+	for word in file_text:
+   		 ls.append(word)
+    
+print(ls)
+    
+
+
+Ques 2-
+Reading a file line by line and storing in array
+
+arr = []
+f = open("name.txt")
+for line in f:
+	for word in file_text:
+   		 arr.append(word)
+    
+print(arr)
+
+
+
+
+Ques 3-
+Read a random line froma file
+
+import random
+f = open("name.txt", 'r')
+h = (f.read().splitlines())
+print(random.choice(h))
+
+
+
+
+
+
+Ques 4-
+Combine each line from first file with the corresponding line in second file
+
+
+f = open("name.txt", 'r')
+a = f.read().splitlines()
+
+f2= open("name2.txt", 'r')
+b = f.read().splitlines()
+
+ls = []
+for i,j in zip(a,b):
+    print(i + j)
+    
+

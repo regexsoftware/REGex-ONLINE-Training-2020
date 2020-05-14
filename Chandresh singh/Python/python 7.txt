@@ -1,0 +1,14 @@
+Late Night Task
+Make a script to send “Hi” 5 times to a friend.
+import webbrowser
+import pyautogui
+import time
+count=0
+number=int(input("Enter the number- "))
+while count<5:
+	webbrowser.open('https://webbrowser.whatsapp.com/send?phone='+str(number)+'&text=Hi')
+	time.sleep(30)
+	pyautogui.press('enter')
+	time.sleep(3)
+	pyautogui.hotkey('ctrl','w')
+	count=count+1

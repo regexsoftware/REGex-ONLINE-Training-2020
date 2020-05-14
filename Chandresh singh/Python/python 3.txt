@@ -1,0 +1,29 @@
+Ques 1-
+
+Take input from user and find the armstrong number in the range?
+What is Armstrong number : 153 -> 1*1*1 + 5*5*5 + 3*3*3
+
+n1 = int(input("Enter the first number"))
+n2 = int(input("Enter the last number"))
+
+for i in range(n1, n2+1):
+    sum = 0
+    temp = i
+    while temp > 0:
+        digit = temp % 10
+        sum = sum + digit ** 3
+        temp = temp // 10
+
+    if i == sum:
+        print (i)
+Ques 2-
+
+You have a list with words - [“Apple”, “Mango”, “Banana”,”Grapes”]
+
+
+ls = [“Apple”, “Mango”, “Banana”,”Grapes”]
+sortls = sorted(ls)
+print (sortls)
+
+
+    
