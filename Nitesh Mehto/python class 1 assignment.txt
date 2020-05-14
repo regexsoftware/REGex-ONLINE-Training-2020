@@ -9,8 +9,10 @@ ans2. Python 2 made code development process easier than earlier versions. It im
       Python released version 3.0. This version was mainly released to fix problems which exist in Python 2. The nature of these change is such that Python 3 was 
       incompatible with Python 2. It is backward incompatible Some features of Python 3 have been backported to Python 2.x versions to make the migration process easy 
       in Python 3.
+
 Q3. Diff. b/w ASCII & UNICODE?
 ans3. ASCII originally used seven bits to encode each character. This was later increased to eight with Extended ASCII to address the apparent inadequacy of the 
       original.
       Unicode uses a variable bit encoding program where you can choose between 32, 16, and 8-bit encodings. Using more bits lets you use more characters at the 
       expense of larger files while fewer bits give you a limited choice but you save a lot of space.
+
