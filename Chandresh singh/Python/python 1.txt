@@ -1,0 +1,27 @@
+1) What is jpython & cpython ?
+The default implementation of the Python programming language is Cpython.
+As the name suggests Cpython is written in C language.
+Cpython compiles the python source code into intermediate bytecode, which is executed by the Cpython virtual machine.
+CPython is distributed with a large standard library written in a mixture of C and Python. CPython provides the highest level of compatibility with Python packages and C extension modules.
+All versions of the Python language are implemented in C because CPython is the reference implementation.
+Jython is an implementation of the Python programming language that can run on the Java platform.
+Jython programs use Java classes instead of Python modules.
+Jython compiles into Java byte code, which can then be run by Java virtual machine.
+Jython enables the use of Java class library functions from the Python program
+Jython is slow as compared to Cpython and lacks compatibility with CPython libraries.
+
+
+2) Difference between python2 & python3
+Python 3 syntax is simpler and easily understandable whereas Python 2 syntax is comparatively difficult to understand.
+Python 3 default storing of strings is Unicode whereas Python 2 stores need to define Unicode string value with "u."
+Python 3 value of variables never changes whereas in Python 2 value of the global variable will be changed while using it inside for-loop.
+Python 3 exceptions should be enclosed in parenthesis while Python 2 exceptions should be enclosed in notations.
+Python 3 rules of ordering comparisons are simplified whereas Python 2 rules of ordering comparison are complex.
+Python 3 offers Range() function to perform iterations whereas, In Python 2, the xrange() is used for iterations.
+
+3) Diffrence between ASCII & Unicode
+ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221 characters, which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+
+Unicode is a superset of ASCII, and the numbers 0–127 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means "Latin capital 'A'".
+
+Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.

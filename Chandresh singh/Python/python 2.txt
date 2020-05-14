@@ -1,0 +1,21 @@
+4054
+
+string="hello this side regex"
+count=0
+for i in string
+	for j in ['a','e','i','o','u']
+		count++;
+print count
+
+
+h=int(input("Enter the height of the triangle"))
+b=int(input("Enter the base of the triangle"))
+print("the area of the triangle is: ")
+area=(1/2)*h*b
+print(area)
+
+import calendar
+print("Which Year ")
+y = int(input())
+print("Calendar of year "+y+" is ")
+print(calendar.calendar(y))
