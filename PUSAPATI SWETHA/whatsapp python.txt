@@ -1,0 +1,25 @@
+import requests as rq 
+import pyautogui as pg
+import webbrowser as wb  
+num=[] 
+message=input("Enter your message: ") 
+count=int(input("How many person you want to send message: ")) 
+Message=int(input("How many message you want to send: ")) 
+for i in range(count): 
+	n=int(input("Enter Contact Number followed by 91: ")) 
+	num.append(num)
+for a in range(count): 
+	time.sleep(2) 
+	link="https://web.whatsapp.com/send?phone={}&text={}".format(number[a],message) 
+wb.open(link) 
+time.sleep(15)
+print("Page timeout") 
+pg.press("enter") 
+for x in range(Message): 
+	pg.typewrite(message) 
+	pg.press("enter") 
+	time.sleep(2) 
+	pg.hotkey("ctrl","w") 
+	pg.press("enter") 
+	print("Mesage sent to {} message is {}".format(number[a],message)) 
+print("message sent")
